@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "app": "miaoclaw",
+  "publishedAt": "2026-07-03T09:16:42.154Z",
+  "latest": {
+    "version": "2.1.0",
+    "notes": "Miaoclaw 2.1.0\n\n- 办公交付更稳:上传的 Word/Excel 文档直接可修改;大表格不再漏行、PDF 中文水印正常\n- 交付看得见:生成的文件在对话里就有卡片,可预览 / 打开 / 在文件夹中显示\n- 应用内更新:从这版起,设置 →「关于与更新」可以检查新版本、一键下载安装;升级自动保留会话、记忆和全部设置\n- 网页读取增强:在「搜索」设置里配一个免费的 Jina Key,很多原本打不开的网页也能读出正文\n- 修复:搜索设置里保存的 Key 此前未真正生效;用量记录新增「首字」耗时,一眼看清模型快慢\n- 语音、手帐、桌宠等多处细节修复与打磨\n\n安装说明:下载 Miaoclaw-Setup-2.1.0.exe 双击安装;老用户覆盖安装,数据(会话/记忆/Key/设置)不受影响。",
+    "minSupported": "2.0.0",
+    "full": {
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.0/Miaoclaw-Setup-2.1.0.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.0/Miaoclaw-Setup-2.1.0.exe",
+      "sha256": "36c997b213d5095a26f480c56b52e66b4c5f594dbeb56587336c2a987f39cecb",
+      "sizeBytes": 261510212
+    }
+  }
+}
