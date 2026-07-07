@@ -1,59 +1,60 @@
 # Miaoclaw · 喵喵
 
-<p align="center">🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese</p>
+> 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
+
+**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v2.1.1**
 
 ---
 
 ## 中文介绍
 
-**Miaoclaw(喵喵)** 是一只住在你 Windows 桌面上的 AI 助手——一只赛博暹罗猫。它把"能聊的 AI"变成"能干活的 AI":
+Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付为 Windows 桌面应用。
 
-- 📄 **办公交付**:Word / Excel / PPT / PDF 的生成与修改——写报告、改批注、双表对比标红、加水印,产出真实文件直接落到桌面,对话里就能预览打开。
-- 🔍 **联网调研**:多源搜索 + 网页正文读取增强,中文搜索质量优先;做调研报告、每日简报都拿手。
-- 🎨 **看图与画图**:识别本地图片、文生图、同轮改图。
-- 🎙️ **语音**:会议录音转文字出纪要(云端 / 本地离线双引擎),输入框按住说话。
-- 📔 **喵喵手帐**:随手记、贴链接、存图片,自动分类整理,还能一键整理成篇;凭据只存本机、绝不进模型。
-- ⏰ **定时任务**:"每天 8 点搜 AI 新闻整理成简报"——说一句就安排上。
-- 🧠 **长期记忆**:记得你的偏好、决定和纪念日,越用越懂你。
-- 🐈 **桌面宠物**:可选开启的像素小猫,感知你在干什么,克制地陪伴与吐槽。
-- 🔌 **模型自由**:DeepSeek / Kimi / 智谱 / MiniMax / 通义 / 阶跃等一键接入,贴一个 Key 就能用;模型能力真机自检,不猜、只信实测。
-
-**数据全在本地**:会话、记忆、手帐、Key 都存在你自己的电脑里;密钥有读取黑名单和日志脱敏双重保护。
+- **能干活**：真实产出和修改 Word / Excel / PPT / PDF，联网调研出报告，会议录音转文字纪要，定时任务自动跑。
+- **数据在本地**：会话、记忆、API Key 都存在你自己的电脑上，程序和数据分离，升级卸载不动数据。
+- **模型自由**：不绑定任何一家模型，DeepSeek / Kimi / 智谱 / MiniMax / 通义 / 阶跃等贴一个 Key 即用。
 
 ### 安装
 
-从 [Releases](../../releases) 下载最新 `Miaoclaw-Setup-<版本>.exe`,双击安装即可。
+1. 从 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest) 下载 `Miaoclaw-Setup-<版本>.exe`
+2. 双击安装（默认装在当前用户目录，免管理员）
+3. 首次运行如弹「未知发布者」，点「更多信息 → 仍要运行」（安装包未做代码签名，正常现象）
+4. 打开后在 设置 → 模型 API 贴一个 API Key 即可开始用；不确定选哪家可先用 DeepSeek（便宜、中文好）
 
-- 免管理员权限,默认装到用户目录,可自选路径。
-- **覆盖升级不丢数据**:程序与数据分离存放,重装/升级/卸载都不碰你的会话、记忆和配置。
-- 首次启动会引导你贴一个模型 API Key(任选一家),之后即用。
+### 更新
+
+- 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
+- **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
+
+### 2.1.1 更新亮点
+
+- 文档不再无故标红：只有你明确要求「标红 / 批注 / 修订」时才出现，普通文档所写即所得
+- 更安全：联网读到的网页内容一律当参考资料，网页里夹带的「指令」不会被执行
+- 上下文用量显示更准，多把 API Key 可自动轮换，中文检索更聪明
+- 新增应用内「使用帮助」页（设置 →「使用帮助」）
 
 ---
 
 ## English
 
-**Miaoclaw** is a local-first desktop AI assistant for Windows — a cyber Siamese cat that lives on your desktop and actually gets work done:
+**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v2.1.1**.
 
-- 📄 **Office deliverables** — create and edit Word / Excel / PPT / PDF: reports, tracked comments, cross-sheet diff highlighting, watermarks. Real files, saved to your desktop, previewable right in the chat.
-- 🔍 **Web research** — multi-source search with enhanced page reading, optimized for Chinese content; great at research reports and daily briefings.
-- 🎨 **Vision & image generation** — understands local images, generates and iteratively edits pictures.
-- 🎙️ **Voice** — meeting audio → transcript → minutes (cloud or fully offline engine); push-to-talk input.
-- 📔 **Notes (手帐)** — capture text, links and images; auto-organized, digestible into daily journals; credentials never leave your machine.
-- ⏰ **Scheduled tasks** — "search AI news at 8am daily and write me a briefing" — just say it.
-- 🧠 **Long-term memory** — remembers your preferences, decisions and important dates.
-- 🐈 **Desktop pet** — an optional pixel cat that senses what you're up to and keeps you company, tastefully.
-- 🔌 **Bring your own model** — one-key setup for DeepSeek, Kimi (Moonshot), GLM, MiniMax, Qwen, StepFun and more; model capabilities are probe-verified on your machine, never guessed.
-
-**Local-first by design**: sessions, memory, notes and API keys stay on your own machine, with read-blacklist and log-redaction protection for secrets.
+- **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
+- **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
+- **Model freedom**: bring your own key for DeepSeek, Kimi, Zhipu, MiniMax, Qwen, StepFun, and more.
 
 ### Install
 
-Download the latest `Miaoclaw-Setup-<version>.exe` from [Releases](../../releases) and run it.
+1. Download `Miaoclaw-Setup-<version>.exe` from [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)
+2. Run the installer (installs to your user directory, no admin needed)
+3. If Windows shows "Unknown publisher", click "More info → Run anyway" (the installer isn't code-signed yet)
+4. Open it, go to Settings → Model API, paste one API key, and start
 
-- No admin rights required; installs to your user directory (path selectable).
-- **Upgrades never touch your data** — app and data live side by side; reinstall/upgrade/uninstall leave sessions, memory and settings intact.
-- On first launch, paste one model API key (any supported provider) and you're ready.
+### Update
+
+- A banner appears when a new version is available; you can also check manually in Settings → About & Update. Upgrades preserve your data.
+- **From 2.1.1, minor updates are lightweight**: download a ~10 MB package and just restart — no installer wizard. If a new build fails to start, it **automatically rolls back** to the current version. Versions that change the bundled runtime still ship a full installer.
 
 ---
 
-> 📦 This repository hosts **binaries and the update channel only** — installers, hot-update packages and `latest.json`. 本仓库只发布安装包与更新通道文件。
+_Miaoclaw is under active development. Issues and feedback welcome._
