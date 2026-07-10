@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-10T08:04:54.264Z",
+  "publishedAt": "2026-07-10T08:53:23.829Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,21 +21,21 @@
     }
   ],
   "latest": {
-    "version": "2.1.4",
-    "notes": "Miaoclaw 2.1.4\n\n这次带来一个新能力和一批质量提升。\n\n【从 2.1.1 及以上升级】点「重启完成更新」即可——本次是轻量更新，重启就装好。\n【从 2.1.0 或更早升级】旧版的更新安装存在一个已修复的缺陷：点「安装」后向导会闪退。\n请这样操作一次：更新下载完成后，到 安装目录\\data\\updates\\ 里把安装包复制到桌面，\n双击安装即可；装上本版后，以后的更新一键完成，不再有此问题。\n\n新增：交叉审阅（自选开启）\n- 在 设置 → Agent 角色 打开「交叉审阅」后，重要交付（长文、报告、带文件的产出）在给你之前，会先请另一家模型独立把关一遍——挑事实错误、缺漏、答非所问，修订后再交付。审阅过程在对话里可见、用量页可查。\n- 会多用约三成 token，所以默认关闭；至少配置两家模型供应商才能生效。\n- 不开开关也能用：对话里说「仔细点」，本轮就会临时审一遍并告诉你结果。\n\n语音包 / 文字识别能一键更新了\n- 装过「离线语音包」或「本地文字识别」的，设置页现在会显示组件版本。\n- 官方验证过组件新版本后，设置页会提示你，点「更新组件」即可升级到验证过的版本；更新失败不影响现在能用的版本。\n\n模型发挥更稳了\n- 修复了一个会让模型\"被逼着用不相关扩展\"的问题——此前部分任务里，模型要么被迫运行无关的扩展产出多余文件，要么在回答里解释一大段\"为什么没用扩展\"，现在都不会了。\n- 让喵喵做网页时，它现在能看到页面的报错信息，发现问题会自己修好再交付，不再\"看起来做完了其实打不开\"。\n\n其它\n- 把任务分派给帮手时，会参考各模型的实测反应速度，快的优先，整体更利索。\n\n覆盖安装不影响已有数据（会话 / 记忆 / API Key / 设置都保留）。",
+    "version": "2.1.5",
+    "notes": "Miaoclaw 2.1.5\n\n这是 2.1.4 的补充更新，三处使用体验改进。\n\n【从 2.1.1 及以上升级】点「重启完成更新」即可——本次是轻量更新，重启就装好。\n【从 2.1.0 或更早升级】旧版的更新安装存在一个已修复的缺陷：点「安装」后向导会闪退。\n请这样操作一次：更新下载完成后，到 安装目录\\data\\updates\\ 里把安装包复制到桌面，\n双击安装即可；装上本版后，以后的更新一键完成，不再有此问题。\n\n收尾更诚实\n- 多步骤任务时间不够没做完时，喵喵现在会如实给出「已完成 / 未完成」清单，回复「继续」就能接着做完剩下的——不再含糊收尾让你以为全做完了。\n- 修复了一个收尾说明偶尔显示\"最终说明没有生成出来\"的问题——文件明明做好了，现在会如实列出产物清单。\n\n反应更轻快\n- 与当前任务关系不大的扩展说明不再整篇塞给模型（曾经一次多占上万字的空间），改为一行简介、需要时再展开——回答更专注、上下文占用更省。\n\n界面小改进\n- 设置 → Agent 角色：「新建自定义 Agent」表单默认收起，页面更清爽；点「＋ 新建」或编辑某个 Agent 时自动展开。\n\n覆盖安装不影响已有数据（会话 / 记忆 / API Key / 设置都保留）。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.4/Miaoclaw-Setup-2.1.4.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.4/Miaoclaw-Setup-2.1.4.exe",
-      "sha256": "15ccffba2b9b2024bcba7c311779f31e7c9b208c39af969eec37832c7eb218c2",
-      "sizeBytes": 261576839
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.5/Miaoclaw-Setup-2.1.5.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.5/Miaoclaw-Setup-2.1.5.exe",
+      "sha256": "5745f3e934db1b2532155de267cdf837dfa965e8f66c40872cd0bd915eae2dfb",
+      "sizeBytes": 261606409
     },
     "hot": {
       "baseline": "2.1.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.4/miaoclaw-hot-2.1.4.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.4/miaoclaw-hot-2.1.4.zip",
-      "sha256": "37c10e039a85ae24a40345c4c9a704fcfd60df5dff95ab18cd8769c29447c93d",
-      "sizeBytes": 22210488
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.5/miaoclaw-hot-2.1.5.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.5/miaoclaw-hot-2.1.5.zip",
+      "sha256": "1076a398b2e670d5501c01dfcdb7bcb2d513063d1b01a58b016787feb50f6c93",
+      "sizeBytes": 22211961
     }
   }
 }
