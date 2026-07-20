@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-10T08:53:23.829Z",
+  "publishedAt": "2026-07-20T06:35:53.487Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,21 +21,21 @@
     }
   ],
   "latest": {
-    "version": "2.1.5",
-    "notes": "Miaoclaw 2.1.5\n\n这是 2.1.4 的补充更新，三处使用体验改进。\n\n【从 2.1.1 及以上升级】点「重启完成更新」即可——本次是轻量更新，重启就装好。\n【从 2.1.0 或更早升级】旧版的更新安装存在一个已修复的缺陷：点「安装」后向导会闪退。\n请这样操作一次：更新下载完成后，到 安装目录\\data\\updates\\ 里把安装包复制到桌面，\n双击安装即可；装上本版后，以后的更新一键完成，不再有此问题。\n\n收尾更诚实\n- 多步骤任务时间不够没做完时，喵喵现在会如实给出「已完成 / 未完成」清单，回复「继续」就能接着做完剩下的——不再含糊收尾让你以为全做完了。\n- 修复了一个收尾说明偶尔显示\"最终说明没有生成出来\"的问题——文件明明做好了，现在会如实列出产物清单。\n\n反应更轻快\n- 与当前任务关系不大的扩展说明不再整篇塞给模型（曾经一次多占上万字的空间），改为一行简介、需要时再展开——回答更专注、上下文占用更省。\n\n界面小改进\n- 设置 → Agent 角色：「新建自定义 Agent」表单默认收起，页面更清爽；点「＋ 新建」或编辑某个 Agent 时自动展开。\n\n覆盖安装不影响已有数据（会话 / 记忆 / API Key / 设置都保留）。",
+    "version": "2.1.6",
+    "notes": "# Miaoclaw 2.1.6\n\n这一版带来三件新玩法和一批贴心打磨：\n\n## 新功能\n\n### 📝 猫猫便利贴：把事写在贴纸上，喵喵路过会办\n在工作台挂载的文件夹里贴一张「猫猫便利贴」，用大白话写上要交办的事（比如\"把这个文件夹里的录音整理成会议纪要\"），喵喵每隔一段时间巡看一次——内容变了才执行一次，办完把执行记录写回贴尾。贴与改都在应用内完成（工作台 → 猫猫便利贴 → 贴一张 / 编辑），不用碰任何文件；想让喵喵再办一次，改改内容或点「立即执行」就行。默认关闭，巡看间隔可调（15 分钟～2 小时）。\n\n### 🗂 Skill 分组：常用扩展一键成组开关\n扩展管理页新增「我的分组」：把常一起用的 Skill 编成组（比如\"写作三件套\"），一个开关整组启停。分组只是\"贴标签\"，删除分组不影响 Skill 本身；内置能力不参与开关（会如实提示）。\n\n### 🖼 看图升级：放大、翻页、快捷键\n对话里的生成图片和手帐里的图片，点开后现在是完整的看图模式：滚轮指哪放大哪、拖拽平移、双击放大/复位、← → 翻看相邻图片（自动预载不白屏）、Esc 关闭、+ − 0 缩放复位。\n\n### 🎴 角色卡：自定义 Agent 一键分享\nAgent 角色页的自定义 Agent 现在可以「导出」成一张角色卡文件（JSON），换电脑或分享给朋友后一键导入。导入前会先给你看卡里的内容（叫什么、会什么、用什么模型），确认才落地；重名自动改名绝不覆盖；卡里指定的模型本机没有时自动改走智能路由。\n\n## 优化与修复\n\n- **Kimi K3 全系接入**：新增 Kimi K3（标准 API，1M 上下文旗舰推理）、K3 Coding 端、K2.7 Code 高速版（实测快 5 倍上下）三个新模型；全部按官方文档核对并经真机实测（对话 / 工具调用 / 看图）后收录。现有 Kimi 模型不受影响，老配置继续可用。注意：Coding 端 K3 与高速版需要相应 Kimi 订阅档位。\n- **组件更新进度更清爽**：安装/更新语音、文字识别组件时，进度区不再闪过 \"False\" 之类的底层日志字样（那是组件内部日志，不是出错）。\n\n## 升级方式\n\n- **2.1.1 及以上版本**：应用内提示更新后，点「重启完成更新」即可（约 20MB 轻量更新，几秒完成）。\n- **2.1.0 及更早版本**：会自动下载完整安装包；如安装时闪退，把安装包复制到桌面再双击运行即可，装完这次以后就都是轻量更新了。\n- 数据（会话、记忆、API Key）不受升级影响。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.5/Miaoclaw-Setup-2.1.5.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.5/Miaoclaw-Setup-2.1.5.exe",
-      "sha256": "5745f3e934db1b2532155de267cdf837dfa965e8f66c40872cd0bd915eae2dfb",
-      "sizeBytes": 261606409
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.6/Miaoclaw-Setup-2.1.6.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.6/Miaoclaw-Setup-2.1.6.exe",
+      "sha256": "33c21ae426866f1d6574e726f2a2094ab022264d6afa7507538fd7a33d88b970",
+      "sizeBytes": 261662227
     },
     "hot": {
       "baseline": "2.1.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.5/miaoclaw-hot-2.1.5.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.5/miaoclaw-hot-2.1.5.zip",
-      "sha256": "1076a398b2e670d5501c01dfcdb7bcb2d513063d1b01a58b016787feb50f6c93",
-      "sizeBytes": 22211961
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.6/miaoclaw-hot-2.1.6.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.6/miaoclaw-hot-2.1.6.zip",
+      "sha256": "a3181951963c6805c72ec07c47b10b2a7e7b91a6c4d7da09204e934dca94514c",
+      "sizeBytes": 22249607
     }
   }
 }
