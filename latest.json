@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-20T06:35:53.487Z",
+  "publishedAt": "2026-07-20T07:49:24.623Z",
   "resources": [
     {
       "id": "ocr",
@@ -20,22 +20,28 @@
       "verifiedAt": "2026-07-09"
     }
   ],
+  "providerCatalog": {
+    "version": "2026-07-20",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-20.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-20.json",
+    "sha256": "5af24ee24be72114ace0bbbf0906bf7183194aacd98eca000871ec613233af91"
+  },
   "latest": {
-    "version": "2.1.6",
-    "notes": "# Miaoclaw 2.1.6\n\n这一版带来三件新玩法和一批贴心打磨：\n\n## 新功能\n\n### 📝 猫猫便利贴：把事写在贴纸上，喵喵路过会办\n在工作台挂载的文件夹里贴一张「猫猫便利贴」，用大白话写上要交办的事（比如\"把这个文件夹里的录音整理成会议纪要\"），喵喵每隔一段时间巡看一次——内容变了才执行一次，办完把执行记录写回贴尾。贴与改都在应用内完成（工作台 → 猫猫便利贴 → 贴一张 / 编辑），不用碰任何文件；想让喵喵再办一次，改改内容或点「立即执行」就行。默认关闭，巡看间隔可调（15 分钟～2 小时）。\n\n### 🗂 Skill 分组：常用扩展一键成组开关\n扩展管理页新增「我的分组」：把常一起用的 Skill 编成组（比如\"写作三件套\"），一个开关整组启停。分组只是\"贴标签\"，删除分组不影响 Skill 本身；内置能力不参与开关（会如实提示）。\n\n### 🖼 看图升级：放大、翻页、快捷键\n对话里的生成图片和手帐里的图片，点开后现在是完整的看图模式：滚轮指哪放大哪、拖拽平移、双击放大/复位、← → 翻看相邻图片（自动预载不白屏）、Esc 关闭、+ − 0 缩放复位。\n\n### 🎴 角色卡：自定义 Agent 一键分享\nAgent 角色页的自定义 Agent 现在可以「导出」成一张角色卡文件（JSON），换电脑或分享给朋友后一键导入。导入前会先给你看卡里的内容（叫什么、会什么、用什么模型），确认才落地；重名自动改名绝不覆盖；卡里指定的模型本机没有时自动改走智能路由。\n\n## 优化与修复\n\n- **Kimi K3 全系接入**：新增 Kimi K3（标准 API，1M 上下文旗舰推理）、K3 Coding 端、K2.7 Code 高速版（实测快 5 倍上下）三个新模型；全部按官方文档核对并经真机实测（对话 / 工具调用 / 看图）后收录。现有 Kimi 模型不受影响，老配置继续可用。注意：Coding 端 K3 与高速版需要相应 Kimi 订阅档位。\n- **组件更新进度更清爽**：安装/更新语音、文字识别组件时，进度区不再闪过 \"False\" 之类的底层日志字样（那是组件内部日志，不是出错）。\n\n## 升级方式\n\n- **2.1.1 及以上版本**：应用内提示更新后，点「重启完成更新」即可（约 20MB 轻量更新，几秒完成）。\n- **2.1.0 及更早版本**：会自动下载完整安装包；如安装时闪退，把安装包复制到桌面再双击运行即可，装完这次以后就都是轻量更新了。\n- 数据（会话、记忆、API Key）不受升级影响。",
+    "version": "2.1.7",
+    "notes": "# Miaoclaw 2.1.7\n\n这一版让模型目录「活」了起来,便利贴也能用嘴贴了:\n\n## 新功能\n\n### 🔄 模型目录自动更新:供应商上新,不用等新版本\n模型厂商上新模型后,Miaoclaw 会随日常的更新检查自动收到核验过的模型目录(经官方文档核对+真机实测后才下发),新模型直接出现在你的模型列表里——应用本体不用升级。本版随带首份目录:**Kimi K3 全系**(K3 旗舰 1M 上下文/K3 Coding 端/K2.7 Code 高速版),还在用旧版本的朋友也能直接用上。\n\n### 🩺 模型目录体检:下线预警,不再突然报错\n设置 → 模型 API → 「只查模型目录(几秒)」:一键对照官方最新列表——你配着的模型如果官方已下线会红字预警(避免哪天突然报错才发现),官方新上的模型也会列出来。「一键自检全部模型」末尾会顺带跑一遍。\n\n### 📝 猫猫便利贴,现在能用嘴贴了\n在聊天里(打字或按住🎤说话)直接说「在XX文件夹贴张便利贴:把里面的录音整理成会议纪要」,喵喵就会帮你贴好;「改一下那张便利贴」「现在就照便利贴办」也都听得懂。不用打开工作台。\n\n## 优化与修复\n\n- **看图窗口滚轮不再带滚背景**:对话/手帐里放大看图时,滚轮只缩放图片,底下的页面不会跟着滚动。\n- **便利贴编辑保存修复**:工作台里编辑便利贴点保存曾会失败,已修复。\n- **安装器修复**:静默安装指定新位置时不再被旧安装位置\"劫持\"(迁移安装场景)。\n- 清理了一批无效代码,应用更轻快。\n\n## 升级方式\n\n- **2.1.1 及以上版本**:应用内提示更新后,点「重启完成更新」即可(约 20MB 轻量更新,几秒完成)。\n- **2.1.0 及更早版本**:会自动下载完整安装包;如安装时闪退,把安装包复制到桌面再双击运行即可。\n- 数据(会话、记忆、API Key)不受升级影响。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.6/Miaoclaw-Setup-2.1.6.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.6/Miaoclaw-Setup-2.1.6.exe",
-      "sha256": "33c21ae426866f1d6574e726f2a2094ab022264d6afa7507538fd7a33d88b970",
-      "sizeBytes": 261662227
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.7/Miaoclaw-Setup-2.1.7.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.7/Miaoclaw-Setup-2.1.7.exe",
+      "sha256": "993ed80fa90b695a6a189e82e400cc7f4d64a019dc77d67613c9ee209567dcc5",
+      "sizeBytes": 261649785
     },
     "hot": {
       "baseline": "2.1.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.6/miaoclaw-hot-2.1.6.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.6/miaoclaw-hot-2.1.6.zip",
-      "sha256": "a3181951963c6805c72ec07c47b10b2a7e7b91a6c4d7da09204e934dca94514c",
-      "sizeBytes": 22249607
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.7/miaoclaw-hot-2.1.7.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.7/miaoclaw-hot-2.1.7.zip",
+      "sha256": "ebe5da6803da7c53f231214d8c8a363b12e53ae69008db910756b960b73f9be0",
+      "sizeBytes": 22256977
     }
   }
 }
