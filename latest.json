@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-28T03:45:21.261Z",
+  "publishedAt": "2026-07-28T07:03:15.108Z",
   "resources": [
     {
       "id": "ocr",
@@ -27,21 +27,21 @@
     "sha256": "5af24ee24be72114ace0bbbf0906bf7183194aacd98eca000871ec613233af91"
   },
   "latest": {
-    "version": "2.1.9",
-    "notes": "# Miaoclaw 2.1.9\n\n紧急修复版:**把窗口拉小时输入框会整个消失**,没法打字。2.1.8 用户建议尽快更新。\n\n## 🐛 修复:小窗口下看不到输入框\n\n把主窗口拉窄到一定程度(大约 720 像素以内)时,界面只剩顶部一条导航栏,**下面的聊天区和输入框全都不见了**,等于没法用。\n\n原因是侧边栏在窄屏下没有正确让出高度,把聊天区挤到了窗口外面。现在从 1280×800 一直到 360×420 的各种窗口尺寸都已逐一验证:输入框和发送按钮都在窗口里、可以正常打字发送。\n\n如果你习惯把 Miaoclaw 缩成小窗口贴在屏幕角落用,这一版必须更新。\n\n> 顺带一提:如果你想要的是\"边写东西边跟猫聊\",其实还有更合适的 **迷你浮窗**——按 `Ctrl+Alt+M`,或点侧边栏的「🐈迷你浮窗」,会开一个半透明置顶的小窗,专为这个场景做的。\n\n## 升级方式\n\n- **2.1.1 及以上版本**:应用内提示更新后,点「重启完成更新」即可(轻量更新,几秒完成)。\n- **2.1.0 及更早版本**:会自动下载完整安装包;如安装时闪退,把安装包复制到桌面再双击运行即可。\n- 数据(会话、记忆、手帐、API Key)不受升级影响。\n\n---\n\n（2.1.8 的更新内容:花费透明与预算上限、断电不再丢对话、长会话摘要不再丢失、装 Skill 更安全、后台更稳。详见 2.1.8 发布说明。）",
+    "version": "2.1.10",
+    "notes": "# Miaoclaw 2.1.10\n\n**给你的硬盘减负。** 有用户发现 Miaoclaw 悄悄占了几十 GB —— 查下来确实是我们的问题，这一版根治。\n\n## 💾 升级备份不再臃肿\n\n每次升级前 Miaoclaw 都会自动备份一份，万一新版本有问题可以回退。但这个备份**把不该备份的东西也拷进去了**：\n\n- 你产出的文件（图片、文档、上传的附件）—— 升级根本不会动它们，备份它们毫无意义\n- 浏览器缓存 —— 纯粹的临时文件，删了会自动重建\n\n结果就是每份备份 2GB，攒了几十份就是几十 GB，而里面**真正需要保护的内容其实只有 2MB 左右**（配置、对话、记忆、个性化设置）。\n\n这一版起：新的备份只保护真正需要保护的，体积从 GB 级降到 KB 级。**回滚能力一点没减** —— 因为被剔除的那些东西，升级本来就不会碰。\n\n**升级后旧的臃肿备份会自动瘦身**，你什么都不用做，空间自己就回来了。实测一台用了一段时间的机器：**74.5 GB → 4.46 GB**。\n\n## 📊 占用了多少，现在你自己看得见\n\n**设置 → 用量记录** 新增「占用空间」卡片，分两栏摊开讲清楚：\n\n- **你的东西（永远不动）**：对话记录、记忆、喵喵手帐、知识库、个性化设置、扩展、产出的文件\n- **备份、缓存与离线组件**：可以清理的部分，旁边就是「清理可回收空间」按钮\n\n清理**只动第二栏**，你的对话、记忆、手帐、文件一个字节都不会碰。\n\n## 🧹 缓存不再无限长大\n\n浏览器缓存类的目录现在有体积上限，超了自动清（会重新生成，你不会有任何感觉）。以前它们只增不减 —— 实测其中一个长到了 432MB。\n\n## 升级方式\n\n- **2.1.1 及以上版本**：应用内提示更新后，点「重启完成更新」即可（轻量更新，几秒完成）。\n- **2.1.0 及更早版本**：会自动下载完整安装包；如安装时闪退，把安装包复制到桌面再双击运行即可。\n- 数据（会话、记忆、手帐、API Key）不受升级影响。\n\n---\n\n（2.1.9 的更新内容：修复把窗口拉小时输入框会整个消失的问题，从大屏到 360×420 各种尺寸都已逐一验证。）",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.9/Miaoclaw-Setup-2.1.9.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.9/Miaoclaw-Setup-2.1.9.exe",
-      "sha256": "561688ad49d5ccfc7ac80dfc5575336ba9b297640037e8f400325964f66224e7",
-      "sizeBytes": 261658527
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.10/Miaoclaw-Setup-2.1.10.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.10/Miaoclaw-Setup-2.1.10.exe",
+      "sha256": "6a6133844c820715100c4239035214ae251fbc1b8e393517f4a0993a4972172e",
+      "sizeBytes": 261682027
     },
     "hot": {
       "baseline": "2.1.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.9/miaoclaw-hot-2.1.9.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.9/miaoclaw-hot-2.1.9.zip",
-      "sha256": "c6db969bbbad901f978124aa70ff9f733529c0373d8abd370aa46fbf7114c28a",
-      "sizeBytes": 22284610
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.10/miaoclaw-hot-2.1.10.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.10/miaoclaw-hot-2.1.10.zip",
+      "sha256": "8908e3156e7e5afe864c5a37a3b92ca47bf7ecc8d880120f5e2d7468c9437aed",
+      "sizeBytes": 22293701
     }
   }
 }
