@@ -2,7 +2,7 @@
 
 > 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
 
-**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v2.1.9**
+**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v2.1.10**
 
 ---
 
@@ -26,17 +26,18 @@ Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付�
 - 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
 - **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
 
-### 2.1.9 更新亮点
+### 2.1.10 更新亮点
 
-- **## 升级方式**：**2.1.1 及以上版本**:应用内提示更新后,点「重启完成更新」即可(轻量更新,几秒完成)
+- **## 💾 升级备份不再臃肿**：你产出的文件（图片、文档、上传的附件）—— 升级根本不会动它们，备份它们毫无意义
+- **## 升级方式**：**2.1.1 及以上版本**：应用内提示更新后，点「重启完成更新」即可（轻量更新，几秒完成）
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v2.1.9)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v2.1.10)。
 
 ---
 
 ## English
 
-**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v2.1.9**.
+**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v2.1.10**.
 
 - **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
 - **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
