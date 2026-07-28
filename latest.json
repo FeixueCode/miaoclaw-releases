@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-20T07:49:24.623Z",
+  "publishedAt": "2026-07-28T03:04:38.094Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,27 +21,27 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-07-20",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-20.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-20.json",
+    "version": "2026-07-28",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-28.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-28.json",
     "sha256": "5af24ee24be72114ace0bbbf0906bf7183194aacd98eca000871ec613233af91"
   },
   "latest": {
-    "version": "2.1.7",
-    "notes": "# Miaoclaw 2.1.7\n\n这一版让模型目录「活」了起来,便利贴也能用嘴贴了:\n\n## 新功能\n\n### 🔄 模型目录自动更新:供应商上新,不用等新版本\n模型厂商上新模型后,Miaoclaw 会随日常的更新检查自动收到核验过的模型目录(经官方文档核对+真机实测后才下发),新模型直接出现在你的模型列表里——应用本体不用升级。本版随带首份目录:**Kimi K3 全系**(K3 旗舰 1M 上下文/K3 Coding 端/K2.7 Code 高速版),还在用旧版本的朋友也能直接用上。\n\n### 🩺 模型目录体检:下线预警,不再突然报错\n设置 → 模型 API → 「只查模型目录(几秒)」:一键对照官方最新列表——你配着的模型如果官方已下线会红字预警(避免哪天突然报错才发现),官方新上的模型也会列出来。「一键自检全部模型」末尾会顺带跑一遍。\n\n### 📝 猫猫便利贴,现在能用嘴贴了\n在聊天里(打字或按住🎤说话)直接说「在XX文件夹贴张便利贴:把里面的录音整理成会议纪要」,喵喵就会帮你贴好;「改一下那张便利贴」「现在就照便利贴办」也都听得懂。不用打开工作台。\n\n## 优化与修复\n\n- **看图窗口滚轮不再带滚背景**:对话/手帐里放大看图时,滚轮只缩放图片,底下的页面不会跟着滚动。\n- **便利贴编辑保存修复**:工作台里编辑便利贴点保存曾会失败,已修复。\n- **安装器修复**:静默安装指定新位置时不再被旧安装位置\"劫持\"(迁移安装场景)。\n- 清理了一批无效代码,应用更轻快。\n\n## 升级方式\n\n- **2.1.1 及以上版本**:应用内提示更新后,点「重启完成更新」即可(约 20MB 轻量更新,几秒完成)。\n- **2.1.0 及更早版本**:会自动下载完整安装包;如安装时闪退,把安装包复制到桌面再双击运行即可。\n- 数据(会话、记忆、API Key)不受升级影响。",
+    "version": "2.1.8",
+    "notes": "# Miaoclaw 2.1.8\n\n2.1 系列的收官版。这一版**没有新功能**,全部力气花在两件事上:让它更稳,让你对花销心里有数。\n\n## 💰 花了多少钱,一眼看得见\n\n以前用量记录只给 token 数字,大部分人看不出那意味着几毛钱。现在:\n\n- **设置 → 用量记录** 把【花费】放到最前面,直接按人民币算给你看,可以按天、按模型看明细。\n- 单价用的是各家**官方公开价目**。个别没有公开单价的模型显示「—」,**不瞎猜一个数糊弄你**;包月订阅制的端点也会如实标注,不会硬算成按量计费。\n- **花费上限(新)**:可以设每天/每月的钱数上限。到 80% 提醒你,超了就先把定时任务、猫猫便利贴这类**自动跑的活儿**停下来 —— **你手动发的消息永远不会被拦住**。默认关闭,想开去用量记录页。\n\n第一次使用的引导里也补上了这些:钱付给谁(直接付给模型厂商,Miaoclaw 不经手不抽成)、日常大概多少(几分到几毛)、在哪设上限。\n\n## 🛡️ 对话和文件更不容易丢\n\n- **断电后不再吞掉最后一轮对话**:强制关机/断电如果正好写到一半,下一次的对话记录会被粘在坏掉的半行后面,导致那一轮**整个消失**。已修复。\n- **长会话不再\"聊着聊着忘了前面\"**:长对话会自动整理成摘要供后续参考,但这份摘要偶尔会被同时进行的对话记录覆盖掉,表现为聊久了它像失忆。已修复。\n- **回滚更安全**:恢复到旧版本前会先给当前数据留一份副本,不再是先删后拷。\n- 对话、手帐现在也进入升级前的自动保护清单。\n\n## 🔒 装 Skill 更安全\n\n- 压缩包解压增加多道边界检查:防止恶意压缩包把文件写到安装目录之外、防止用一个小文件撑爆内存、拒绝符号链接和加密条目。\n- **Skill 更新失败会自动还原**成更新前的版本,不再留下一个装了一半、之后既不能开也不能删的残缺 Skill。\n\n## ⚙️ 后台更稳\n\n- 「停止」更干脆:停止任务时残留的子进程会被彻底清理,不再有幽灵进程占着资源。\n- 磁盘占用有了上限:更新包、快照、上传文件、生成的图片会按份数和时间自动清理,不再无限增长。\n- 长任务被停止后如果下游卡住,不再让整个队列永久挂死。\n- 超长消息不再拖慢界面。\n\n## 🐛 其它修复\n\n- **窄窗口设置入口消失**:把窗口拉窄时侧边栏的设置按钮会不见,已修。\n- 网络请求增加了同源校验,减少被本机其它网页页面误触发的可能。\n- 清理了约 430 行早已无人调用的旧代码,应用更轻快。\n\n## 升级方式\n\n- **2.1.1 及以上版本**:应用内提示更新后,点「重启完成更新」即可(轻量更新,几秒完成)。\n- **2.1.0 及更早版本**:会自动下载完整安装包;如安装时闪退,把安装包复制到桌面再双击运行即可。\n- 数据(会话、记忆、手帐、API Key)不受升级影响。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.7/Miaoclaw-Setup-2.1.7.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.7/Miaoclaw-Setup-2.1.7.exe",
-      "sha256": "993ed80fa90b695a6a189e82e400cc7f4d64a019dc77d67613c9ee209567dcc5",
-      "sizeBytes": 261649785
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.8/Miaoclaw-Setup-2.1.8.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.8/Miaoclaw-Setup-2.1.8.exe",
+      "sha256": "9b1e5d3b2436b19d84b356c8906cdfb8a52a48874312c4e1749bad086f3cd8f1",
+      "sizeBytes": 261657172
     },
     "hot": {
       "baseline": "2.1.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.7/miaoclaw-hot-2.1.7.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.7/miaoclaw-hot-2.1.7.zip",
-      "sha256": "ebe5da6803da7c53f231214d8c8a363b12e53ae69008db910756b960b73f9be0",
-      "sizeBytes": 22256977
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.8/miaoclaw-hot-2.1.8.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.8/miaoclaw-hot-2.1.8.zip",
+      "sha256": "fab7b346aa44e989ef474349b95a7c7c2339ee2cc0c18d39a3be4646c2168734",
+      "sizeBytes": 22283819
     }
   }
 }
