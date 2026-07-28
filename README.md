@@ -2,7 +2,7 @@
 
 > 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
 
-**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v2.1.7**
+**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v2.1.8**
 
 ---
 
@@ -26,18 +26,22 @@ Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付�
 - 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
 - **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
 
-### 2.1.7 更新亮点
+### 2.1.8 更新亮点
 
-- **## 优化与修复**：**看图窗口滚轮不再带滚背景**:对话/手帐里放大看图时,滚轮只缩放图片,底下的页面不会跟着滚动
-- **## 升级方式**：**2.1.1 及以上版本**:应用内提示更新后,点「重启完成更新」即可(约 20MB 轻量更新,几秒完成)
+- **## 💰 花了多少钱,一眼看得见**：**设置 → 用量记录** 把【花费】放到最前面,直接按人民币算给你看,可以按天、按模型看明细
+- **## 🛡️ 对话和文件更不容易丢**：**断电后不再吞掉最后一轮对话**:强制关机/断电如果正好写到一半,下一次的对话记录会被粘在坏掉的半行后面,导致那一轮*…
+- **## 🔒 装 Skill 更安全**：压缩包解压增加多道边界检查:防止恶意压缩包把文件写到安装目录之外、防止用一个小文件撑爆内存、拒绝符号链接和加密条目
+- **## ⚙️ 后台更稳**：「停止」更干脆:停止任务时残留的子进程会被彻底清理,不再有幽灵进程占着资源
+- **## 🐛 其它修复**：**窄窗口设置入口消失**:把窗口拉窄时侧边栏的设置按钮会不见,已修
+- **## 升级方式**：**2.1.1 及以上版本**:应用内提示更新后,点「重启完成更新」即可(轻量更新,几秒完成)
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v2.1.7)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v2.1.8)。
 
 ---
 
 ## English
 
-**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v2.1.7**.
+**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v2.1.8**.
 
 - **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
 - **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
