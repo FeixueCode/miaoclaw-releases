@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-28T07:03:15.108Z",
+  "publishedAt": "2026-07-29T10:20:06.671Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,27 +21,27 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-07-28",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-28.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-28.json",
+    "version": "2026-07-29",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-29.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-29.json",
     "sha256": "5af24ee24be72114ace0bbbf0906bf7183194aacd98eca000871ec613233af91"
   },
   "latest": {
-    "version": "2.1.10",
-    "notes": "# Miaoclaw 2.1.10\n\n**给你的硬盘减负。** 有用户发现 Miaoclaw 悄悄占了几十 GB —— 查下来确实是我们的问题，这一版根治。\n\n## 💾 升级备份不再臃肿\n\n每次升级前 Miaoclaw 都会自动备份一份，万一新版本有问题可以回退。但这个备份**把不该备份的东西也拷进去了**：\n\n- 你产出的文件（图片、文档、上传的附件）—— 升级根本不会动它们，备份它们毫无意义\n- 浏览器缓存 —— 纯粹的临时文件，删了会自动重建\n\n结果就是每份备份 2GB，攒了几十份就是几十 GB，而里面**真正需要保护的内容其实只有 2MB 左右**（配置、对话、记忆、个性化设置）。\n\n这一版起：新的备份只保护真正需要保护的，体积从 GB 级降到 KB 级。**回滚能力一点没减** —— 因为被剔除的那些东西，升级本来就不会碰。\n\n**升级后旧的臃肿备份会自动瘦身**，你什么都不用做，空间自己就回来了。实测一台用了一段时间的机器：**74.5 GB → 4.46 GB**。\n\n## 📊 占用了多少，现在你自己看得见\n\n**设置 → 用量记录** 新增「占用空间」卡片，分两栏摊开讲清楚：\n\n- **你的东西（永远不动）**：对话记录、记忆、喵喵手帐、知识库、个性化设置、扩展、产出的文件\n- **备份、缓存与离线组件**：可以清理的部分，旁边就是「清理可回收空间」按钮\n\n清理**只动第二栏**，你的对话、记忆、手帐、文件一个字节都不会碰。\n\n## 🧹 缓存不再无限长大\n\n浏览器缓存类的目录现在有体积上限，超了自动清（会重新生成，你不会有任何感觉）。以前它们只增不减 —— 实测其中一个长到了 432MB。\n\n## 升级方式\n\n- **2.1.1 及以上版本**：应用内提示更新后，点「重启完成更新」即可（轻量更新，几秒完成）。\n- **2.1.0 及更早版本**：会自动下载完整安装包；如安装时闪退，把安装包复制到桌面再双击运行即可。\n- 数据（会话、记忆、手帐、API Key）不受升级影响。\n\n---\n\n（2.1.9 的更新内容：修复把窗口拉小时输入框会整个消失的问题，从大屏到 360×420 各种尺寸都已逐一验证。）",
+    "version": "3.0.1",
+    "notes": "# Miaoclaw 3.0.1\n\n**手机来了。** 从这一版起，你可以在手机上用喵喵 —— 在外面问一句、看看电脑上的任务跑到哪了、随手记一笔手帐。不需要和电脑在同一个网络。\n\n## 📱 手机连接（本版核心）\n\n- **扫码即用**：设置 → 手机连接 → 打开开关 → 添加一台手机 → 用手机扫二维码，就这四步。手机上打开的是一个网页（app.miao-claw.com），可以「添加到主屏幕」当 App 用。\n- **在任何网络下都能用**：手机和电脑之间经官方中转服务对话，出门在外照样连得上。电脑需要开着，喵喵才回应得了。\n- **内容全程加密，中转服务器看不到**：配对时手机和电脑当面交换一把钥匙（就是扫的那个码），之后传输的一切都用这把钥匙加密。中转服务器只知道「把这包转给谁」，看不到里面是什么 —— 那把钥匙从不经过网络。\n- **手机能做的事比电脑上少一些，这是有意的**：对话、看任务进度、记手帐可以；改模型配置、装东西、执行命令只能在电脑上做。添加手机时可以选权限档位。\n- **手机丢了不慌**：在电脑上「设置 → 手机连接」把它移除，立刻失效。\n\n## 🔐 顺带把安全地基整个翻新了\n\n为了让手机安全地连进来，这一版给整个后端加上了完整的权限体系：每个接口逐条声明远程能不能碰、什么档位能碰，默认一律拒绝。远程设备哪怕拿到链接，能做的也只有你授权的那些事。这套体系对只在电脑上用的你完全透明 —— 一切照旧。\n\n## 🧰 其它修复\n\n- 界面上的连接状态现在只反映「真正通着的那条路」：连上了才说能用，没连上老实说正在连。\n- 帮助页补齐了近几个版本的新功能（手机连接、猫猫便利贴、工作台、记忆、Skill）。\n- 手机端图片显示、消息状态等一批打磨。\n\n升级方式照旧：应用内提示一键更新，数据不受影响。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.10/Miaoclaw-Setup-2.1.10.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.10/Miaoclaw-Setup-2.1.10.exe",
-      "sha256": "6a6133844c820715100c4239035214ae251fbc1b8e393517f4a0993a4972172e",
-      "sizeBytes": 261682027
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.1/Miaoclaw-Setup-3.0.1.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.1/Miaoclaw-Setup-3.0.1.exe",
+      "sha256": "677d07239dad6e20750f584114cd2637b0149b80a4f1d636a5e3280d64af6610",
+      "sizeBytes": 262578164
     },
     "hot": {
-      "baseline": "2.1.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v2.1.10/miaoclaw-hot-2.1.10.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v2.1.10/miaoclaw-hot-2.1.10.zip",
-      "sha256": "8908e3156e7e5afe864c5a37a3b92ca47bf7ecc8d880120f5e2d7468c9437aed",
-      "sizeBytes": 22293701
+      "baseline": "3.0.0",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.1/miaoclaw-hot-3.0.1.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.1/miaoclaw-hot-3.0.1.zip",
+      "sha256": "cbd90f0c62b5bdfd7ac804cf74bb56de4d9908d8c9fd2fdfa7aa3ff1fdcabda3",
+      "sizeBytes": 23110695
     }
   }
 }
