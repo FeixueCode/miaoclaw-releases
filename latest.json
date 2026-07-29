@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-29T10:20:06.671Z",
+  "publishedAt": "2026-07-29T11:01:54.423Z",
   "resources": [
     {
       "id": "ocr",
@@ -33,15 +33,15 @@
     "full": {
       "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.1/Miaoclaw-Setup-3.0.1.exe",
       "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.1/Miaoclaw-Setup-3.0.1.exe",
-      "sha256": "677d07239dad6e20750f584114cd2637b0149b80a4f1d636a5e3280d64af6610",
-      "sizeBytes": 262578164
+      "sha256": "15ab57ddb732a194e7f53de27e54d4e63b5f6ab86f458fd7e68f7566e234abd0",
+      "sizeBytes": 262563751
     },
     "hot": {
       "baseline": "3.0.0",
       "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.1/miaoclaw-hot-3.0.1.zip",
       "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.1/miaoclaw-hot-3.0.1.zip",
-      "sha256": "cbd90f0c62b5bdfd7ac804cf74bb56de4d9908d8c9fd2fdfa7aa3ff1fdcabda3",
-      "sizeBytes": 23110695
+      "sha256": "5f5adb834a8e6af8579a8e51ee9f3b08be5b802ae72cd7a492d5412795ca7368",
+      "sizeBytes": 23111852
     }
   }
 }
