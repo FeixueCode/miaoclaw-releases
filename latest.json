@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-29T11:01:54.423Z",
+  "publishedAt": "2026-07-30T06:29:14.569Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,27 +21,27 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-07-29",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-29.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-29.json",
+    "version": "2026-07-30",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-30.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-30.json",
     "sha256": "5af24ee24be72114ace0bbbf0906bf7183194aacd98eca000871ec613233af91"
   },
   "latest": {
-    "version": "3.0.1",
-    "notes": "# Miaoclaw 3.0.1\n\n**手机来了。** 从这一版起，你可以在手机上用喵喵 —— 在外面问一句、看看电脑上的任务跑到哪了、随手记一笔手帐。不需要和电脑在同一个网络。\n\n## 📱 手机连接（本版核心）\n\n- **扫码即用**：设置 → 手机连接 → 打开开关 → 添加一台手机 → 用手机扫二维码，就这四步。手机上打开的是一个网页（app.miao-claw.com），可以「添加到主屏幕」当 App 用。\n- **在任何网络下都能用**：手机和电脑之间经官方中转服务对话，出门在外照样连得上。电脑需要开着，喵喵才回应得了。\n- **内容全程加密，中转服务器看不到**：配对时手机和电脑当面交换一把钥匙（就是扫的那个码），之后传输的一切都用这把钥匙加密。中转服务器只知道「把这包转给谁」，看不到里面是什么 —— 那把钥匙从不经过网络。\n- **手机能做的事比电脑上少一些，这是有意的**：对话、看任务进度、记手帐可以；改模型配置、装东西、执行命令只能在电脑上做。添加手机时可以选权限档位。\n- **手机丢了不慌**：在电脑上「设置 → 手机连接」把它移除，立刻失效。\n\n## 🔐 顺带把安全地基整个翻新了\n\n为了让手机安全地连进来，这一版给整个后端加上了完整的权限体系：每个接口逐条声明远程能不能碰、什么档位能碰，默认一律拒绝。远程设备哪怕拿到链接，能做的也只有你授权的那些事。这套体系对只在电脑上用的你完全透明 —— 一切照旧。\n\n## 🧰 其它修复\n\n- 界面上的连接状态现在只反映「真正通着的那条路」：连上了才说能用，没连上老实说正在连。\n- 帮助页补齐了近几个版本的新功能（手机连接、猫猫便利贴、工作台、记忆、Skill）。\n- 手机端图片显示、消息状态等一批打磨。\n\n升级方式照旧：应用内提示一键更新，数据不受影响。",
+    "version": "3.0.2",
+    "notes": "# Miaoclaw 3.0.2\n\n3.0.1 把手机端做出来之后，这一版专心做两件事：**把用起来别扭的地方磨顺**，以及**让界面说人话**。\n\n## 界面做了一次减法\n\n喵喵的按钮和选项一直在变多，这一版反过来往回收了一遍。目标很简单：**每一屏都让人一眼看出该点哪个**。\n\n- **模型 API 页**：每个服务商那一行原来并排四个按钮，「删除」就挨着「测试连接」，手一抖就删掉了；现在只留「展开」和一个「⋯」，删除收在菜单里单独隔开。模型的看图能力也不再显示「实测/录入/文档/推测」四种标注，就三种说法：**会看图 / 没测过 / 不会看图**，测出来的详情移到鼠标悬停上。\n- **对话界面**：喵喵干活时那一条上，原来「引导当前」「停止改向」「停止」三个按钮共用一个输入框，谁也看不出区别。现在写一句话进去就是**补充给它**（不打断），想让它换个方向做，按钮自己会变成**停下改做这个**。\n- **上下文那个百分比**不再一直挂着了 —— 只有这段对话真的快装不下时才出现，并且写成一句人话「这段对话快满了 · 整理一下」。\n- **设置页**十四个分区分成了「先配好 / 调教它 / 其他」三组，顺序就是上手顺序。\n- **桌面宠物**原来要同时调「灵敏度」和「每小时最多说几次」才知道会得到什么效果，现在合成一个三选一：**安静 / 适中 / 话痨**。\n- **本领（Skill）页**第一次进去不再是几张只有数字的卡片，直接看得到它到底会些什么。\n- 侧边栏底部、定时任务、搜索、语音等页面也各收了一轮。功能一个没删，只是不常用的收得更靠里。\n\n## 界面开始说人话\n\n- **出错时不再甩英文原文**。以前弹出来的是「Failed to fetch」这种，现在会告诉你出了什么事、可以做什么：「连不上你的电脑 —— 确认电脑开着、Miaoclaw 正在运行」。余额不足那种还会明说**不是 Miaoclaw 的问题**，免得你以为是软件坏了。\n- **权限三档**各自补上了选了会怎样，不用再猜「工作访问」到底能不能帮你改文件。\n- **语音识别**两个选项改叫「在线识别（更准）」和「本机识别（免费）」；安装时的进度也不再蹦出一串看不懂的英文零件名。\n\n## 修好了什么\n\n- **画图时报「连接失败」画不出来**：某些绘图模型在国内网络下连不上，现在能正常出图了。\n- **手机上打字时被输入法挡住输入框**：九宫格、全键盘、手写各种输入法都已正常。\n- **手机上打不开喵喵做好的网页文件**：点开只看到配对页面，现在能正常预览了。\n- **手机第一次打开时，历史对话要等很久才出来**（新对话都显示了历史还是空的）：现在进去就能看到。\n- **长文章出字很慢、越写越卡**：现在长回复也能顺畅刷出来。\n- **模型自检有时一直卡在「正在测试中」**，失败了也不说为什么：现在会正常结束并告诉你哪个模型、什么原因没通过。\n- **换 API Key 之后有时没生效**：同时改多处设置时，有的改动会被覆盖掉，现在不会了。\n- 手机上那些本来就做不了的设置项，不再显示出来给你点了才发现不行。\n\n## 你需要做什么\n\n- **要不要重启**：需要。请**完全退出 Miaoclaw 再打开** —— 点右上角关闭只是缩到托盘，不算退出，要从托盘图标上退出。\n- **手机上要做什么**：把手机上的喵喵页面**下拉刷新一次**就行，不用重新扫码，也不用重新配对。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。\n- **还不能做什么**：手机上仍然不能改模型配置、装东西和执行命令，这些只能在电脑上做；微信公众号、知乎这类需要登录的网页，喵喵仍然读不到正文。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.1/Miaoclaw-Setup-3.0.1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.1/Miaoclaw-Setup-3.0.1.exe",
-      "sha256": "15ab57ddb732a194e7f53de27e54d4e63b5f6ab86f458fd7e68f7566e234abd0",
-      "sizeBytes": 262563751
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.2/Miaoclaw-Setup-3.0.2.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.2/Miaoclaw-Setup-3.0.2.exe",
+      "sha256": "81c324655eabeb86fbf9a1ab3c480eab68d84a3666f0952b17294eeb5d7c1df5",
+      "sizeBytes": 262559797
     },
     "hot": {
-      "baseline": "3.0.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.1/miaoclaw-hot-3.0.1.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.1/miaoclaw-hot-3.0.1.zip",
-      "sha256": "5f5adb834a8e6af8579a8e51ee9f3b08be5b802ae72cd7a492d5412795ca7368",
-      "sizeBytes": 23111852
+      "baseline": "3.0.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.2/miaoclaw-hot-3.0.2.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.2/miaoclaw-hot-3.0.2.zip",
+      "sha256": "12716ec5892b47d3297db676e5d463be9d08d6cb71d95c9b6f6ee7084e0d2dde",
+      "sizeBytes": 23150764
     }
   }
 }
