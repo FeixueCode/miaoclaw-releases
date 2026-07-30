@@ -2,7 +2,7 @@
 
 > 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
 
-**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.0.1**
+**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.0.2**
 
 ---
 
@@ -26,18 +26,20 @@ Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付�
 - 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
 - **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
 
-### 3.0.1 更新亮点
+### 3.0.2 更新亮点
 
-- **## 📱 手机连接（本版核心）**：**扫码即用**：设置 → 手机连接 → 打开开关 → 添加一台手机 → 用手机扫二维码，就这四步
-- **## 🧰 其它修复**：界面上的连接状态现在只反映「真正通着的那条路」：连上了才说能用，没连上老实说正在连
+- **## 界面做了一次减法**：**模型 API 页**：每个服务商那一行原来并排四个按钮，「删除」就挨着「测试连接」，手一抖就删掉了；现在只留「展开」…
+- **## 界面开始说人话**：**出错时不再甩英文原文**
+- **## 修好了什么**：**画图时报「连接失败」画不出来**：某些绘图模型在国内网络下连不上，现在能正常出图了
+- **## 你需要做什么**：**要不要重启**：需要
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.0.1)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.0.2)。
 
 ---
 
 ## English
 
-**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.0.1**.
+**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.0.2**.
 
 - **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
 - **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
