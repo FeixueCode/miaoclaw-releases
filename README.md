@@ -2,7 +2,7 @@
 
 > 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
 
-**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.0.3**
+**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.0.4**
 
 ---
 
@@ -26,19 +26,19 @@ Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付�
 - 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
 - **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
 
-### 3.0.3 更新亮点
+### 3.0.4 更新亮点
 
-- **## 这次有什么变化**：**官网上线（miao-claw.com）**：下载、配真实截图的完整使用说明、每一版的更新日志都在上面；下载慢还有百度…
-- **## 修好了什么**：**手机上打字，输入框被输入法挡住**：部分手机浏览器上仍会出现的形态这次也覆盖了——九宫格、全键盘、手写，键盘弹出后输…
+- **## 这次有什么变化**：**手机能取回电脑上的文件了**：工作台、对话里的文件卡、预览面板都有「取回」——点一下，文件直接下载到手机上打开看
+- **## 修好了什么**：**手机工作台的「打开」「定位」点了没反应**：这些是电脑上的动作，手机上点了必然无效——现在全部换成真能用的「取回到手…
 - **## 你需要做什么**：**要不要重启**：需要
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.0.3)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.0.4)。
 
 ---
 
 ## English
 
-**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.0.3**.
+**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.0.4**.
 
 - **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
 - **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
