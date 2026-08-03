@@ -2,7 +2,7 @@
 
 > 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
 
-**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.0.5**
+**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.0.6**
 
 ---
 
@@ -26,19 +26,19 @@ Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付�
 - 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
 - **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
 
-### 3.0.5 更新亮点
+### 3.0.6 更新亮点
 
-- **## 这次有什么变化**：**手机能看的范围收紧了**：手机现在只能看喵喵产出的文件、桌面/文档/下载，以及你在电脑上交给它的文件夹——其它位置一…
-- **## 修好了什么**：**很长的对话里，旧回复会莫名转圈**：对话超过两百多条时往上翻，会看到一条早就结束的回复挂着「正在处理」
+- **## 这次有什么变化**：**步骤多的任务能一路做完了**：以前遇到写代码、批量改文件这类要几十步的活儿，喵喵做到一半会说"到步骤上限了"停下来
+- **## 修好了什么**：**任务栏图标变成黑色原子图案**：Windows 通知系统给喵喵登记了一个错误的"身份"导致的（触发点是提醒功能第一次…
 - **## 你需要做什么**：**要不要重启**：需要
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.0.5)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.0.6)。
 
 ---
 
 ## English
 
-**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.0.5**.
+**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.0.6**.
 
 - **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
 - **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
