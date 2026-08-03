@@ -1,0 +1,104 @@
+[
+  {
+    "id": "kimi",
+    "models": [
+      {
+        "id": "kimi-k3",
+        "label": "Kimi K3",
+        "use": "旗舰深度推理、长程复杂任务(费用较高)",
+        "input": ["text", "image"],
+        "capabilities": ["text", "image_input", "tools", "coding", "agent", "long_context", "deep_reasoning"],
+        "routingTags": ["reasoning", "agent"],
+        "capabilitySource": "manual-verified",
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        },
+        "reasoning": true,
+        "contextWindow": 1048576,
+        "maxTokens": 131072,
+        "defaultMaxTokens": 32768,
+        "minReasoningMaxTokens": 4096,
+        "requestDefaults": {
+          "reasoning_effort": "max"
+        },
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit"
+        }
+      }
+    ]
+  },
+  {
+    "id": "kimi-coding",
+    "models": [
+      {
+        "id": "kimi-for-coding",
+        "label": "Kimi Code（K2.7 Code 稳定版）"
+      },
+      {
+        "id": "k3",
+        "label": "Kimi K3（Coding 端）",
+        "use": "复杂工程与长程推理(需 Moderato 及以上订阅档位)",
+        "input": ["text", "image"],
+        "capabilities": ["text", "image_input", "tools", "coding", "agent", "long_context", "deep_reasoning", "non_streaming_preferred"],
+        "routingTags": ["reasoning", "agent"],
+        "capabilitySource": "manual-verified",
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 16384,
+        "minReasoningMaxTokens": 4096,
+        "requestDefaults": {
+          "reasoning_effort": "high"
+        },
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "requiresCodingAgentUserAgent": true
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": true
+        }
+      },
+      {
+        "id": "kimi-for-coding-highspeed",
+        "label": "Kimi Code 高速版（K2.7）",
+        "use": "追求响应速度的代码与工具任务(需 Allegretto 及以上档位,消耗约 3 倍)",
+        "input": ["text", "image"],
+        "capabilities": ["text", "image_input", "tools", "coding", "non_streaming_preferred"],
+        "routingTags": ["coding", "dev"],
+        "capabilitySource": "manual-verified",
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 16384,
+        "minReasoningMaxTokens": 16384,
+        "requestDefaults": {
+          "thinking": { "type": "enabled" },
+          "reasoning_effort": "medium"
+        },
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "thinkingDefault": "enabled",
+          "requiresCodingAgentUserAgent": true
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": true
+        }
+      }
+    ]
+  }
+]
