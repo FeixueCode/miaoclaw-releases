@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-07-31T07:31:32.335Z",
+  "publishedAt": "2026-08-03T01:01:52.812Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,27 +21,27 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-07-31",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-07-31.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-07-31.json",
+    "version": "2026-08-03",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-03.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-03.json",
     "sha256": "5af24ee24be72114ace0bbbf0906bf7183194aacd98eca000871ec613233af91"
   },
   "latest": {
-    "version": "3.0.5",
-    "notes": "# Miaoclaw 3.0.5\n\n这一版是一次安全与稳当性的体检收尾：把手机能看到的范围收紧到该有的样子，顺手修掉几个会让界面说错话、让磁盘白占地方的毛病。\n\n## 这次有什么变化\n\n- **手机能看的范围收紧了**：手机现在只能看喵喵产出的文件、桌面/文档/下载，以及你在电脑上交给它的文件夹——其它位置一律看不到。万一手机丢了，别人拿它也翻不到你电脑上的其它东西。\n- **手机不能改脚本类文件**：`.bat`、`.ps1`、`.py` 这类你会双击运行的文件，手机上不给改（电脑上照常）。\n- **退出连接会清干净**：在手机上「退出连接」或在电脑上移除这台设备后，手机本地缓存的对话内容会一并清除，不再留痕。\n- **改文档的中间副本会自动清理**：喵喵每改一次文档都会留一份过程副本，以前只增不减；现在会自动保留最近的、清掉旧的。你桌面上的成品文件不受任何影响。\n- **设置里的占用统计更实在**：搬家包和自动备份现在也算进「空间占用」，看到的总数不再少算。\n\n## 修好了什么\n\n- **很长的对话里，旧回复会莫名转圈**：对话超过两百多条时往上翻，会看到一条早就结束的回复挂着「正在处理」。现在不会了。\n- **喵喵的知识卡片可能整批消失**：桌宠攒的知识卡片以前遇到断电或意外可能整个文件损坏、静默清空，现在改成了更稳的写入方式。\n- **有几处内部规则没对齐**：手帐的整理间隔在手机上本该改不了却能改；反馈拉取的凭据以前会出现在网址里，现在改走请求头。\n\n## 你需要做什么\n\n- **要不要重启**：需要。这是一个轻量更新，在「设置 → 关于与更新」里点更新、重启就完成，不用重新安装。\n- **手机上要做什么**：把手机上的喵喵页面**下拉刷新一次**。如果你之前在手机上能打开电脑上某个文件夹、现在提示看不了，那是这次收紧生效了——在电脑上把那个文件夹「交给喵喵」（工作台里挂载）就又能看了。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。\n- **还不能做什么**：与上版相同——手机上不能改模型配置、装东西和执行命令；微信公众号、知乎这类需要登录的网页仍读不到正文。",
+    "version": "3.0.6",
+    "notes": "# Miaoclaw 3.0.6\n\n这一版做了三件你能直接感到的事：任务栏图标找回来了、步骤多的大活儿能一口气干完了、手机连电脑更稳了。\n\n## 这次有什么变化\n\n- **步骤多的任务能一路做完了**：以前遇到写代码、批量改文件这类要几十步的活儿，喵喵做到一半会说\"到步骤上限了\"停下来。现在只要它还在实实在在推进，就会一直做下去（干活多了它每隔一段还会自己盘点一次进度，防止跑偏）；真在空转打转还是会及时停下、如实告诉你卡在哪。\n- **手机连电脑更稳了**：手机页面挂一整天不掉线；断网、切后台、换 Wi-Fi 之后回到前台，几秒内自动接上，不再出现\"看着连着、其实早断了\"的假象。\n- **模型的推理强度真正生效了**：给 Kimi K3、DeepSeek 这类模型选的推理档位，以前有些情况会被悄悄忽略或降档，现在都会原样送达；MiniMax M2 也能输出比以前长得多的内容了。\n- **DeepSeek V4-Flash 正式版**：官方 7 月 31 日发布的正式版已自动生效，你什么都不用做——继续用 flash 就是最新模型。\n\n## 修好了什么\n\n- **任务栏图标变成黑色原子图案**：Windows 通知系统给喵喵登记了一个错误的\"身份\"导致的（触发点是提醒功能第一次发系统通知），而且这个错身份在系统里洗不掉。这版换了一个干净身份并在启动时把名字和猫图标正式登记好，任务栏恢复猫图标,以后也不会再被顶掉。副作用只有一个：Windows 的通知开关会重置一次（默认是允许，一般无感）。\n\n## 你需要做什么\n\n- **要不要重启**：需要。这是一个轻量更新，在「设置 → 关于与更新」里点更新、重启就完成，不用重新安装。\n- **手机上要做什么**：把手机上的喵喵页面下拉刷新一次，连接稳定性的改进就都生效了。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。\n- **还不能做什么**：与上版相同——手机上不能改模型配置、装东西和执行命令；微信公众号、知乎这类需要登录的网页仍读不到正文。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.5/Miaoclaw-Setup-3.0.5.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.5/Miaoclaw-Setup-3.0.5.exe",
-      "sha256": "26e0a9e10b5a2effd5a8c0130d68f19e7342695a0c504a4e2e76af452bc3ea0f",
-      "sizeBytes": 262594473
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.6/Miaoclaw-Setup-3.0.6.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.6/Miaoclaw-Setup-3.0.6.exe",
+      "sha256": "4b900bb5fd4d6d27217899439f4d0f563055f2fe61b1d4c72117579923efb0fa",
+      "sizeBytes": 262594320
     },
     "hot": {
       "baseline": "3.0.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.5/miaoclaw-hot-3.0.5.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.5/miaoclaw-hot-3.0.5.zip",
-      "sha256": "fdce1d0d6002c4f777abf9bad8b5b5b77dbd8fb33ca4ccb70bfd07f202c8f543",
-      "sizeBytes": 23179803
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.6/miaoclaw-hot-3.0.6.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.6/miaoclaw-hot-3.0.6.zip",
+      "sha256": "24f5791dde7848407b8c9c44de5a2eb109bd9a916e8978d640d443d1e7bd8577",
+      "sizeBytes": 23194556
     }
   }
 }
