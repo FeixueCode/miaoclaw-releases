@@ -37,12 +37,12 @@
       "sizeBytes": 262879119
     },
     "android": {
-      "shellVersion": "0.3.1-fe3.0.7",
+      "shellVersion": "0.3.1-fe3.0.8",
       "feVersion": "3.0.8",
-      "sha256": "a33c1d3b8fd4bf0a8236a6c8a78068d18ed1ddbd928563924f67aa0d7de6af62",
-      "sizeBytes": 6733914,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.7.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.8/Miaoclaw-android-0.3.1-fe3.0.7.apk"
+      "sha256": "8367c7d9bf053e5ab7584912c025b9a1c97c775e1c3b1385574c7b7810c4aa73",
+      "sizeBytes": 6733918,
+      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.8/Miaoclaw-android-0.3.1-fe3.0.8.apk"
     }
   }
 }
