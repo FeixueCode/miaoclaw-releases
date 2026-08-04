@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-03T01:01:52.812Z",
+  "publishedAt": "2026-08-04T05:44:09.802Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,35 +21,20 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-08-03",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-03.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-03.json",
-    "sha256": "5af24ee24be72114ace0bbbf0906bf7183194aacd98eca000871ec613233af91"
+    "version": "2026-08-04",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-04.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-04.json",
+    "sha256": "3579eacfe2b9978eb13d08cde1d7b516534c738f4e45f8f6a74f89f9364c52b6"
   },
   "latest": {
-    "version": "3.0.6",
-    "notes": "# Miaoclaw 3.0.6\n\n这一版做了三件你能直接感到的事：任务栏图标找回来了、步骤多的大活儿能一口气干完了、手机连电脑更稳了。\n\n## 这次有什么变化\n\n- **步骤多的任务能一路做完了**：以前遇到写代码、批量改文件这类要几十步的活儿，喵喵做到一半会说\"到步骤上限了\"停下来。现在只要它还在实实在在推进，就会一直做下去（干活多了它每隔一段还会自己盘点一次进度，防止跑偏）；真在空转打转还是会及时停下、如实告诉你卡在哪。\n- **手机连电脑更稳了**：手机页面挂一整天不掉线；断网、切后台、换 Wi-Fi 之后回到前台，几秒内自动接上，不再出现\"看着连着、其实早断了\"的假象。\n- **模型的推理强度真正生效了**：给 Kimi K3、DeepSeek 这类模型选的推理档位，以前有些情况会被悄悄忽略或降档，现在都会原样送达；MiniMax M2 也能输出比以前长得多的内容了。\n- **DeepSeek V4-Flash 正式版**：官方 7 月 31 日发布的正式版已自动生效，你什么都不用做——继续用 flash 就是最新模型。\n\n## 修好了什么\n\n- **任务栏图标变成黑色原子图案**：Windows 通知系统给喵喵登记了一个错误的\"身份\"导致的（触发点是提醒功能第一次发系统通知），而且这个错身份在系统里洗不掉。这版换了一个干净身份并在启动时把名字和猫图标正式登记好，任务栏恢复猫图标,以后也不会再被顶掉。副作用只有一个：Windows 的通知开关会重置一次（默认是允许，一般无感）。\n\n## 你需要做什么\n\n- **要不要重启**：需要。这是一个轻量更新，在「设置 → 关于与更新」里点更新、重启就完成，不用重新安装。\n- **手机上要做什么**：把手机上的喵喵页面下拉刷新一次，连接稳定性的改进就都生效了。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。\n- **还不能做什么**：与上版相同——手机上不能改模型配置、装东西和执行命令；微信公众号、知乎这类需要登录的网页仍读不到正文。",
+    "version": "3.0.7",
+    "notes": "# 3.0.7\n\n这一版集中解决了几个反复出现的老毛病,并把手机端体验整体打磨了一遍。\n\n## 修好了\n\n- **任务栏猫图标彻底修好**:此前重启电脑后图标会变回黑色原子图案,这次从根上治了,重启多少次都是猫。\n- **「本喵接住了」不再残留**:对话明明完成了、下方却一直挂着处理中的提示——现在完成即消失;万一网络波动错过了完成信号,十几秒内也会自动对齐真实状态。\n- **手机上能看到画的图了**:让喵喵画图、生成的图片和视频,手机上都能直接看;点「打开」不再把 App 顶走跳到空白页。\n- **手机分享图片进手帐不再重复**:此前一次分享会出现两条记录;现在只存一条,存大图也不再悄悄失败。\n- **偶发的「远程访问未开启」误报根治**:明明连着却偶尔弹红色提示的问题从根上修掉了。\n\n## 新东西\n\n- **安卓 App 正式上架官网**:在 miao-claw.com 即可下载。比浏览器多三样:系统分享面板直接把图文分享进手帐、拍照直存、任务完成有手机通知。\n- **两端都说真话的连接状态**:手机断线会显示「已断开 N 分钟」而不是假装在线;电脑端「手机连接」页能看到手机现在连没连着。\n- **手机界面更顺手**:按钮更好点、图片列表用缩略图明显变快、大图支持双指缩放、加载中有占位提示不再误显示成空会话、帮助页不再出现快捷键等电脑上才有的概念。\n- **模型目录新增 GLM-4.7**(智谱新旗舰);老版本用户也会自动收到目录更新,不用升级就能用。\n- 设置页左下角新增界面版本号,一眼知道自己在哪一版。\n\n## 你需要做什么\n\n- 电脑端:应用内提示更新后按引导操作,完成后**完全退出 Miaoclaw 再打开**(点关闭只是缩到托盘)。本版为全量安装包(任务栏图标的修复在程序本体里,小更新包带不动)。\n- 安卓 App:去官网下载新版 APK 覆盖安装即可,配对不用重新扫。用浏览器版(app.miao-claw.com)的下拉刷新一次就是新版。\n- **数据会不会丢**:不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.6/Miaoclaw-Setup-3.0.6.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.6/Miaoclaw-Setup-3.0.6.exe",
-      "sha256": "4b900bb5fd4d6d27217899439f4d0f563055f2fe61b1d4c72117579923efb0fa",
-      "sizeBytes": 262594320
-    },
-    "hot": {
-      "baseline": "3.0.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.6/miaoclaw-hot-3.0.6.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.6/miaoclaw-hot-3.0.6.zip",
-      "sha256": "24f5791dde7848407b8c9c44de5a2eb109bd9a916e8978d640d443d1e7bd8577",
-      "sizeBytes": 23194556
-    },
-    "android": {
-      "shellVersion": "0.3.0-fe3.0.6",
-      "feVersion": "3.0.6",
-      "sha256": "b55a5f20fa1ae32c85273cce37b553cc25552a0f5a8300e9eab753577744631b",
-      "sizeBytes": 6729882,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.0-fe3.0.6.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.6/Miaoclaw-android-0.3.0-fe3.0.6.apk"
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.7/Miaoclaw-Setup-3.0.7.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.7/Miaoclaw-Setup-3.0.7.exe",
+      "sha256": "3835d5afbd96c1589ebe831aa9e346b19822c17642d56dc024965b6ea903459a",
+      "sizeBytes": 262866838
     }
   }
 }
