@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-04T06:56:43.444Z",
+  "publishedAt": "2026-08-04T10:48:26.615Z",
   "resources": [
     {
       "id": "ocr",
@@ -27,22 +27,21 @@
     "sha256": "3579eacfe2b9978eb13d08cde1d7b516534c738f4e45f8f6a74f89f9364c52b6"
   },
   "latest": {
-    "version": "3.0.8",
-    "notes": "# 3.0.8\n\n紧急修复版:3.0.7 存在一个启动缺陷,装了 3.0.7 的用户请直接升到这一版。\n\n## 修好了\n\n- **3.0.7 启动后界面空白**:3.0.7 桌面端启动后窗口是空的(或弹出「启动诊断」页);手机端如果已经自动更新到 3.0.7 界面,打开也是空白。本版修复,手机端会在下次打开 App 时自动恢复,无需任何操作。3.0.7 的全部新功能与修复(任务栏猫图标、手机看图、连接状态等)在本版中完整保留。\n\n## 你需要做什么\n\n- **装了 3.0.7 的电脑**:界面打不开没法点更新——去官网 miao-claw.com 重新下载安装包,直接覆盖安装即可。\n- **还在 3.0.6 及更早版本的电脑**:照常在应用内点更新提示,或去官网下载。完成后完全退出 Miaoclaw 再打开(点关闭只是缩到托盘)。\n- **手机**:什么都不用做。App 下次打开会自动换到修复后的界面;浏览器版下拉刷新一次即可。\n- **数据会不会丢**:不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。",
+    "version": "3.0.9",
+    "notes": "# 3.0.9\n\n常规更新:上网、供应商接入、PDF 读取三处能力升级,外加两个实测问题修复。\n\n## 新增与改进\n\n- **读网页更准更快**:老式中文网站(GBK 编码)不再乱码;网页正文自动去掉导航、广告、弹窗等杂质,喵喵读到的就是文章本身;网页打开慢时会自动换更快的通道,不再干等。\n- **能接的模型服务多了 53 家**:设置 → 模型 API → 快速接入里新增「更多接入站」名录(聚合站/第三方中转/国内官方编码端点),点「用这家」自动填好地址,贴上 Key 就能拉出模型列表挑着用。连接偏慢的站点会如实标注\"能用但偏慢\",不会误报成故障。\n- **PDF 读得更干净**:多页 PDF 里每页重复的页眉页脚(文档名、页码)不再混进正文;识别不准的表格会按原样呈现并明确标注,不再硬拼成错误的表格。\n\n## 修好了\n\n- **设置 → 手机连接页一直显示「正在连接…」**:实际手机早已连上,界面却不更新。现在连接状态如实显示,如果真有问题也会写明原因和解决办法。\n- **手机上看聊天里的图片很慢**:聊天中生成的图片现在会自动配一张小尺寸预览图,列表里秒开,点开大图再加载原图(和手帐图片同样的机制)。\n\n## 你需要做什么\n\n- **电脑**:应用内点更新提示,或去官网 miao-claw.com 下载。完成后完全退出 Miaoclaw 再打开(点关闭只是缩到托盘)。\n- **手机**:什么都不用做,App 下次打开自动更新;浏览器版下拉刷新一次即可。\n- **数据会不会丢**:不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.8/Miaoclaw-Setup-3.0.8.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.8/Miaoclaw-Setup-3.0.8.exe",
-      "sha256": "7d98fbf145ad178df139ec062719bd0c89e1217f640d76edd37fc00bca791d2f",
-      "sizeBytes": 262879119
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.9/Miaoclaw-Setup-3.0.9.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.9/Miaoclaw-Setup-3.0.9.exe",
+      "sha256": "8a08d703a41f974b377baf343915dc86c76fcb8404bf169864176fbc22cc79e1",
+      "sizeBytes": 262919770
     },
-    "android": {
-      "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.0.8",
-      "sha256": "8367c7d9bf053e5ab7584912c025b9a1c97c775e1c3b1385574c7b7810c4aa73",
-      "sizeBytes": 6733918,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.8/Miaoclaw-android-0.3.1-fe3.0.8.apk"
+    "hot": {
+      "baseline": "3.0.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.9/miaoclaw-hot-3.0.9.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.9/miaoclaw-hot-3.0.9.zip",
+      "sha256": "64aed0f9708d0ae6aaa79bd9c96dcbf53475fdb7a9790964906f216a298f249e",
+      "sizeBytes": 23395413
     }
   }
 }
