@@ -2,7 +2,7 @@
 
 > 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
 
-**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.0.9**
+**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.1.0**
 
 ---
 
@@ -26,19 +26,19 @@ Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付�
 - 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
 - **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
 
-### 3.0.9 更新亮点
+### 3.1.0 更新亮点
 
-- **## 新增与改进**：**读网页更准更快**:老式中文网站(GBK 编码)不再乱码;网页正文自动去掉导航、广告、弹窗等杂质,喵喵读到的就是文章…
-- **## 修好了**：**设置 → 手机连接页一直显示「正在连接…」**:实际手机早已连上,界面却不更新
-- **## 你需要做什么**：**电脑**:应用内点更新提示,或去官网 miao-claw.com 下载
+- **## 新增与改进**：**改文档不再认错地方**:同样的一句话在文档里出现好几处时,喵喵现在按"第几段、第几个表格"精确定位下手,只改你点名的…
+- **## 修好了**：多栏 PDF 中,页码"卡"在两栏缝隙里导致识别失败的问题
+- **## 你需要做什么**：**电脑**:本次是完整安装包更新(应用内点更新提示,或去官网 miao-claw.com 下载),下载后运行安装即可
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.0.9)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.0)。
 
 ---
 
 ## English
 
-**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.0.9**.
+**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.1.0**.
 
 - **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
 - **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
