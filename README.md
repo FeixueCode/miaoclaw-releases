@@ -1,36 +1,52 @@
-# Miaoclaw · 喵喵
+<div align="center">
 
-> 🐱 本地优先的中文日用 AI 助手 · Local-first AI assistant for everyday work, in Chinese
+<img src="https://miao-claw.com/assets/img/mascot-256.png" width="96" alt="Miaoclaw 妙爪">
 
-**下载最新版本 → [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)** ｜ 最新：**v3.1.0**
+# 妙爪 Miaoclaw
+
+**装在你自己电脑上的 AI 助手 —— 不止会聊，它真的动手。**
+
+[![官网](https://img.shields.io/badge/官网-miao--claw.com-b98a3e)](https://miao-claw.com)
+[![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-blue)](https://miao-claw.com/#download)
+[![Android](https://img.shields.io/badge/Android-App%20%2F%20PWA-3ddc84)](https://app.miao-claw.com)
+[![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
+[![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
+
+最新：v3.1.0 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+
+[⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
+
+</div>
 
 ---
 
-## 中文介绍
+## 它能做什么
 
-Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付为 Windows 桌面应用。
+| 能力 | 一句话 |
+|---|---|
+| 📄 **办公文档** | 真的打开你电脑里的 Word / Excel / PPT / PDF 动手改：套模板、填公式、加批注；按「第几段/第几个表」精确定位，同一句话出现十次也不改错地方；原文件永不覆盖 |
+| 👀 **做完自己看一眼** | 生成的 PPT / 文档会渲染出页面自查版式，发现问题自己修好再交 |
+| 📑 **读 PDF 像人一样** | 两栏/三栏论文按正常阅读顺序读；页眉页码不混进正文；拼不出的表格诚实标注；扫描件本机离线 OCR |
+| 🔎 **联网调研出成品** | 说一句话，分头搜集、交叉整理，交一份带对比表格的 Word/PDF 报告；老网站不乱码、网页广告导航自动剥掉 |
+| 🧪 **模型能力靠实测** | 模型能不能看图，是真发一张图测出来的，不是抄文档；多把 Key 自动轮换，报错说人话 |
+| 📱 **手机随时接上** | 扫码配对、端到端加密（中转服务器只见密文），任何网络可用；安卓 App + 浏览器双形态 |
+| 🗒️ **日常小事** | 喵喵手帐随手记自动分类、定时任务到点自动跑、语音说话直接转文字（可离线）、桌面像素猫（可选） |
 
-- **能干活**：真实产出和修改 Word / Excel / PPT / PDF，联网调研出报告，会议录音转文字纪要，定时任务自动跑。
-- **数据在本地**：会话、记忆、API Key 都存在你自己的电脑上，程序和数据分离，升级卸载不动数据。
-- **模型自由**：不绑定任何一家模型，DeepSeek / Kimi / 智谱 / MiniMax / 通义 / 阶跃等贴一个 Key 即用。
+**为什么这些做得好？** 每一条背后的工程细节：[miao-claw.com/why](https://miao-claw.com/why)
 
-### 安装
+## 三步上手
 
-1. 从 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest) 下载 `Miaoclaw-Setup-<版本>.exe`
-2. 双击安装（默认装在当前用户目录，免管理员）
-3. 首次运行如弹「未知发布者」，点「更多信息 → 仍要运行」（安装包未做代码签名，正常现象）
-4. 打开后在 设置 → 模型 API 贴一个 API Key 即可开始用；不确定选哪家可先用 DeepSeek（便宜、中文好）
+1. **下载安装**：[官网下载](https://miao-claw.com/#download)（约 260MB，含全部运行时，双击一路下一步）；下载慢可用[百度网盘](https://pan.baidu.com/s/11cMkfjOXg8JsZOi39cy9PQ?pwd=v3bk)（提取码 v3bk）或本仓库 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases)
+2. **贴一把 Key**：去 DeepSeek / Kimi 等官网领 API Key（约 5 分钟，多数厂商注册送额度），贴进设置或直接发到对话框
+3. **直接说人话**：「把这份 Excel 里的加班记录标出来」「调研这个行业写份报告」——说就行
 
-### 更新
-
-- 应用顶部发现新版本会有提示条，设置 →「关于与更新」也能手动检查。升级**不丢数据**（会话 / 记忆 / API Key / 设置都保留）。
-- **从 2.1.1 起，小版本更新更轻**：只需下载约 10MB 的更新包、重启即完成，不再走完整安装向导；万一新版启动异常会**自动回退到当前版本**，零风险。改动到运行时的大版本仍下载完整安装包。
+> 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
 
 ### 3.1.0 更新亮点
 
-- **## 新增与改进**：**改文档不再认错地方**:同样的一句话在文档里出现好几处时,喵喵现在按"第几段、第几个表格"精确定位下手,只改你点名的…
-- **## 修好了**：多栏 PDF 中,页码"卡"在两栏缝隙里导致识别失败的问题
-- **## 你需要做什么**：**电脑**:本次是完整安装包更新(应用内点更新提示,或去官网 miao-claw.com 下载),下载后运行安装即可
+- **改文档不再认错地方**：按「第几段、第几个表格」精确定位，只改你点名的那一处
+- **做完的 PPT/文档会自己「看一眼」**：渲染出页面自查版式，发现问题自己修好再交
+- **复杂 PDF 按人的顺序读**：两栏、三栏和复合版式按正常阅读顺序读取
 
 完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.0)。
 
@@ -38,24 +54,24 @@ Miaoclaw（喵喵）是一个**本地优先**的中文日用 AI 助手，交付�
 
 ## English
 
-**Miaoclaw** is a local-first AI assistant for everyday work, delivered as a Windows desktop app with a Chinese-first UX. Latest: **v3.1.0**.
+**Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
 
-- **Gets work done**: create and edit Word / Excel / PPT / PDF, research online into reports, transcribe meeting audio, run scheduled tasks.
-- **Local data**: sessions, memory, and API keys stay on your machine; program and data are separated so upgrades never touch your data.
-- **Model freedom**: bring your own key for DeepSeek, Kimi, Zhipu, MiniMax, Qwen, StepFun, and more.
+Latest: v3.1.0 · Free · Local-first · Bring your own model key (60+ providers supported)
 
-### Install
+- **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
+- **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
+- **Web research to finished reports** — charset sniffing, boilerplate stripping, hedged fetching
+- **Model truth by live probing** — capabilities verified by real test calls, not docs; multi-key rotation
+- **Phone access, end-to-end encrypted** — QR pairing, relay sees only ciphertext, works on any network
 
-1. Download `Miaoclaw-Setup-<version>.exe` from [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest)
-2. Run the installer (installs to your user directory, no admin needed)
-3. If Windows shows "Unknown publisher", click "More info → Run anyway" (the installer isn't code-signed yet)
-4. Open it, go to Settings → Model API, paste one API key, and start
-
-### Update
-
-- A banner appears when a new version is available; you can also check manually in Settings → About & Update. Upgrades preserve your data.
-- **From 2.1.1, minor updates are lightweight**: download a ~10 MB package and just restart — no installer wizard. If a new build fails to start, it **automatically rolls back** to the current version. Versions that change the bundled runtime still ship a full installer.
+[Download for Windows](https://miao-claw.com/#download) · [English homepage](https://miao-claw.com/en/) · Note: UI is currently Chinese-first; English UI is on the roadmap.
 
 ---
 
-_Miaoclaw is under active development. Issues and feedback welcome._
+## 关于本仓库
+
+本仓库只存放**发布产物**（安装包、更新描述文件）。Miaoclaw 是安装在你自己电脑上的软件；AI 能力由你接入的模型服务商提供，费用与服务商直接结算，妙爪不经手、不抽成。
+
+- 官网：[miao-claw.com](https://miao-claw.com) · 手机版：[app.miao-claw.com](https://app.miao-claw.com)
+- 更新日志：[miao-claw.com/changelog](https://miao-claw.com/changelog)
+- 问题反馈：[miao-claw.com/feedback](https://miao-claw.com/feedback) 或本仓库 [Issues](https://github.com/FeixueCode/miaoclaw-releases/issues)
