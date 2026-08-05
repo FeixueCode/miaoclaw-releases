@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-04T10:48:26.615Z",
+  "publishedAt": "2026-08-05T03:01:05.178Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,35 +21,20 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-08-04",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-04.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-04.json",
+    "version": "2026-08-05",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-05.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-05.json",
     "sha256": "3579eacfe2b9978eb13d08cde1d7b516534c738f4e45f8f6a74f89f9364c52b6"
   },
   "latest": {
-    "version": "3.0.9",
-    "notes": "# 3.0.9\n\n常规更新:上网、供应商接入、PDF 读取三处能力升级,外加两个实测问题修复。\n\n## 新增与改进\n\n- **读网页更准更快**:老式中文网站(GBK 编码)不再乱码;网页正文自动去掉导航、广告、弹窗等杂质,喵喵读到的就是文章本身;网页打开慢时会自动换更快的通道,不再干等。\n- **能接的模型服务多了 53 家**:设置 → 模型 API → 快速接入里新增「更多接入站」名录(聚合站/第三方中转/国内官方编码端点),点「用这家」自动填好地址,贴上 Key 就能拉出模型列表挑着用。连接偏慢的站点会如实标注\"能用但偏慢\",不会误报成故障。\n- **PDF 读得更干净**:多页 PDF 里每页重复的页眉页脚(文档名、页码)不再混进正文;识别不准的表格会按原样呈现并明确标注,不再硬拼成错误的表格。\n\n## 修好了\n\n- **设置 → 手机连接页一直显示「正在连接…」**:实际手机早已连上,界面却不更新。现在连接状态如实显示,如果真有问题也会写明原因和解决办法。\n- **手机上看聊天里的图片很慢**:聊天中生成的图片现在会自动配一张小尺寸预览图,列表里秒开,点开大图再加载原图(和手帐图片同样的机制)。\n\n## 你需要做什么\n\n- **电脑**:应用内点更新提示,或去官网 miao-claw.com 下载。完成后完全退出 Miaoclaw 再打开(点关闭只是缩到托盘)。\n- **手机**:什么都不用做,App 下次打开自动更新;浏览器版下拉刷新一次即可。\n- **数据会不会丢**:不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。",
+    "version": "3.1.0",
+    "notes": "# 3.1.0\n\n办公与 PDF 的一次大升级:喵喵改文档更准了、做完会自己\"看一眼\",复杂 PDF 也能按正确顺序读。\n\n## 新增与改进\n\n- **改文档不再认错地方**:同样的一句话在文档里出现好几处时,喵喵现在按\"第几段、第几个表格\"精确定位下手,只改你点名的那一处,别的一个字不碰;原文件永远保持原样,改动存进新副本,不满意随时找回原件。\n- **做完的 PPT / 文档会自己\"看一眼\"**:生成后喵喵能把页面渲染出来自查版式(文字溢出、排版错位这类问题),发现了就自己修好再交给你。\n- **复杂 PDF 按人的顺序读**:两栏、三栏论文和\"上面通栏标题、下面分栏\"的复合版式,现在都按正常阅读顺序读取,不再左一句右一句串行;整页是大图表或藏着\"看不见的文字\"的 PDF 会明确提醒你,不会假装读全了。\n- **Excel 里的数据活儿更稳**:公式填充、按位置改单元格这类操作全面加固,和 Word/PPT 一样支持精确定位。\n\n## 修好了\n\n- 多栏 PDF 中,页码\"卡\"在两栏缝隙里导致识别失败的问题。\n- 少数扫描版 PDF 自带乱码文字层时,喵喵误以为读到了正文的问题(现在会识破并改用文字识别)。\n\n## 你需要做什么\n\n- **电脑**:本次是完整安装包更新(应用内点更新提示,或去官网 miao-claw.com 下载),下载后运行安装即可。完成后完全退出 Miaoclaw 再打开(点关闭只是缩到托盘)。\n- **手机**:什么都不用做,App 下次打开自动更新;浏览器版下拉刷新一次即可。\n- **数据会不会丢**:不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.9/Miaoclaw-Setup-3.0.9.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.9/Miaoclaw-Setup-3.0.9.exe",
-      "sha256": "8a08d703a41f974b377baf343915dc86c76fcb8404bf169864176fbc22cc79e1",
-      "sizeBytes": 262919770
-    },
-    "hot": {
-      "baseline": "3.0.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.0.9/miaoclaw-hot-3.0.9.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.9/miaoclaw-hot-3.0.9.zip",
-      "sha256": "64aed0f9708d0ae6aaa79bd9c96dcbf53475fdb7a9790964906f216a298f249e",
-      "sizeBytes": 23395413
-    },
-    "android": {
-      "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.0.9",
-      "sha256": "525246e12743be7b6e2faff5c4d7bdab5a74f953a96d6539eff0563049e1029f",
-      "sizeBytes": 6737386,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.0.9/Miaoclaw-android-0.3.1-fe3.0.8.apk"
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.0/Miaoclaw-Setup-3.1.0.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.0/Miaoclaw-Setup-3.1.0.exe",
+      "sha256": "29c2e7d1b16ab4f6deb0724784f3ff92e611506adfdf52e9dc7ee8979063fb86",
+      "sizeBytes": 271935420
     }
   }
 }
