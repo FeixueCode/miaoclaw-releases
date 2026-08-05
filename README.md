@@ -34,6 +34,16 @@
 
 **为什么这些做得好？** 每一条背后的工程细节：[miao-claw.com/why](https://miao-claw.com/why)
 
+## 长什么样
+
+| 说一句话，Word 报告做好放进文件夹 | 联网调研，成稿带对比表格 |
+|---|---|
+| ![对话中生成 Word 文档](https://miao-claw.com/assets/img/shots/chat-office.png) | ![联网调研出报告](https://miao-claw.com/assets/img/shots/research.png) |
+
+| 随手记自动分类成手帐 | 定时任务到点自动跑 |
+|---|---|
+| ![喵喵手帐](https://miao-claw.com/assets/img/shots/notes.png) | ![定时任务](https://miao-claw.com/assets/img/shots/schedules.png) |
+
 ## 三步上手
 
 1. **下载安装**：[官网下载](https://miao-claw.com/#download)（约 260MB，含全部运行时，双击一路下一步）；下载慢可用[百度网盘](https://pan.baidu.com/s/11cMkfjOXg8JsZOi39cy9PQ?pwd=v3bk)（提取码 v3bk）或本仓库 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases)
