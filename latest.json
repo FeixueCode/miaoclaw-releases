@@ -35,6 +35,14 @@
       "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.11/Miaoclaw-Setup-3.1.11.exe",
       "sha256": "35ddff81e75471a991222e296dff61683df3c94e27b9af39f53ea8f141e83195",
       "sizeBytes": 272166886
+    },
+    "android": {
+      "shellVersion": "0.3.1-fe3.0.8",
+      "feVersion": "3.1.11",
+      "sha256": "43973216c80dcf6f5d52a41ca678b20fd390f74a8ec6f8febd2c69c0c67a8510",
+      "sizeBytes": 6743626,
+      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.11/Miaoclaw-android-0.3.1-fe3.0.8.apk"
     }
   }
 }
