@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-05T03:01:05.178Z",
+  "publishedAt": "2026-08-07T21:57:04.540Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,28 +21,20 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-08-05",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-05.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-05.json",
+    "version": "2026-08-07",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-07.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-07.json",
     "sha256": "3579eacfe2b9978eb13d08cde1d7b516534c738f4e45f8f6a74f89f9364c52b6"
   },
   "latest": {
-    "version": "3.1.0",
-    "notes": "# 3.1.0\n\n办公与 PDF 的一次大升级:喵喵改文档更准了、做完会自己\"看一眼\",复杂 PDF 也能按正确顺序读。\n\n## 新增与改进\n\n- **改文档不再认错地方**:同样的一句话在文档里出现好几处时,喵喵现在按\"第几段、第几个表格\"精确定位下手,只改你点名的那一处,别的一个字不碰;原文件永远保持原样,改动存进新副本,不满意随时找回原件。\n- **做完的 PPT / 文档会自己\"看一眼\"**:生成后喵喵能把页面渲染出来自查版式(文字溢出、排版错位这类问题),发现了就自己修好再交给你。\n- **复杂 PDF 按人的顺序读**:两栏、三栏论文和\"上面通栏标题、下面分栏\"的复合版式,现在都按正常阅读顺序读取,不再左一句右一句串行;整页是大图表或藏着\"看不见的文字\"的 PDF 会明确提醒你,不会假装读全了。\n- **Excel 里的数据活儿更稳**:公式填充、按位置改单元格这类操作全面加固,和 Word/PPT 一样支持精确定位。\n\n## 修好了\n\n- 多栏 PDF 中,页码\"卡\"在两栏缝隙里导致识别失败的问题。\n- 少数扫描版 PDF 自带乱码文字层时,喵喵误以为读到了正文的问题(现在会识破并改用文字识别)。\n\n## 你需要做什么\n\n- **电脑**:本次是完整安装包更新(应用内点更新提示,或去官网 miao-claw.com 下载),下载后运行安装即可。完成后完全退出 Miaoclaw 再打开(点关闭只是缩到托盘)。\n- **手机**:什么都不用做,App 下次打开自动更新;浏览器版下拉刷新一次即可。\n- **数据会不会丢**:不会。升级不影响你的对话、手帐、记忆、模型配置和全部设置。",
+    "version": "3.1.11",
+    "notes": "# 3.1.11\n\n这次更新把 Miaoclaw 最容易“看起来做完、实际没交付”的地方重新收紧了：任务会更诚实地收尾，重启后不会重复执行，图片和文档预览也真正以画面为准。\n\n## 新增与改进\n\n- **任务收尾更可靠**：完成、中断、失败和部分完成现在分得更清楚；不会把解释、诊断截图或半成品草稿冒充最终成果。\n- **重启后接着做，不重复做**：长任务被打断后能找回原要求、附件和已完成步骤；已经建过的日程、写过的文件等不会因为恢复而再执行一遍。\n- **文件交付只认最终稿**：中间脚本、排版检查图和被替换的旧稿会留在详情里，但主文件卡只展示真正完成并验证过的成品。\n- **Word、Excel、PPT、PDF 预览更真实**：优先显示完整页面布局和内嵌图片；PDF 不再只给文字摘要。重复打开同一文件会复用预览，不再反复转换。\n- **看图更准也更诚实**：支持图片的模型直接读取原图；纯文字模型会借视觉模型看图。图片损坏、过大或没有真正读到像素时，会明确说明，不会根据文件名猜。\n- **连续对话能接住上一张图**：你说“继续看刚才那张图”时，会在校验文件未被替换后恢复最近相关图片；不会把更早、无关或未授权的附件一起带过去。\n- **子 Agent 和 Skill 权限更清楚**：只把本次明确授权的附件、文件和 Skill 交给子 Agent；图片、网页或附件里藏着的文字不会变成新的操作指令。\n- **更多模型接口可正常使用工具和图片**：补齐 Anthropic Messages、OpenAI Responses 和 Google Gemini 的图片、工具调用、用量与错误处理，异常或截断的调用不会被执行。\n- **长对话与记忆更稳**：保留最近完整的对话和工具往返；模型推测、疑问、举例或被否定的内容不会自动变成“用户事实”。\n\n## 修好了\n\n- 全新安装的数据目录少建“喵喵手帐”文件夹，导致第一次升级体检被阻断的问题。\n- 任务外层已中止、内层却把文件标成完成，以及刷新后旧草稿重新出现的问题。\n- Office/PDF 文件只因路径存在就被当成已验证、旧截图证明被错误借给新文件的问题。\n- 多页演示文稿只看前几页却被标成“全部检查完成”的问题。\n- 图片只有文件头、实际已损坏时仍被送给模型的问题。\n- Skill 点名、否定和子 Agent 附件授权中的多种歧义与越权边界。\n\n## 你需要做什么\n\n- **电脑**：本次必须安装完整更新包。可在应用内点更新提示，或去 miao-claw.com 下载 3.1.11 安装包，直接覆盖安装。安装完成后请完全退出 Miaoclaw 再重新打开（点关闭通常只是缩到托盘）。\n- **手机**：什么都不用做；App 下次打开会更新界面，浏览器版下拉刷新一次即可。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置、定时任务和全部设置。\n\n## 已知限制\n\n- 第一次打开尚未缓存的 Office 文件预览时，即使立刻关掉预览面板，后台转换仍可能继续，最长约 120 秒；同一文件之后会直接使用缓存。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.0/Miaoclaw-Setup-3.1.0.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.0/Miaoclaw-Setup-3.1.0.exe",
-      "sha256": "29c2e7d1b16ab4f6deb0724784f3ff92e611506adfdf52e9dc7ee8979063fb86",
-      "sizeBytes": 271935420
-    },
-    "android": {
-      "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.1.0",
-      "sha256": "c9677061088de8d31fe3ef23f51f26d47151e6fe15fa3e6f7d8837e033fac237",
-      "sizeBytes": 6737386,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.0/Miaoclaw-android-0.3.1-fe3.0.8.apk"
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.11/Miaoclaw-Setup-3.1.11.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.11/Miaoclaw-Setup-3.1.11.exe",
+      "sha256": "35ddff81e75471a991222e296dff61683df3c94e27b9af39f53ea8f141e83195",
+      "sizeBytes": 272166886
     }
   }
 }
