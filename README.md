@@ -12,7 +12,7 @@
 [![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
 [![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
 
-最新：v3.1.11 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+最新：v3.1.12 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
 
 [⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
 
@@ -52,14 +52,13 @@
 
 > 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
 
-### 3.1.11 更新亮点
+### 3.1.12 更新亮点
 
-- **## 新增与改进**：**任务收尾更可靠**：完成、中断、失败和部分完成现在分得更清楚；不会把解释、诊断截图或半成品草稿冒充最终成果
-- **## 修好了**：全新安装的数据目录少建“喵喵手帐”文件夹，导致第一次升级体检被阻断的问题
+- **## 新增与改进**：**接入外部工具（第一阶段）**：现在可以在本机设置中接入外部工具，让 Miaoclaw 调用它们完成工作
 - **## 你需要做什么**：**电脑**：本次必须安装完整更新包
-- **## 已知限制**：第一次打开尚未缓存的 Office 文件预览时，即使立刻关掉预览面板，后台转换仍可能继续，最长约 120 秒；同一文件之…
+- **## 已知限制**：外部工具目前只提供“调用外部工具”这一阶段；暂不把 Miaoclaw 提供成外部服务，也暂未覆盖资源浏览、提示模板等完整…
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.11)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.12)。
 
 ---
 
@@ -67,7 +66,7 @@
 
 **Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
 
-Latest: v3.1.11 · Free · Local-first · Bring your own model key (60+ providers supported)
+Latest: v3.1.12 · Free · Local-first · Bring your own model key (60+ providers supported)
 
 - **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
 - **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
