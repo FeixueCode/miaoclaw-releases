@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-07T21:57:04.540Z",
+  "publishedAt": "2026-08-10T06:12:27.181Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,28 +21,20 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-08-07",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-07.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-07.json",
+    "version": "2026-08-10",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-10.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-10.json",
     "sha256": "3579eacfe2b9978eb13d08cde1d7b516534c738f4e45f8f6a74f89f9364c52b6"
   },
   "latest": {
-    "version": "3.1.11",
-    "notes": "# 3.1.11\n\n这次更新把 Miaoclaw 最容易“看起来做完、实际没交付”的地方重新收紧了：任务会更诚实地收尾，重启后不会重复执行，图片和文档预览也真正以画面为准。\n\n## 新增与改进\n\n- **任务收尾更可靠**：完成、中断、失败和部分完成现在分得更清楚；不会把解释、诊断截图或半成品草稿冒充最终成果。\n- **重启后接着做，不重复做**：长任务被打断后能找回原要求、附件和已完成步骤；已经建过的日程、写过的文件等不会因为恢复而再执行一遍。\n- **文件交付只认最终稿**：中间脚本、排版检查图和被替换的旧稿会留在详情里，但主文件卡只展示真正完成并验证过的成品。\n- **Word、Excel、PPT、PDF 预览更真实**：优先显示完整页面布局和内嵌图片；PDF 不再只给文字摘要。重复打开同一文件会复用预览，不再反复转换。\n- **看图更准也更诚实**：支持图片的模型直接读取原图；纯文字模型会借视觉模型看图。图片损坏、过大或没有真正读到像素时，会明确说明，不会根据文件名猜。\n- **连续对话能接住上一张图**：你说“继续看刚才那张图”时，会在校验文件未被替换后恢复最近相关图片；不会把更早、无关或未授权的附件一起带过去。\n- **子 Agent 和 Skill 权限更清楚**：只把本次明确授权的附件、文件和 Skill 交给子 Agent；图片、网页或附件里藏着的文字不会变成新的操作指令。\n- **更多模型接口可正常使用工具和图片**：补齐 Anthropic Messages、OpenAI Responses 和 Google Gemini 的图片、工具调用、用量与错误处理，异常或截断的调用不会被执行。\n- **长对话与记忆更稳**：保留最近完整的对话和工具往返；模型推测、疑问、举例或被否定的内容不会自动变成“用户事实”。\n\n## 修好了\n\n- 全新安装的数据目录少建“喵喵手帐”文件夹，导致第一次升级体检被阻断的问题。\n- 任务外层已中止、内层却把文件标成完成，以及刷新后旧草稿重新出现的问题。\n- Office/PDF 文件只因路径存在就被当成已验证、旧截图证明被错误借给新文件的问题。\n- 多页演示文稿只看前几页却被标成“全部检查完成”的问题。\n- 图片只有文件头、实际已损坏时仍被送给模型的问题。\n- Skill 点名、否定和子 Agent 附件授权中的多种歧义与越权边界。\n\n## 你需要做什么\n\n- **电脑**：本次必须安装完整更新包。可在应用内点更新提示，或去 miao-claw.com 下载 3.1.11 安装包，直接覆盖安装。安装完成后请完全退出 Miaoclaw 再重新打开（点关闭通常只是缩到托盘）。\n- **手机**：什么都不用做；App 下次打开会更新界面，浏览器版下拉刷新一次即可。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置、定时任务和全部设置。\n\n## 已知限制\n\n- 第一次打开尚未缓存的 Office 文件预览时，即使立刻关掉预览面板，后台转换仍可能继续，最长约 120 秒；同一文件之后会直接使用缓存。",
+    "version": "3.1.12",
+    "notes": "# 3.1.12\n\n这次更新让 Miaoclaw 能更稳妥地连接外部工具，同时把文档、迁移和分享中容易出错的环节补齐了。核心服务已完成检查，运行正常，本版没有为求变化而改动它。\n\n## 新增与改进\n\n- **接入外部工具（第一阶段）**：现在可以在本机设置中接入外部工具，让 Miaoclaw 调用它们完成工作。Miaoclaw 在这里是使用外部工具的一方，并不会把自己变成可被别人调用的服务。\n- **外部工具更可控**：连接资料和密钥只保存在本机，界面不会回显；外部工具给出的说明和结果都只当作参考资料，不会自动变成操作要求。实际调用时，本次工具参数会发送给你选择的外部服务，因此只应连接你信任的服务。\n- **Excel 更稳**：新生成的带筛选表格不会再触发 Excel 打开时的修复提示。\n- **Office 预览更省资源**：关闭预览或切换文件时，尚未完成的后台准备会随之停止；已准备好的同一文件仍可快速再次打开。\n- **Skill 更容易核对和分享**：每个 Skill 会展示来源、内容指纹和审核结论；确认无误后可打包分享给他人使用。\n- **导入迁移更安全**：导入前会先检查内容；如果中途失败，会恢复到导入前的完整状态，不留下半导入的数据。\n- **官网更容易被找到**：官网补齐了搜索引擎所需的信息，百度站点验证已完成；页面打开也更轻快。\n\n## 你需要做什么\n\n- **电脑**：本次必须安装完整更新包。安装完成后请从托盘中完全退出 Miaoclaw，再重新打开。\n- **手机**：App 下次打开会更新；浏览器版下拉刷新一次即可。\n- **数据会不会丢**：不会。你的对话、手帐、记忆、模型配置、定时任务和其他设置都会保留。\n\n## 已知限制\n\n- 外部工具目前只提供“调用外部工具”这一阶段；暂不把 Miaoclaw 提供成外部服务，也暂未覆盖资源浏览、提示模板等完整能力。\n- 部分外部工具仍需要按其自己的说明完成安装、登录或授权。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.11/Miaoclaw-Setup-3.1.11.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.11/Miaoclaw-Setup-3.1.11.exe",
-      "sha256": "35ddff81e75471a991222e296dff61683df3c94e27b9af39f53ea8f141e83195",
-      "sizeBytes": 272166886
-    },
-    "android": {
-      "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.1.11",
-      "sha256": "43973216c80dcf6f5d52a41ca678b20fd390f74a8ec6f8febd2c69c0c67a8510",
-      "sizeBytes": 6743626,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.11/Miaoclaw-android-0.3.1-fe3.0.8.apk"
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.12/Miaoclaw-Setup-3.1.12.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.12/Miaoclaw-Setup-3.1.12.exe",
+      "sha256": "aa0ed424fbf73d8bde636f3a89923493669fa1a4b86a6b9250c9b98f6a6a3bea",
+      "sizeBytes": 260541945
     }
   }
 }
