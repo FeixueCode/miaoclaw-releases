@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-10T06:12:27.181Z",
+  "publishedAt": "2026-08-11T15:12:17.132Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,28 +21,27 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-08-10",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-10.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-10.json",
+    "version": "2026-08-11",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-11.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-11.json",
     "sha256": "3579eacfe2b9978eb13d08cde1d7b516534c738f4e45f8f6a74f89f9364c52b6"
   },
   "latest": {
-    "version": "3.1.12",
-    "notes": "# 3.1.12\n\n这次更新让 Miaoclaw 能更稳妥地连接外部工具，同时把文档、迁移和分享中容易出错的环节补齐了。核心服务已完成检查，运行正常，本版没有为求变化而改动它。\n\n## 新增与改进\n\n- **接入外部工具（第一阶段）**：现在可以在本机设置中接入外部工具，让 Miaoclaw 调用它们完成工作。Miaoclaw 在这里是使用外部工具的一方，并不会把自己变成可被别人调用的服务。\n- **外部工具更可控**：连接资料和密钥只保存在本机，界面不会回显；外部工具给出的说明和结果都只当作参考资料，不会自动变成操作要求。实际调用时，本次工具参数会发送给你选择的外部服务，因此只应连接你信任的服务。\n- **Excel 更稳**：新生成的带筛选表格不会再触发 Excel 打开时的修复提示。\n- **Office 预览更省资源**：关闭预览或切换文件时，尚未完成的后台准备会随之停止；已准备好的同一文件仍可快速再次打开。\n- **Skill 更容易核对和分享**：每个 Skill 会展示来源、内容指纹和审核结论；确认无误后可打包分享给他人使用。\n- **导入迁移更安全**：导入前会先检查内容；如果中途失败，会恢复到导入前的完整状态，不留下半导入的数据。\n- **官网更容易被找到**：官网补齐了搜索引擎所需的信息，百度站点验证已完成；页面打开也更轻快。\n\n## 你需要做什么\n\n- **电脑**：本次必须安装完整更新包。安装完成后请从托盘中完全退出 Miaoclaw，再重新打开。\n- **手机**：App 下次打开会更新；浏览器版下拉刷新一次即可。\n- **数据会不会丢**：不会。你的对话、手帐、记忆、模型配置、定时任务和其他设置都会保留。\n\n## 已知限制\n\n- 外部工具目前只提供“调用外部工具”这一阶段；暂不把 Miaoclaw 提供成外部服务，也暂未覆盖资源浏览、提示模板等完整能力。\n- 部分外部工具仍需要按其自己的说明完成安装、登录或授权。",
+    "version": "3.1.13",
+    "notes": "# 3.1.13\n\n这次更新把魔法咒语集与 Miaoclaw 安全地连接起来，也让定时新闻和 Office 文件交付更可靠。\n\n## 这次有什么变化\n\n- **可以从魔法咒语集试用精选咒语**：装有 Miaoclaw 时，网页会先在本机打开咒语预览；你可以检查和修改，确认后才会放进聊天输入框。它不会自行发送或执行，也不会安装任何附加能力。\n- **没有安装 Miaoclaw 也能使用**：魔法咒语集仍可独立浏览和安全复制，不会因为未安装客户端而限制内容。\n- **官网与使用指南增加咒语入口**：第一次接触 AI 的用户可以从精选咒语开始，再按需要进入 Miaoclaw 完成实际工作。\n\n## 修好了什么\n\n- **定时 AI 新闻会严格按时间范围查找**：日报只采用最近一天、周报只采用最近七天内有日期和直接来源的新闻；找不到足够的新内容时会如实少报，不再拿旧消息补数。\n- **Excel 汇总结果会经过更完整的核对**：生成的表格不仅要能打开，还会检查真实数据、公式计算、增删明细后的联动结果，以及保存后重新打开是否一致。\n- **Word、PPT 和 PDF 交付更完整**：明确要求的文字、页数、标题和摘要会被更严格地保留；PPT 不会擅自增加封面或目录，删除页面后也不会留下重复内容。\n- **PPT 版面和 Office 深测更接近真实工作**：单句页面会使用清楚的重点版式，不再挤在顶部留下大片空白；发布前还会随机组合会议纪要、数据汇总、周报、产品演示等不同任务一起验证。\n- **Office 文件重试更稳妥**：换名保存、预览暂时不可用等情况不会再被过早判定为任务失败。\n\n## 你需要做什么\n\n- **要不要重启**：需要安装完整更新包；安装完成后，请从托盘完全退出 Miaoclaw，再重新打开。\n- **手机上要做什么**：本版没有改动手机端，不用处理。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置、定时任务和其他设置。\n- **还不能做什么**：目前只有一批已核对的精选咒语支持直接打开本机预览，其他咒语仍可复制使用；客户端内直接搜索全部咒语会在后续版本提供。\n\n## 已知限制\n\n- 从网页打开的咒语只会进入预览和聊天草稿，不会自动运行。\n- 魔法咒语集与 Miaoclaw 仍可分别独立使用，任一方暂时不可用时不会锁住另一方。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.12/Miaoclaw-Setup-3.1.12.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.12/Miaoclaw-Setup-3.1.12.exe",
-      "sha256": "aa0ed424fbf73d8bde636f3a89923493669fa1a4b86a6b9250c9b98f6a6a3bea",
-      "sizeBytes": 260541945
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.13/Miaoclaw-Setup-3.1.13.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.13/Miaoclaw-Setup-3.1.13.exe",
+      "sha256": "c2b0c059cc28522859b2c0b40d791cce74561ab722fd0449e404d9a540ea11d1",
+      "sizeBytes": 260572531
     },
-    "android": {
-      "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.1.12",
-      "sha256": "970edb309f841ad329a060360ffb1f5866b2dfcd6fdedef5d9479d1a6f2f6a2b",
-      "sizeBytes": 6747962,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.12/Miaoclaw-android-0.3.1-fe3.0.8.apk"
+    "hot": {
+      "baseline": "3.1.12",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.13/miaoclaw-hot-3.1.13.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.13/miaoclaw-hot-3.1.13.zip",
+      "sha256": "2cd2974d79d4c3ae4c13fa7919206d688597d56aae9a2447ef0cbeedfb054c5d",
+      "sizeBytes": 9704342
     }
   }
 }
