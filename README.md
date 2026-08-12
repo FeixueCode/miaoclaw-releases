@@ -12,7 +12,7 @@
 [![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
 [![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
 
-最新：v3.1.13 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+最新：v3.1.14 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
 
 [⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
 
@@ -52,14 +52,14 @@
 
 > 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
 
-### 3.1.13 更新亮点
+### 3.1.14 更新亮点
 
-- **## 这次有什么变化**：**可以从魔法咒语集试用精选咒语**：装有 Miaoclaw 时，网页会先在本机打开咒语预览；你可以检查和修改，确认后才…
-- **## 修好了什么**：**定时 AI 新闻会严格按时间范围查找**：日报只采用最近一天、周报只采用最近七天内有日期和直接来源的新闻；找不到足够…
-- **## 你需要做什么**：**要不要重启**：需要安装完整更新包；安装完成后，请从托盘完全退出 Miaoclaw，再重新打开
-- **## 已知限制**：从网页打开的咒语只会进入预览和聊天草稿，不会自动运行
+- **## 这次有什么变化**：**按需打开 Mojo 提示词库**：到「设置 → 提示词库」打开后，对话输入区会出现入口
+- **## 修好了什么**：**网页提示词可以安全带入聊天**：Mojo 内容只会经过“预览 → 编辑 → 确认 → 聊天草稿”，不会自动发送、执行…
+- **## 你需要做什么**：**要不要重启**：需要
+- **## 已知限制**：Mojo 是独立的外部内容来源；Miaoclaw 只接收已发布、完整性一致且通过安全检查的内容
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.13)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.14)。
 
 ---
 
@@ -67,7 +67,7 @@
 
 **Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
 
-Latest: v3.1.13 · Free · Local-first · Bring your own model key (60+ providers supported)
+Latest: v3.1.14 · Free · Local-first · Bring your own model key (60+ providers supported)
 
 - **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
 - **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
