@@ -12,7 +12,7 @@
 [![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
 [![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
 
-最新：v3.1.14 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+最新：v3.1.15 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
 
 [⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
 
@@ -52,14 +52,14 @@
 
 > 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
 
-### 3.1.14 更新亮点
+### 3.1.15 更新亮点
 
-- **## 这次有什么变化**：**按需打开 Mojo 提示词库**：到「设置 → 提示词库」打开后，对话输入区会出现入口
-- **## 修好了什么**：**网页提示词可以安全带入聊天**：Mojo 内容只会经过“预览 → 编辑 → 确认 → 聊天草稿”，不会自动发送、执行…
+- **## 这次有什么变化**：**演示可以选择交付方式**：对话输入区可选自动判断、PowerPoint、HTML 演示或两种都要
+- **## 修好了什么**：**长任务中断后更容易接着做**：重启或任务续跑时，会保留原要求、已完成步骤和用户后来补充的要求；已经执行过的操作仍会防…
 - **## 你需要做什么**：**要不要重启**：需要
-- **## 已知限制**：Mojo 是独立的外部内容来源；Miaoclaw 只接收已发布、完整性一致且通过安全检查的内容
+- **## 已知限制**：HTML 演示只是演示内容的一种网页交付，不会替代 PowerPoint
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.14)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.15)。
 
 ---
 
@@ -67,7 +67,7 @@
 
 **Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
 
-Latest: v3.1.14 · Free · Local-first · Bring your own model key (60+ providers supported)
+Latest: v3.1.15 · Free · Local-first · Bring your own model key (60+ providers supported)
 
 - **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
 - **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
