@@ -12,7 +12,7 @@
 [![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
 [![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
 
-最新：v3.1.16 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+最新：v3.1.17 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
 
 [⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
 
@@ -58,13 +58,13 @@
 
 > 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
 
-### 3.1.16 更新亮点
+### 3.1.17 更新亮点
 
-- **这次有什么变化**：**聊天框重新显示上下文用量**：可以直观看到当前对话占用，并在需要时主动整理；整理不会删除原始聊天记录
-- **修好了什么**：**要求生成或修改文件时不再只口头承诺**：模型能看到真实可用的工具；工具暂未展开、输出过长、调用中断或应用重启时，都有…
-- **你需要做什么**：**要不要重启**：需要
+- **这次有什么变化**：**定时任务可以编辑**：已有任务可直接修改名称、内容、星期、时间和执行频率；只改内容不会悄悄顺延下次运行，停用状态也会…
+- **同时收好的平台能力**：模型窗口、最大输出和思考方式继续按具体模型的可信配置或探针使用，未知模型不套统一数字
+- **你需要做什么**：**要不要重启**：需要从托盘完全退出 Miaoclaw，再重新打开；只关窗口不算完全退出
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.16)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.17)。
 
 ---
 
@@ -72,7 +72,7 @@
 
 **Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
 
-Latest: v3.1.16 · Free · Local-first · Bring your own model key (60+ providers supported)
+Latest: v3.1.17 · Free · Local-first · Bring your own model key (60+ providers supported)
 
 - **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
 - **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
