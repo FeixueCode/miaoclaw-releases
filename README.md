@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://miao-claw.com/assets/img/mascot-256.png" width="96" alt="Miaoclaw 妙爪">
+<img src=".github/assets/miaoclaw-mascot.png" width="96" alt="Miaoclaw 妙爪">
 
 # 妙爪 Miaoclaw
 
-**装在你自己电脑上的 AI 助手 —— 不止会聊，它真的动手。**
+**本地优先的 Windows AI Agent —— 直接把 Word / Excel / PPT / PDF 做完。**
 
 [![官网](https://img.shields.io/badge/官网-miao--claw.com-b98a3e)](https://miao-claw.com)
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-blue)](https://miao-claw.com/#download)
@@ -18,9 +18,16 @@
 
 </div>
 
+<!-- miaoclaw-product-hero:start -->
+<p align="center">
+  <a href="https://miao-claw.com/#download"><img src=".github/assets/chat-office.png" alt="Miaoclaw 在真实 Excel 文件中标记异常并交付修改后的文件" width="100%"></a>
+</p>
+<p align="center"><strong>真实任务示例：</strong>上传 Excel，说一句话，Miaoclaw 在副本中完成修改、核对结果并把可打开的文件交回来。</p>
+<!-- miaoclaw-product-hero:end -->
+
 ---
 
-## 它能做什么
+## 你交代事情，它交付结果
 
 | 能力 | 一句话 |
 |---|---|
@@ -34,16 +41,15 @@
 
 **为什么这些做得好？** 每一条背后的工程细节：[miao-claw.com/why](https://miao-claw.com/why)
 
-## 长什么样
+## 更多真实界面
 
-| 说一句话，Word 报告做好放进文件夹 | 联网调研，成稿带对比表格 |
+| 联网调研，成稿带对比表格 | 手机加密连回自己的电脑 |
 |---|---|
-| ![对话中生成 Word 文档](https://miao-claw.com/assets/img/shots/chat-office.png) | ![联网调研出报告](https://miao-claw.com/assets/img/shots/research.png) |
+| ![联网调研出报告](https://miao-claw.com/assets/img/shots/research.png) | ![手机端加密访问](https://miao-claw.com/assets/img/shots/mobile.png) |
 
 | 随手记自动分类成手帐 | 定时任务到点自动跑 |
 |---|---|
 | ![喵喵手帐](https://miao-claw.com/assets/img/shots/notes.png) | ![定时任务](https://miao-claw.com/assets/img/shots/schedules.png) |
-
 ## 三步上手
 
 1. **下载安装**：[官网下载](https://miao-claw.com/#download)（约 260MB，含全部运行时，双击一路下一步）；下载慢可用[百度网盘](https://pan.baidu.com/s/11cMkfjOXg8JsZOi39cy9PQ?pwd=v3bk)（提取码 v3bk）或本仓库 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases)
@@ -54,9 +60,9 @@
 
 ### 3.1.16 更新亮点
 
-- **## 这次有什么变化**：**聊天框重新显示上下文用量**：可以直观看到当前对话占用，并在需要时主动整理；整理不会删除原始聊天记录
-- **## 修好了什么**：**要求生成或修改文件时不再只口头承诺**：模型能看到真实可用的工具；工具暂未展开、输出过长、调用中断或应用重启时，都有…
-- **## 你需要做什么**：**要不要重启**：需要
+- **这次有什么变化**：**聊天框重新显示上下文用量**：可以直观看到当前对话占用，并在需要时主动整理；整理不会删除原始聊天记录
+- **修好了什么**：**要求生成或修改文件时不再只口头承诺**：模型能看到真实可用的工具；工具暂未展开、输出过长、调用中断或应用重启时，都有…
+- **你需要做什么**：**要不要重启**：需要
 
 完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.1.16)。
 
