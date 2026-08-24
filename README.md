@@ -20,9 +20,9 @@
 
 <!-- miaoclaw-product-hero:start -->
 <p align="center">
-  <a href="https://miao-claw.com/#download"><img src=".github/assets/chat-office.png" alt="Miaoclaw 在真实 Excel 文件中标记异常并交付修改后的文件" width="100%"></a>
+  <a href="https://miao-claw.com/#download"><img src=".github/assets/miaoclaw-hero.svg" alt="Miaoclaw 妙爪：把任务交代清楚，拿回能打开的结果" width="100%"></a>
 </p>
-<p align="center"><strong>真实任务示例：</strong>上传 Excel，说一句话，Miaoclaw 在副本中完成修改、核对结果并把可打开的文件交回来。</p>
+<p align="center"><strong>聊清楚 → 用工具 → 核对 → 交付</strong>　数据留在本机，模型由你选择。</p>
 <!-- miaoclaw-product-hero:end -->
 
 ---
@@ -40,6 +40,14 @@
 | 🗒️ **日常小事** | 喵喵手帐随手记自动分类、定时任务到点自动跑、语音说话直接转文字（可离线）、桌面像素猫（可选） |
 
 **为什么这些做得好？** 每一条背后的工程细节：[miao-claw.com/why](https://miao-claw.com/why)
+
+## 真实交付，不是界面示意
+
+上传 Excel，说一句话，Miaoclaw 会在副本中完成修改、核对结果，并把能直接打开的文件交回来。下图来自真实任务：312 行考勤逐项核对、两班倒标红、汇总表写回同一份交付文件。
+
+<p align="center">
+  <img src=".github/assets/chat-office.png" alt="Miaoclaw 在真实 Excel 文件中标记异常并交付修改后的文件" width="100%">
+</p>
 
 ## 更多真实界面
 
