@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-21T09:02:19.691Z",
+  "publishedAt": "2026-08-24T08:09:32.980Z",
   "resources": [
     {
       "id": "ocr",
@@ -21,27 +21,27 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-08-21",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-21.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-21.json",
+    "version": "2026-08-24",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-24.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-24.json",
     "sha256": "adcd618cbe2dc1b0d79c8987804dfe911f2d1d01a29805ce7058c4cd366cb14c"
   },
   "latest": {
-    "version": "3.1.16",
-    "notes": "# 3.1.16\n\n这次更新把长对话、模型能力、记忆、文件交付和桌宠的关键闭环补完整，让 Miaoclaw 在任务变长、模型只有一个或工具暂时失败时，也能更可靠地继续工作。\n\n## 这次有什么变化\n\n- **聊天框重新显示上下文用量**：可以直观看到当前对话占用，并在需要时主动整理；整理不会删除原始聊天记录。\n- **不同模型按自己的真实能力工作**：上下文、最长回答、思考方式和看图能力以当前模型的配置与实测为准；新增 GLM-5.3，并保留 GLM-5.2 等已有配置。\n- **记忆能区分时间与来源**：重要事实会记录何时获知、何时有效、来自用户还是工具；遇到冲突或证据不足时可以保留不确定，而不是把旧信息当成当前事实。\n- **长文件可以连续读取**：Word、Excel、PowerPoint 和 PDF 可分段继续，表格能按工作表、行和列续读，不会把“这一页读完”误当成“整个文件读完”。\n- **Agent 协作可以安全复用已验证工作**：同一任务的后续工作可复用新鲜的项目结论；来源变化、权限不符或跨会话时会重新取证。主模型能完成时仍由主模型直接完成。\n\n## 修好了什么\n\n- **要求生成或修改文件时不再只口头承诺**：模型能看到真实可用的工具；工具暂未展开、输出过长、调用中断或应用重启时，都有继续发现、续写和恢复的路径。\n- **单一模型也不会因内容过长直接停掉**：会先整理完整事务、分页读取当前输入或保留续点；配置了合适备用模型时才增加备用接管。\n- **不需要文件的普通问答不会被强迫产出文件**：是否交付真实文件以用户要求和模型判断为准。\n- **取消 Office 长任务不会损坏原文件**：生成或修改先在安全副本完成，成功后才替换；重启恢复会核对同一文件，不重复执行已经落地的操作。\n- **扫描 PDF 的引用页码更可靠**：识别结果保留真实页码，并明确说明是否覆盖全部扫描页。\n- **桌宠仍然真正看屏幕**：自动模式只从可看图模型中按实际速度选择，并显示具体模型；首选暂时失败时可换另一个视觉模型，没有视觉模型时会在开启前说明。\n- **桌宠两种人格和图片手帐互不混用**：毒舌与博学会针对画面给出不同回应；图片手帐在暂时无法识图时保留原图等待恢复，不会强行误分类。\n- **问候不再固定偷用某个模型**：优先使用用户配置的合适模型，临时全部不可用时才使用一次简短保底，下次仍会重新选择。\n- **Mojo 提示只在用户开启后出现**：关闭“在对话中显示 Mojo 提示词”时不会弹出相关警告。\n\n## 你需要做什么\n\n- **要不要重启**：需要。更新完成后，请从托盘完全退出 Miaoclaw，再重新打开。\n- **手机上要做什么**：把页面下拉刷新一次即可，不用重新扫码。\n- **数据会不会丢**：不会。升级不影响你的对话、手帐、记忆、模型配置、定时任务和其他设置。\n- **还不能做什么**：桌宠必须有至少一个实际支持图片的模型；可复用的 Agent 工作目前只会自动复用来源未变化的本地证据，网页等会变化的来源仍会重新核对。",
+    "version": "3.1.17",
+    "notes": "# 3.1.17\n\n这次小更新主要收好 3.1.16 发布后的几个使用细节：定时任务可以直接修改，长任务协作更容易接回，也减少了同一结果在主控与 Agent 之间来回重复传递。\n\n## 这次有什么变化\n\n- **定时任务可以编辑**：已有任务可直接修改名称、内容、星期、时间和执行频率；只改内容不会悄悄顺延下次运行，停用状态也会保留。\n- **长任务协作可以少等几轮**：主控确实必须等 Agent 结论时，可以在同一次操作里有限等待；结果已经完成就直接接回，仍在运行则保留同一工作身份，之后再继续。\n- **可恢复 Agent 不会重复派同一工作**：普通一次性委派和可恢复工作是两种选择。长任务已经用可恢复方式完成后，不会再补派一个普通 Agent 重做。\n- **接回过程更省上下文**：定向续接运行时只回传上一轮结果的简短提示，暂停、失败或需要恢复时仍保留完整结果；归档确认不再重复整段正文，历史结果仍可精确取回。\n- **运行轨迹更容易判断慢在哪里**：保留每一轮真实模型、耗时和 token 数值，便于区分模型或网络波动与主控编排成本，不公开供应商原始回执。\n- **连续搜索记忆不再被自身统计打断**：上一轮搜索更新“最近召回”记录时，下一轮会在确有冲突时等本地写入收束，再从一致快照继续，不会误报记忆一直变化。\n\n## 同时收好的平台能力\n\n- 模型窗口、最大输出和思考方式继续按具体模型的可信配置或探针使用，未知模型不套统一数字。\n- 工具目录、搜索、详情和恢复使用同一份权限真值，缓存失效不会让模型看不见本来可用的工具。\n- 记忆搜索在数量增大后使用稳定分页；Office 随机验收覆盖真正不同的跨文件任务，不是固定模板换数字。\n\n## 你需要做什么\n\n- **要不要重启**：需要从托盘完全退出 Miaoclaw，再重新打开；只关窗口不算完全退出。\n- **手机上要做什么**：把手机页面下拉刷新一次即可，不用重新扫码。\n- **数据会不会丢**：升级不影响你的对话、手帐、记忆、模型配置、定时任务和本地文件。\n- **还不能做什么**：可恢复 Agent 仍只适合真正耗时、独立或需要多轮继续的子任务；普通简单任务仍由主模型直接完成。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.16/Miaoclaw-Setup-3.1.16.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.16/Miaoclaw-Setup-3.1.16.exe",
-      "sha256": "3f54014760446124736cdc1d2464356aa34f58eb87891e07ae90dd2e2d8292ed",
-      "sizeBytes": 262557203
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.17/Miaoclaw-Setup-3.1.17.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.17/Miaoclaw-Setup-3.1.17.exe",
+      "sha256": "05d7fa3a2cf9406d8be353f9cd94de7da9d096ea94e64429c0f9a8ef3969413b",
+      "sizeBytes": 262611524
     },
     "hot": {
-      "baseline": "3.1.15",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.16/miaoclaw-hot-3.1.16.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.16/miaoclaw-hot-3.1.16.zip",
-      "sha256": "5015aad4bae8313b7332b955cec33b82f4ba4dded04d32863d1bbd59e6354e2e",
-      "sizeBytes": 9937358
+      "baseline": "3.1.16",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.1.17/miaoclaw-hot-3.1.17.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.1.17/miaoclaw-hot-3.1.17.zip",
+      "sha256": "bfd7c5f1598a5b51db7d84c13ef88a2edf377539fda71b9ebc2a8fedcc1716f4",
+      "sizeBytes": 9977314
     },
     "android": {
       "shellVersion": "0.3.1-fe3.0.8",
