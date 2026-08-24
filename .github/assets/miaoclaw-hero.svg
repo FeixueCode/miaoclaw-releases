@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+  <title id="title">Miaoclaw 妙爪，一句话交代任务，拿回能打开的结果</title>
+  <desc id="desc">本地优先的 Windows AI Agent，支持 Word、Excel、PowerPoint、PDF、联网调研、记忆和 Agent 协作。</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f0de"/>
+      <stop offset="1" stop-color="#e5d5ae"/>
+    </linearGradient>
+    <linearGradient id="aqua" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22c8d8"/>
+      <stop offset="1" stop-color="#087f98"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#152328" flood-opacity=".18"/>
+    </filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#6f766b" stroke-width="1" opacity=".12"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="640" rx="32" fill="url(#paper)"/>
+  <rect width="1600" height="640" rx="32" fill="url(#grid)"/>
+  <path d="M788 0h812v640H1060C903 510 826 277 788 0Z" fill="#203036"/>
+  <path d="M903 0c23 137 90 247 207 331 94 68 216 113 365 134" fill="none" stroke="#19b7c8" stroke-width="8" opacity=".75"/>
+  <path d="M904 0c22 125 87 227 195 305 86 62 199 105 339 128" fill="none" stroke="#f1b54c" stroke-width="2" stroke-dasharray="9 13" opacity=".8"/>
+
+  <g transform="translate(92 76)">
+    <g transform="translate(0 0)">
+      <rect width="58" height="58" rx="17" fill="#203036"/>
+      <circle cx="20" cy="21" r="6" fill="#25c7d8"/>
+      <circle cx="38" cy="21" r="6" fill="#25c7d8"/>
+      <circle cx="14" cy="36" r="5" fill="#25c7d8"/>
+      <circle cx="44" cy="36" r="5" fill="#25c7d8"/>
+      <path d="M20 39c0-9 5-15 9-15s9 6 9 15c0 6-4 10-9 10s-9-4-9-10Z" fill="#f1b54c"/>
+    </g>
+    <text x="76" y="28" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="28" font-weight="800" fill="#203036" letter-spacing="1">MIAOCLAW</text>
+    <text x="77" y="52" font-family="Microsoft YaHei UI, sans-serif" font-size="16" font-weight="600" fill="#60706a" letter-spacing="4">妙爪 · 本地优先</text>
+  </g>
+
+  <g font-family="Microsoft YaHei UI, Noto Sans SC, sans-serif" fill="#203036">
+    <text x="92" y="215" font-size="60" font-weight="800">把任务交代清楚，</text>
+    <text x="92" y="292" font-size="60" font-weight="800">拿回<tspan fill="#087f98">能打开的结果</tspan>。</text>
+    <text x="96" y="355" font-size="23" font-weight="500" fill="#4e625f">不止聊天。它会调用真实工具、核对结果，再把文件交回来。</text>
+  </g>
+
+  <g transform="translate(92 405)" font-family="Segoe UI, Microsoft YaHei UI, sans-serif">
+    <g>
+      <rect width="240" height="58" rx="16" fill="#203036"/>
+      <text x="28" y="37" font-size="20" font-weight="700" fill="#fff9e9">下载 Windows 版  →</text>
+    </g>
+    <g transform="translate(255 0)">
+      <rect width="198" height="58" rx="16" fill="#f9f2df" stroke="#8d8268" stroke-width="1.5"/>
+      <text x="24" y="37" font-size="18" font-weight="700" fill="#203036">本机数据 · 模型自选</text>
+    </g>
+  </g>
+
+  <g transform="translate(94 517)" font-family="Segoe UI, Microsoft YaHei UI, sans-serif" font-size="17" font-weight="700">
+    <g><rect width="92" height="42" rx="12" fill="#dce9de"/><text x="23" y="27" fill="#26423c">WORD</text></g>
+    <g transform="translate(104 0)"><rect width="92" height="42" rx="12" fill="#dce9de"/><text x="20" y="27" fill="#26423c">EXCEL</text></g>
+    <g transform="translate(208 0)"><rect width="84" height="42" rx="12" fill="#f2d7b2"/><text x="23" y="27" fill="#6f431f">PPT</text></g>
+    <g transform="translate(304 0)"><rect width="84" height="42" rx="12" fill="#efd1cc"/><text x="23" y="27" fill="#713830">PDF</text></g>
+    <text x="414" y="27" fill="#5b6d68" font-weight="600">联网调研 · 长期记忆 · 定时任务 · Agent 协作</text>
+  </g>
+
+  <g transform="translate(920 72)" filter="url(#shadow)" font-family="Microsoft YaHei UI, Noto Sans SC, sans-serif">
+    <rect width="586" height="496" rx="28" fill="#f8f0dc" stroke="#6d766b" stroke-width="2"/>
+    <rect width="586" height="66" rx="28" fill="#d8c9a6"/>
+    <path d="M0 38h586v28H0Z" fill="#d8c9a6"/>
+    <circle cx="34" cy="33" r="7" fill="#e4725f"/>
+    <circle cx="58" cy="33" r="7" fill="#eeb451"/>
+    <circle cx="82" cy="33" r="7" fill="#4eb98b"/>
+    <text x="112" y="41" font-size="18" font-weight="700" fill="#26363a">Miaoclaw 工作台</text>
+
+    <g transform="translate(34 92)">
+      <rect x="74" width="444" height="88" rx="20" fill="#d8e8de" stroke="#65bac0"/>
+      <text x="98" y="36" font-size="18" font-weight="600" fill="#203036">把这份考勤表里的倒班标红，</text>
+      <text x="98" y="64" font-size="18" font-weight="600" fill="#203036">再按人汇总一张早晚班统计表。</text>
+    </g>
+
+    <g transform="translate(38 214)">
+      <path d="M39 34H438" stroke="#79a5a4" stroke-width="3" stroke-dasharray="7 8"/>
+      <g transform="translate(0)">
+        <circle cx="39" cy="34" r="29" fill="url(#aqua)"/>
+        <text x="39" y="41" text-anchor="middle" font-size="20" font-weight="800" fill="white">1</text>
+        <text x="39" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#30464a">理解</text>
+      </g>
+      <g transform="translate(134)">
+        <circle cx="39" cy="34" r="29" fill="#203036"/>
+        <text x="39" y="41" text-anchor="middle" font-size="20" font-weight="800" fill="white">2</text>
+        <text x="39" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#30464a">用工具</text>
+      </g>
+      <g transform="translate(268)">
+        <circle cx="39" cy="34" r="29" fill="#203036"/>
+        <text x="39" y="41" text-anchor="middle" font-size="20" font-weight="800" fill="white">3</text>
+        <text x="39" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#30464a">核验</text>
+      </g>
+      <g transform="translate(402)">
+        <circle cx="39" cy="34" r="29" fill="#e7a83e"/>
+        <path d="M28 35l8 8 17-19" fill="none" stroke="#203036" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="39" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#30464a">交付</text>
+      </g>
+    </g>
+
+    <g transform="translate(38 335)">
+      <rect width="510" height="120" rx="18" fill="#fffaf0" stroke="#c7b88f" stroke-width="1.5"/>
+      <rect x="18" y="19" width="74" height="82" rx="12" fill="#d5eadb"/>
+      <text x="55" y="58" text-anchor="middle" font-size="17" font-weight="800" fill="#22674a">XLSX</text>
+      <path d="M35 72h40M35 82h40" stroke="#75a98e" stroke-width="3"/>
+      <text x="116" y="49" font-size="19" font-weight="800" fill="#203036">7月考勤表-标注版.xlsx</text>
+      <text x="116" y="79" font-size="16" font-weight="600" fill="#57716b">✓ 原件未改  ·  ✓ 312 行已核对</text>
+      <rect x="398" y="38" width="88" height="44" rx="12" fill="#203036"/>
+      <text x="442" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#fff9e9">打开</text>
+    </g>
+  </g>
+
+  <text x="1502" y="612" text-anchor="end" font-family="Consolas, monospace" font-size="13" fill="#91a4a1" letter-spacing="2">CHAT → TOOL → VERIFY → DELIVER</text>
+</svg>
+
