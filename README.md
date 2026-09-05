@@ -12,7 +12,7 @@
 [![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
 [![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
 
-最新：v3.2.2 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+最新：v3.2.3 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
 
 [⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
 
@@ -66,12 +66,13 @@
 
 > 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
 
-### 3.2.2 更新亮点
+### 3.2.3 更新亮点
 
-- **这次有什么变化**：**归档会话更好管理**：归档区默认收起，打开后按页浏览；对话再多也不会一次铺满页面
-- **你需要做什么**：在应用内检查更新即可：符合条件时会直接使用小体积更新；其他版本会直接下载 3.2.2 完整包，不需要先安装中间版本
+- **这次有什么变化**：**搜索来源可以逐个检查**：在“设置 → 搜索”点击“逐个测试所有搜索来源”，会分别显示百度、Bing、搜狗、Goog…
+- **安装与更新**：**Windows 怎么更新？** 如果 Miaoclaw 已在后台下载 3.2.3，按提示完全退出并重新打开即可；手动…
+- **当前限制**：本地文字识别和 FunASR 语音识别在首次使用或首次更新时需要联网下载模型，所需时间取决于网络速度
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.2.2)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.2.3)。
 
 ---
 
@@ -79,7 +80,7 @@
 
 **Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
 
-Latest: v3.2.2 · Free · Local-first · Bring your own model key (60+ providers supported)
+Latest: v3.2.3 · Free · Local-first · Bring your own model key (60+ providers supported)
 
 - **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
 - **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
