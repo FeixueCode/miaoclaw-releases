@@ -109,7 +109,7 @@
     },
     "android": {
       "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.2.3",
+      "feVersion": "3.2.3+web.1",
       "sha256": "66975ea40c4e5a9372a0fd27a02e55e487af79f4f806979263c9cc6691aa1f73",
       "sizeBytes": 6782274,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
