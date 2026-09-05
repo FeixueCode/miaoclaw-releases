@@ -1,69 +1,115 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-08-28T12:00:17.006Z",
+  "publishedAt": "2026-09-05T04:19:34.981Z",
   "resources": [
     {
       "id": "ocr",
-      "name": "本地文字识别",
       "pipName": "rapidocr-onnxruntime",
-      "pipSpec": "rapidocr-onnxruntime<2",
       "verifiedVersion": "1.4.4",
+      "name": "本地文字识别",
       "verifiedAt": "2026-08-27",
       "verification": {
         "realInference": true,
         "contract": "rapidocr-image-v1",
         "fixture": "generated-text-image",
+        "expectedText": "",
         "resultShape": "list",
-        "resultCount": 1
+        "model": ""
+      },
+      "installation": {
+        "constraintFile": "installer/component-locks/ocr-1.4.4.txt",
+        "constraintSha256": "330d32af0fb7cf91fb3b5907f6d9974b97a0376fe02912af4e44631f9e0c4ff9"
+      },
+      "source": {
+        "registry": "https://pypi.org/project/rapidocr-onnxruntime/1.4.4/",
+        "artifactUrl": "https://files.pythonhosted.org/packages/ba/12/1e5497183bdbe782dbb91bad1d0d2297dba4d2831b2652657f7517bfc6df/rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+        "artifactSha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf"
       }
     },
     {
       "id": "funasr",
-      "name": "离线语音包",
       "pipName": "funasr",
-      "pipSpec": "funasr<2",
-      "verifiedVersion": "1.4.3",
-      "verifiedAt": "2026-08-27",
+      "verifiedVersion": "1.4.14",
+      "name": "离线语音包",
+      "verifiedAt": "2026-09-04",
       "verification": {
         "realInference": true,
         "contract": "sensevoice-whole-file-v2",
-        "model": "iic/SenseVoiceSmall",
         "fixture": "official-zh-speech-sample",
-        "fixtureUrl": "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav",
-        "fixtureSha256": "a1bd32dc78493c123f9625a66deee562aed2895f53fbc39f2cca3be7e6f4f20f",
         "expectedText": "欢迎大家来体验达摩院推出的语音识别模型。",
         "resultShape": "sentence_info",
-        "python": "3.12.13"
+        "model": "iic/SenseVoiceSmall",
+        "modelRevisions": {
+          "model": "7bf452403abd7353a300cd760f7adae7701c92c1",
+          "vad": "f9a8b8274674755d925277e27063869038d41515",
+          "speaker": "a045b2afcaa9c3049c98a9215a2bc274407ab237",
+          "paraformer": "0141367fdc9b6ba58b0442ef34bceb56a6c1789c",
+          "punctuation": "45ab6961ad58a973ce7785401b4e93a0aab907a3"
+        },
+        "fixtureUrl": "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav",
+        "fixtureSha256": "a1bd32dc78493c123f9625a66deee562aed2895f53fbc39f2cca3be7e6f4f20f"
+      },
+      "installation": {
+        "constraintFile": "installer/component-locks/funasr-1.4.14.txt",
+        "constraintSha256": "54b8d02b29b109c6ff65d4845e5ae6af19bd8834321f4c892d1fedac4dac455d"
+      },
+      "source": {
+        "registry": "https://pypi.org/project/funasr/1.4.14/",
+        "artifactUrl": "https://files.pythonhosted.org/packages/b8/a8/2304ccd6b39a1f64035d38dbd5ab9ce2c5eca93a196c22d25787802d09a2/funasr-1.4.14-py3-none-any.whl",
+        "artifactSha256": "8f1bceeb183359fb44402dea16200415a838da314742aa0c80752efe0e229e6c",
+        "release": "https://github.com/modelscope/FunASR/releases/tag/v1.4.14"
+      }
+    },
+    {
+      "id": "officecli",
+      "kind": "binary",
+      "platform": "win32-x64",
+      "verifiedVersion": "1.0.147",
+      "name": "Office 文件预览",
+      "verifiedAt": "2026-09-04",
+      "source": {
+        "registry": "https://github.com/iOfficeAI/OfficeCLI",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.147",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.147/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.147/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.147/NOTICE",
+        "artifactSha256": "724056e5ff079c3585df79c8afc386f08ef7d5f956cf4e2723534e129aab6e80",
+        "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
+        "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
+      },
+      "verification": {
+        "realInference": true,
+        "contract": "officecli-readonly-preview-v1",
+        "fixture": "generated-docx-xlsx-pptx",
+        "expectedVersion": "1.0.147",
+        "formats": [
+          "docx",
+          "xlsx",
+          "pptx"
+        ]
       }
     }
   ],
   "providerCatalog": {
-    "version": "2026-08-28",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-08-28.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-08-28.json",
-    "sha256": "d2234a94aaa774b0fcb927234514f9ac53c6eb69872e815d75ddc1b255639132"
+    "version": "2026-09-05.1",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-05.1.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-05.1.json",
+    "sha256": "7f58ae2bcc374a675e1d8d4ebce8d0f39529374c8bc367bd7c905fb7662deb9d"
   },
   "latest": {
-    "version": "3.2.2",
-    "notes": "# 3.2.2\n\n这次更新重点整理了归档、记忆搜索、消息排版和组件更新，让 Miaoclaw 在内容越来越多时仍然清楚、稳定。\n\n## 这次有什么变化\n\n- **归档会话更好管理**：归档区默认收起，打开后按页浏览；对话再多也不会一次铺满页面。打开、恢复和翻页都不会误切换当前对话。\n- **记忆关联更清楚**：页面会说明当前展示多少组、总共有多少组，以及还有多少内容。完整内容可在记忆总览下方的“长期记忆 · 逐条管理”中按页查看，不再把有限预览当成全部。\n- **记忆和知识搜索更稳**：中文问题会优先理解真正主题，降低“是什么、怎么做”等通用词的干扰。结果会标明来自原对话、长期记忆、对话摘要还是知识库；喵喵手帐继续在手帐页面中单独查找。\n- **内容多时仍按需加载**：归档、会话摘要和长期记忆按页读取；手帐只显示有限总览，复盘只在打开具体会话时读取。数据变化后会重新开始当前浏览，减少重复、漏看和一次载入过多内容的风险。\n- **正文排版更舒服**：列表序号与正文对齐，行高和段落间距不再随窗口变化；减少无意义的整段加粗，表格、链接和换行显示更稳定。\n- **PPT 修改后不再裁字**：向已有文本框补充较长内容时，只重新适配被修改的文本框；不会从右侧或底部截掉文字，也不会缩小整份演示文稿。\n- **手机输入更可靠**：输入法弹出后，输入框和发送区域仍保持可见；小屏、低高度和横向空间不足时不会遮挡或无法输入。\n- **已安装组件的状态更准确**：本地语音、文字识别、Office、视频和命令共用同一套内置运行环境，不再把可用组件误报成缺少运行环境。\n- **Skill 更新更谨慎**：会先核对来源、版本和内容。找不到旧安装包时会继续检查可信更新来源，并提示从哪里选择新的更新包；同名或相似名称不会直接覆盖。\n- **设置页更简洁**：搜索来源测试会逐项显示名称与结果；已经证实不需要的图片中转入口已移除。\n\n## 你需要做什么\n\n- 在应用内检查更新即可：符合条件时会直接使用小体积更新；其他版本会直接下载 3.2.2 完整包，不需要先安装中间版本。\n- 更新完成后请从托盘完全退出 Miaoclaw，再重新打开一次。手机端刷新页面即可，不需要重新配对。\n- 更新会保留已有对话、归档、记忆、知识库、手帐、Skill、模型、飞书连接、定时任务和其他设置。\n- 如果某个 Skill 没有可核验的在线来源，也找不到原更新包，需要由你选择可信的新安装包后再继续更新。",
+    "version": "3.2.3",
+    "notes": "# 3.2.3\n\n这次更新重点改善搜索检查、记忆、后台任务和本地组件更新，让日常使用更清楚，也减少无意义的长期记忆。\n\n## 这次有什么变化\n\n- **搜索来源可以逐个检查**：在“设置 → 搜索”点击“逐个测试所有搜索来源”，会分别显示百度、Bing、搜狗、Google、DuckDuckGo、AnySearch、Tavily、Keenable、Brave 和 Serper 的当前状态。未配置 Key、连接成功但没有结果、结果质量较低和连接失败会明确区分。日常“智能混合”仍按问题选择合适来源，不会每次全部调用。\n- **长期记忆只保留以后真正有用的内容**：普通的一次性问答不会再自动进入长期记忆。原对话和对话摘要仍可搜索找回；明确的个人偏好、长期要求和以后仍会用到的信息才会进入可管理的长期记忆。\n- **在对话里就能找回过去内容**：可以直接问“最近的知识卡有哪些”“某天的手帐写了什么”“以前是不是提到过某件事”。Miaoclaw 会在对话、长期记忆、知识库、手帐和知识卡中寻找相关内容，并说明来自哪里；知识资料和卡片不会因此变成你的个人偏好。\n- **记忆页面更简洁**：记忆关联默认收起，需要时再展开查看；长期记忆可以直接编辑、停止使用、删除或彻底遗忘。\n- **删除后的状态更可靠**：删除对话、手帐、知识卡或知识库内容后，相关搜索会立即更新，下一轮对话不会报错，也不会让已删除内容重新出现。单独保存过的长期记忆仍由长期记忆页面管理；删除手帐时可同时选择遗忘与它关联的长期记忆。删除知识库条目不会删除你原来的本地文件。\n- **电脑端选模型更清楚**：先选服务商，再选该服务商的模型，不再展开一条很长的混合列表。只有当前接口明确支持时才显示思考强度；不支持的模型不会出现无效选项。不手动选择时，仍由 Miaoclaw 根据任务自适应。\n- **后台任务更会选模型**：定时任务和后台整理只会在能力与质量合适、你明确允许后台使用且服务商规则允许时，优先使用已配置的 Coding Plan。日常对话继续使用你指定的主模型，桌面宠物继续使用你为快速响应选择的模型。\n- **Agnes 优先使用新一代模型**：普通对话默认升级到 Agnes 2.5 Flash；图片默认优先 Image 2.5 Flash，视频默认优先 Video 2.5 Flash。图片和视频在接口明确返回模型或参数不兼容时，会换用能力合适的备用模型；不会替换你手动选择的模型，超时或提交状态不确定时也不会重复生成。\n- **支持安全更新到 FunASR 1.4.14**：应用会在下载并确认新版本可以正常使用后再启用；更新失败时继续使用原版本。文字识别、Office 预览组件和 Skill 更新也会检查来源，并保留可以恢复的旧版本。\n- **办公任务更贴近日常说法**：像“整理这两份资料，做个汇报”这样的自然请求会由当前模型先理解附件和目标，再选择工具、页数与输出形式；不会要求用户按测试题一样预先指定每一页和每一个文本框。\n- **Word、Excel、PPT 和 PDF 交付更稳**：生成后会确认文件真实写入、可以重新打开，并在可用时直接提供预览。PPT 使用现成模板时会根据内容选择合适版面，让表格、文字、图片和说明区共同适配，不再把内容硬塞进固定文本框；发现明确截断或越界时只修对应区域，不会靠反复删内容过关。\n- **后续修改能接着上一版做**：用户说要继续调整时，会优先沿用当前可读取的成品；用户重新上传改名、移动或自行修改后的文件时，以新文件为准。原文件已删除但存在完整可恢复副本时，会先恢复成新的工作副本再修改；没有可靠文件时会请用户重新提供，不会猜路径或假装已经改好。\n- **完整安装包补齐本地功能所需组件**：安装后，本地文档、PDF、语音、文字识别和音视频处理不需要你另外寻找开发工具或安装程序。\n- **完整升级更稳**：新版本会先准备完整并确认可用，再替换当前程序；如果准备或替换没有完成，原来的版本仍可继续使用，已有数据不受影响。重新打开后可以看到本次安装是否完成。\n\n## 安装与更新\n\n- **Windows 怎么更新？** 如果 Miaoclaw 已在后台下载 3.2.3，按提示完全退出并重新打开即可；手动下载时请使用 **3.2.3 完整安装包**。\n- **需要重启电脑吗？** 不需要。只需要完全退出并重新打开 Miaoclaw；浏览器端刷新页面即可。\n- **原来的数据会保留吗？** 会。已有对话、归档、记忆、知识库、手帐、Skill、模型、飞书连接、定时任务和其他设置都会保留。\n- **手机端怎么更新？** 3.2.3 不更换 Android 安装包，只更新手机端使用的 PWA 页面。页面下载完成后，完全退出并重新打开 Android 版即可使用 3.2.3；不需要重装 APK，也不需要重新配对。\n\n## 当前限制\n\n- 本地文字识别和 FunASR 语音识别在首次使用或首次更新时需要联网下载模型，所需时间取决于网络速度。下载失败时可以稍后重试，不会替换原来可用的版本。\n- Android 原生安装包在 3.2.3 中保持不变。如果手机端没有立即显示新版本，请等待页面下载完成后完全退出并重新打开；仍未更新时可刷新 PWA 页面。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.2.2/Miaoclaw-Setup-3.2.2.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.2.2/Miaoclaw-Setup-3.2.2.exe",
-      "sha256": "370624dd2787ef9f10161b1b115831f1986617ccf00b0d296e7fb91346d314da",
-      "sizeBytes": 262444671
-    },
-    "hot": {
-      "baseline": "3.1.19",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.2.2/miaoclaw-hot-3.2.2.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.2.2/miaoclaw-hot-3.2.2.zip",
-      "sha256": "4eb64bd7f47d6ee6ad0dcc9efb69073bd016f4301b4c2bc69c0241dca438c9d4",
-      "sizeBytes": 10228252
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.2.3/Miaoclaw-Setup-3.2.3.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.2.3/Miaoclaw-Setup-3.2.3.exe",
+      "sha256": "40e0807bfe9d3e52db8540b6afdf4a0b3437c8db683e528fbcecef9bcf9a41be",
+      "sizeBytes": 220399583
     },
     "android": {
       "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.2.2",
+      "feVersion": "3.2.3",
       "sha256": "66975ea40c4e5a9372a0fd27a02e55e487af79f4f806979263c9cc6691aa1f73",
       "sizeBytes": 6782274,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
