@@ -1,0 +1,901 @@
+[
+  {
+    "id": "deepseek",
+    "models": [
+      {
+        "id": "deepseek-v4-flash",
+        "label": "DeepSeek V4 Flash",
+        "release": "DeepSeek-V4-Flash-0731",
+        "use": "轻快任务",
+        "input": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "tools",
+          "fast",
+          "low_cost",
+          "reasoning",
+          "long_context"
+        ],
+        "routingTags": [
+          "fast_chat",
+          "memory_writer",
+          "fallback_web"
+        ],
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 384000,
+        "defaultMaxTokens": 8192,
+        "minReasoningMaxTokens": 2048,
+        "requestDefaults": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "parameterPolicy": {
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "medium": "high",
+            "xhigh": "high"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "unsupported",
+          "localImage": false,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        }
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "label": "DeepSeek V4 Pro",
+        "release": "DeepSeek-V4-Pro-0813",
+        "use": "深度任务",
+        "input": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "tools",
+          "deep_reasoning",
+          "review",
+          "long_context"
+        ],
+        "routingTags": [
+          "reasoning",
+          "review",
+          "office_backup"
+        ],
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 384000,
+        "defaultMaxTokens": 8192,
+        "minReasoningMaxTokens": 2048,
+        "requestDefaults": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "parameterPolicy": {
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "medium": "high",
+            "xhigh": "high"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "unsupported",
+          "localImage": false,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        }
+      },
+      {
+        "id": "deepseek-v4-flash-vision-exp",
+        "label": "DeepSeek V4 Flash Vision Exp（实验）",
+        "release": "DeepSeek-V4-Flash-Vision-Exp",
+        "use": "快速视觉理解、截图识别、图表与文档图片分析",
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "tools",
+          "fast",
+          "low_cost",
+          "reasoning",
+          "long_context"
+        ],
+        "routingTags": [
+          "vision_light",
+          "agent"
+        ],
+        "capabilitySource": "manual-verified",
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 384000,
+        "defaultMaxTokens": 8192,
+        "minReasoningMaxTokens": 2048,
+        "requestDefaults": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "parameterPolicy": {
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "medium": "high",
+            "xhigh": "high"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": true,
+          "auxiliaryVision": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "kimi",
+    "models": [
+      {
+        "id": "kimi-k3",
+        "label": "Kimi K3",
+        "use": "旗舰深度推理、长程复杂任务(费用较高)",
+        "input": [
+          "text",
+          "image"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "tools",
+          "coding",
+          "agent",
+          "long_context",
+          "deep_reasoning"
+        ],
+        "routingTags": [
+          "reasoning",
+          "agent"
+        ],
+        "capabilitySource": "manual-verified",
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        },
+        "reasoning": true,
+        "contextWindow": 1048576,
+        "maxTokens": 131072,
+        "defaultMaxTokens": 32768,
+        "minReasoningMaxTokens": 4096,
+        "requestDefaults": {},
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "minimal": "low",
+            "medium": "high",
+            "xhigh": "max"
+          },
+          "fixedThinkingType": "enabled",
+          "thinking": "omit"
+        }
+      },
+      {
+        "id": "kimi-k2.6",
+        "label": "Kimi K2.6",
+        "use": "中文长上下文、联网整理",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "chinese",
+          "long_context",
+          "web_research",
+          "office"
+        ],
+        "routingTags": [
+          "main_chat",
+          "web_research",
+          "office"
+        ],
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": true
+        },
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 98304,
+        "defaultMaxTokens": 32768,
+        "requestDefaults": {},
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "thinkingDefault": "enabled"
+        }
+      },
+      {
+        "id": "kimi-k2.7-code-highspeed",
+        "label": "Kimi K2.7 Code 高速版",
+        "use": "长程代码和工具任务，速度优先",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "coding",
+          "agent",
+          "long_context"
+        ],
+        "routingTags": [
+          "coding",
+          "dev",
+          "agent"
+        ],
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        },
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 16384,
+        "requestDefaults": {},
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "thinkingDefault": "enabled",
+          "fixedThinkingType": "enabled",
+          "thinking": "omit"
+        }
+      },
+      {
+        "id": "kimi-k2.7-code",
+        "label": "Kimi K2.7 Code",
+        "use": "复杂开发、长上下文代码任务",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "coding",
+          "agent",
+          "long_context",
+          "deep_reasoning"
+        ],
+        "routingTags": [
+          "coding",
+          "dev",
+          "agent",
+          "reasoning"
+        ],
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        },
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 16384,
+        "requestDefaults": {},
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "thinkingDefault": "enabled",
+          "fixedThinkingType": "enabled",
+          "thinking": "omit"
+        }
+      }
+    ]
+  },
+  {
+    "id": "kimi-coding",
+    "models": [
+      {
+        "id": "kimi-for-coding",
+        "label": "Kimi Code（K2.7 Code 稳定版）",
+        "use": "工程代码、多文件修改、工具任务",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "coding",
+          "non_streaming_preferred"
+        ],
+        "routingTags": [
+          "coding",
+          "dev"
+        ],
+        "capabilitySource": "manual-verified",
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 32768,
+        "minReasoningMaxTokens": 32768,
+        "requestDefaults": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "thinkingDefault": "enabled",
+          "fixedThinkingType": "enabled",
+          "thinking": "send_enabled",
+          "requiresCodingAgentUserAgent": true
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": true
+        }
+      },
+      {
+        "id": "k3",
+        "label": "Kimi K3（Coding 端）",
+        "use": "复杂工程与长程推理(需 Moderato 及以上订阅档位)",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "coding",
+          "agent",
+          "long_context",
+          "deep_reasoning",
+          "non_streaming_preferred"
+        ],
+        "routingTags": [
+          "reasoning",
+          "agent"
+        ],
+        "capabilitySource": "manual-verified",
+        "reasoning": true,
+        "contextWindow": 1048576,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 16384,
+        "minReasoningMaxTokens": 4096,
+        "requestDefaults": {},
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "requiresCodingAgentUserAgent": true,
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "minimal": "low",
+            "medium": "high",
+            "xhigh": "max"
+          },
+          "fixedThinkingType": "enabled",
+          "thinking": "send_enabled"
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": true
+        }
+      },
+      {
+        "id": "k3-256k",
+        "label": "Kimi K3（Coding 端 · 256K）",
+        "use": "复杂工程与长程推理(256K 上下文,Moderato 及以上档位)",
+        "input": [
+          "text",
+          "image"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "tools",
+          "coding",
+          "agent",
+          "long_context",
+          "deep_reasoning",
+          "non_streaming_preferred"
+        ],
+        "routingTags": [
+          "reasoning",
+          "agent"
+        ],
+        "capabilitySource": "manual-verified",
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 16384,
+        "minReasoningMaxTokens": 4096,
+        "requestDefaults": {},
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "requiresCodingAgentUserAgent": true,
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "minimal": "low",
+            "medium": "high",
+            "xhigh": "max"
+          },
+          "fixedThinkingType": "enabled",
+          "thinking": "send_enabled"
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": true
+        }
+      },
+      {
+        "id": "kimi-for-coding-highspeed",
+        "label": "Kimi Code 高速版（K2.7）",
+        "use": "追求响应速度的代码与工具任务(需 Allegretto 及以上档位,消耗约 3 倍)",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "coding",
+          "non_streaming_preferred"
+        ],
+        "routingTags": [
+          "coding",
+          "dev"
+        ],
+        "capabilitySource": "manual-verified",
+        "reasoning": true,
+        "contextWindow": 262144,
+        "maxTokens": 32768,
+        "defaultMaxTokens": 16384,
+        "minReasoningMaxTokens": 16384,
+        "requestDefaults": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "parameterPolicy": {
+          "temperature": "omit",
+          "topP": "omit",
+          "penalties": "omit",
+          "thinkingDefault": "enabled",
+          "fixedThinkingType": "enabled",
+          "thinking": "send_enabled",
+          "requiresCodingAgentUserAgent": true
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": false,
+          "auxiliaryVision": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "qwen",
+    "models": [
+      {
+        "id": "qwen3.8-max",
+        "label": "Qwen 3.8 Max",
+        "capabilitySource": "manual-verified",
+        "use": "新旗舰，复杂推理、办公与原生视觉理解",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "deep_reasoning",
+          "long_context",
+          "chinese",
+          "agent",
+          "review"
+        ],
+        "routingTags": [
+          "reasoning",
+          "agent",
+          "review",
+          "office_backup",
+          "vision"
+        ],
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 131072,
+        "defaultMaxTokens": 8192,
+        "minReasoningMaxTokens": 2048,
+        "parameterPolicy": {
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
+          "reasoningEffortMap": {
+            "minimal": "low",
+            "high": "xhigh",
+            "max": "xhigh"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": true,
+          "auxiliaryVision": true
+        }
+      },
+      {
+        "id": "qwen3.8-flash",
+        "label": "Qwen 3.8 Flash",
+        "capabilitySource": "manual-verified",
+        "use": "快速高性价比多模态对话、办公与 Agent",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "deep_reasoning",
+          "long_context",
+          "chinese",
+          "agent",
+          "office",
+          "fast",
+          "low_cost"
+        ],
+        "routingTags": [
+          "fast_chat",
+          "vision_light",
+          "agent",
+          "office",
+          "memory_writer"
+        ],
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 131072,
+        "defaultMaxTokens": 8192,
+        "minReasoningMaxTokens": 2048,
+        "parameterPolicy": {
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
+          "reasoningEffortMap": {
+            "minimal": "low",
+            "high": "xhigh",
+            "max": "xhigh"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": true,
+          "auxiliaryVision": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "glm",
+    "defaultModel": "glm-5.3",
+    "models": [
+      {
+        "id": "glm-5.3",
+        "label": "GLM-5.3",
+        "capabilitySource": "manual-verified",
+        "use": "最新旗舰，复杂工程、长程 Agent 与办公",
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "tools",
+          "deep_reasoning",
+          "long_context",
+          "chinese",
+          "agent",
+          "review"
+        ],
+        "routingTags": [
+          "main_chat",
+          "reasoning",
+          "agent",
+          "review",
+          "office",
+          "coding",
+          "dev"
+        ],
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 131072,
+        "defaultMaxTokens": 32768,
+        "requestDefaults": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "parameterPolicy": {
+          "fixedThinkingType": "enabled",
+          "thinking": "send_enabled",
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "minimal": "low",
+            "medium": "high",
+            "xhigh": "max"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "unsupported",
+          "localImage": false,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        }
+      },
+      {
+        "id": "glm-5.2",
+        "label": "GLM-5.2",
+        "capabilitySource": "manual-verified",
+        "use": "最新旗舰，长程 Agent、复杂工程与办公",
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "tools",
+          "deep_reasoning",
+          "long_context",
+          "chinese",
+          "agent",
+          "review"
+        ],
+        "routingTags": [
+          "main_chat",
+          "reasoning",
+          "agent",
+          "review",
+          "office"
+        ],
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 131072,
+        "defaultMaxTokens": 8192,
+        "minReasoningMaxTokens": 2048,
+        "parameterPolicy": {
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "reasoningEffortUserValues": [
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "low": "high",
+            "medium": "high",
+            "xhigh": "max"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "unsupported",
+          "localImage": false,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        }
+      },
+      {
+        "id": "glm-4.7",
+        "label": "GLM-4.7",
+        "capabilitySource": "manual-verified",
+        "use": "新旗舰对话与推理",
+        "input": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "tools",
+          "reasoning",
+          "long_context",
+          "chinese"
+        ],
+        "routingTags": [
+          "main_chat",
+          "reasoning",
+          "office"
+        ],
+        "reasoning": true,
+        "contextWindow": 200000,
+        "maxTokens": 128000,
+        "defaultMaxTokens": 8192,
+        "minReasoningMaxTokens": 2048,
+        "mediaInputPolicy": {
+          "imageTransport": "unsupported",
+          "localImage": false,
+          "remoteImage": false,
+          "auxiliaryVision": false
+        }
+      },
+      {
+        "id": "glm-5.3-flash",
+        "label": "GLM-5.3-Flash",
+        "capabilitySource": "manual-verified",
+        "use": "快速多模态 Agent、图片/视频理解与办公",
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ],
+        "capabilities": [
+          "text",
+          "image_input",
+          "video_input",
+          "tools",
+          "deep_reasoning",
+          "long_context",
+          "chinese",
+          "agent",
+          "office"
+        ],
+        "routingTags": [
+          "fast_chat",
+          "vision",
+          "agent",
+          "office",
+          "memory_writer"
+        ],
+        "reasoning": true,
+        "contextWindow": 1000000,
+        "maxTokens": 131072,
+        "defaultMaxTokens": 32768,
+        "requestDefaults": {
+          "thinking": {
+            "type": "enabled"
+          }
+        },
+        "parameterPolicy": {
+          "fixedThinkingType": "enabled",
+          "thinking": "send_enabled",
+          "supportsReasoningEffort": true,
+          "reasoningEffortValues": [
+            "low",
+            "high",
+            "max"
+          ],
+          "reasoningEffortMap": {
+            "minimal": "low",
+            "medium": "high",
+            "xhigh": "max"
+          }
+        },
+        "mediaInputPolicy": {
+          "imageTransport": "openai-image-url",
+          "localImage": true,
+          "remoteImage": true,
+          "auxiliaryVision": true
+        }
+      }
+    ]
+  }
+]
