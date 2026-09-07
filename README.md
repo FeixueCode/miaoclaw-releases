@@ -12,7 +12,7 @@
 [![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
 [![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
 
-最新：v3.3.2 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+最新：v3.3.3 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
 
 [⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
 
@@ -66,12 +66,14 @@
 
 > 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
 
-### 3.3.2 更新亮点
+### 3.3.3 更新亮点
 
-- **3.3.2**：**只改一项，其他约定继续保留**：以前一条记忆里保存了多项约定，修改其中一项时可能连带丢失其他内容
-- **你需要做什么**：**要不要重启**：安装本版更新后，从托盘完全退出 Miaoclaw 再打开；不用重启电脑
+- **这次有什么变化**：**交办后更顺畅地完成和修改**：HTML 里的动画不会再被误当成必须交付视频
+- **修好了什么**：**以前的文件更容易找回**：仍被对话引用的上传件和历史文件，不再被普通缓存清理当作无用文件删除
+- **你需要做什么**：**要不要重启**：本版使用完整安装包
+- **供应商接入补充**：**套餐入口更清楚**：补充多家 Coding Plan / Token Plan 接入说明与独立地址，新用户可直接选择…
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.3.2)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.3.3)。
 
 ---
 
@@ -79,7 +81,7 @@
 
 **Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
 
-Latest: v3.3.2 · Free · Local-first · Bring your own model key (60+ providers supported)
+Latest: v3.3.3 · Free · Local-first · Bring your own model key (60+ providers supported)
 
 - **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
 - **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
