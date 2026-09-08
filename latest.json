@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-09-07T07:58:12.809Z",
+  "publishedAt": "2026-09-08T13:23:12.513Z",
   "resources": [
     {
       "id": "ocr",
@@ -71,16 +71,16 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.147",
+      "verifiedVersion": "1.0.148",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-09-04",
+      "verifiedAt": "2026-09-08",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.147",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.147/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.147/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.147/NOTICE",
-        "artifactSha256": "724056e5ff079c3585df79c8afc386f08ef7d5f956cf4e2723534e129aab6e80",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.148",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.148/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.148/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.148/NOTICE",
+        "artifactSha256": "df91e48fa250500b05ae1043777af26857e51ed12ea75b2f7a57e3333e3813bf",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
@@ -88,7 +88,7 @@
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.147",
+        "expectedVersion": "1.0.148",
         "formats": [
           "docx",
           "xlsx",
@@ -98,24 +98,24 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-09-07.1",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-07.1.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-07.1.json",
+    "version": "2026-09-08.1",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-08.1.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-08.1.json",
     "sha256": "4aa15344f430574d9f0efd7a3be26965362920afaa328305a396121a46312f35"
   },
   "latest": {
-    "version": "3.3.3",
-    "notes": "# 3.3.3\n\n本次让任务更贴近你的实际要求，改善文件交付、费用记录、定时任务和备份恢复。\n\n## 这次有什么变化\n\n- **交办后更顺畅地完成和修改**：HTML 里的动画不会再被误当成必须交付视频。你中途补充要求、改变保存位置或指定图片后，会结合完整对话继续处理；长任务会适时整理已有材料与具体缺口，资料够用时及时给结果。\n- **费用累计更完整**：用量不再随近期记录滚动而漏掉较早调用；缺少价格、缺少用量和套餐调用会分别说明。每天、每月的数字是本地估算，实际结算仍以服务商账单为准。\n- **定时任务可以接着等**：预算暂停会保留待办，解除后再继续。同一计划的上一轮还没结束时，后续周期合并等待；搬家后无法核对原执行结果的任务会提示先核对，避免盲目重做。\n- **备份状态看得见**：在“设置 → 关于与更新 → 备份与换电脑搬家”查看最近备份是否成功，选择最近备份恢复。搬家包会带上仍被引用的受管成果，并列出需要另行搬走的外部文件。\n\n## 修好了什么\n\n- **以前的文件更容易找回**：仍被对话引用的上传件和历史文件，不再被普通缓存清理当作无用文件删除。Excel 连续修改时，也会保留单元格内不同文字的字体样式。\n- **成品卡片更准确**：模型明确选好交付文件后，聊天会展示这些成品；处理中使用的脚本仍可回查，不再混作多余的成品卡。\n- **表格规则按实际要求生效**：修复部分公式条件格式被错误转换、没有按状态着色的问题；无法支持的规则或图表会明确说明，不再悄悄换成另一种。\n- **已有记忆较多时等待更少**：减少未变化记录的重复读取；旧记录的编码差异和未完成遗忘仍会核对处理。\n- **模型能力更完整地发挥**：修复视觉辅助、文字协作和长消息阅读被固定短额度提前截断的问题；Kimi Coding 可逐步返回内容，StepFun 的已支持思考强度也能正常使用。实际速度与用量仍取决于模型和任务。\n- **手机更新与离线重开更可靠**：修复已加载界面未正确缓存而离线白屏的问题；手机设置中能看到界面版本，方便确认更新。离线时仍不能向电脑或模型发起任务。\n- **危险命令由你确认**：需要确认的命令会在当前聊天里显示具体动作，点击同意后才执行；普通保存、测试和构建不增加额外确认。手机连接和交互 HTML 的保护同时加强。\n\n## 你需要做什么\n\n- **要不要重启**：本版使用完整安装包。安装更新后，从托盘完全退出 Miaoclaw 再打开；不用重启电脑。\n- **手机上要做什么**：电脑和手机界面都要更新到 3.3.3 或更新版本。浏览器刷新页面；Android App 保持联网，待新版界面下载完成后完全退出再打开。在手机设置中查看界面版本。无需重装 APK，普通升级也无需重新配对；两端版本不匹配时按连接提示完成更新。\n- **数据会不会丢**：正常覆盖升级保留对话、手帐、记忆、知识库和模型设置。搬家恢复与普通升级不同：恢复前会备份当前资料，恢复后手机等远程设备需要重新配对。搬家包包含密钥，应妥善保存；重要备份请另存其他磁盘。\n- **还不能做什么**：模型仍可能误解任务、算错或排版欠佳，可以在原对话继续修改。本地费用不能代替厂商账单，预算不是扣费硬上限；备份也不是全盘备份，未包含的外部文件需要另行保存。\n\n## 供应商接入补充\n\n- **套餐入口更清楚**：补充多家 Coding Plan / Token Plan 接入说明与独立地址，新用户可直接选择套餐；实际可用范围以供应商说明和当前账号为准。\n- **模型设置更可靠**：保留用户明确的模型参数，修复工具往返状态、部分接口地址及流式兼容问题。未知模型容量不再用猜测值代替，接口必填的单次预算与模型能力分开设置。",
+    "version": "3.3.4",
+    "notes": "# 3.3.4\n\n这次围绕长期使用，把手机更新、随手记录、聊天阅读、记忆接续和文件处理做得更稳。\n\n## 这次有什么变化\n\n- **手机 App 可以检查并启用新版界面**：新版安卓 App 打开或回到前台时会检查更新，下载完成后提示启用，也可在“设置 → 手机界面更新”手动检查。启用失败时保留原来可用的界面。\n- **随手记下的内容先保存在手机**：手帐文字和图片在本地保存后再同步，断网或暂时连不上电脑时可以稍后重试；收到确认才从待同步列表移走，重试不会重复记一份。\n- **对话里的图片直接可看**：上传图片和交付的图片可在聊天里直接查看。处理中突出当前动作与简短工作说明，完成后显示汇总，详细步骤默认折叠。\n- **旧事能接着用，纠正能留下来**：改善长对话整理后的任务接续，保留已做、已验证和待完成的区别。旧备份恢复时会核对后来作出的记忆纠正与遗忘，减少旧约定重新覆盖新决定的情况。\n- **桌宠说话频率更符合设置**：调整安静、适中和活跃三档的实际触发；正常编辑办公文件不再轻易被误当成需要保持安静的演示场景。\n\n## 修好了什么\n\n- **办公文件更容易核对和继续修改**：读取 Excel 时提供更完整的条件颜色、颜色筛选与显示格式信息；批量内容可以直接用于生成和修改文件，减少重复转抄。修复部分连续修改无法保存历史的问题，版面和工具仍由模型按任务选择。\n- **中文 PDF 阅读与排版更准确**：改善短中文双栏的阅读顺序和页码定位，保留扫描文字的实际位置；生成 PDF 时正确遵守指定字号、纸张和项目列表。\n- **媒体处理覆盖多种输入**：支持观察和转换本地图片、图片序列、视频以及网页动画；修复 GIF 颜色丢失、末尾画面抽取和完整序列时长问题。创作方法由模型结合材料与可用能力选择。\n- **长任务少些无效折返**：提供实际可用的组件信息，保留接续时需要的工具路径；区分新错误、真实进展和重复失败，避免一直更换不存在的路径却继续空转。\n- **细节更顺手**：改善窄屏短按钮、中文输入、离线提示和附件保存错误；自动备份与空间统计也补齐了遗漏。\n\n## 你需要做什么\n\n- **要不要重启**：电脑端使用完整安装包，沿用原安装位置。安装完成后从托盘完全退出 Miaoclaw 再打开；不用重启电脑。\n- **手机上要做什么**：安卓用户首次获得新版更新管理和可靠分享接收，需要从官网下载安装包直接覆盖升级到 App 0.4.0，保留已有应用，不要先卸载。之后普通界面更新可在 App 内完成。旧 App 可先联网等待界面下载，再从最近任务中划掉并重开；浏览器用户刷新页面即可。确认手机界面版本为 3.3.4。\n- **数据会不会丢**：正常覆盖升级保留对话、记忆、手帐、知识库、模型设置和配对。恢复备份或换电脑后，远程设备仍需重新配对；重要资料请保留独立备份。\n- **还不能做什么**：离线记录不等于离线执行模型任务，手机交办任务时电脑仍需在线。模型仍可能算错、遗漏或排版不理想，复杂文件要结合原始资料核对，可在原对话继续修改。本版没有扩展通用桌面控制或团队生态。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.3.3/Miaoclaw-Setup-3.3.3.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.3.3/Miaoclaw-Setup-3.3.3.exe",
-      "sha256": "6fe25af4209f8ac758b1b3aa3e297af2996271154ce222aab59c0a81afe36e24",
-      "sizeBytes": 220473059
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v3.3.4/Miaoclaw-Setup-3.3.4.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.3.4/Miaoclaw-Setup-3.3.4.exe",
+      "sha256": "8076e3cd7b00f34fe632f7ddd835e4790e2d269b41046b53ebbe1f0fa576a269",
+      "sizeBytes": 220426625
     },
     "android": {
       "shellVersion": "0.3.1-fe3.0.8",
-      "feVersion": "3.3.3",
+      "feVersion": "3.3.4",
       "sha256": "66975ea40c4e5a9372a0fd27a02e55e487af79f4f806979263c9cc6691aa1f73",
       "sizeBytes": 6782274,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.3.1-fe3.0.8.apk",
