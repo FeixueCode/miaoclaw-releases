@@ -4,98 +4,71 @@
 
 # 妙爪 Miaoclaw
 
-**本地优先的 Windows AI Agent —— 直接把 Word / Excel / PPT / PDF 做完。**
+**把事情交代清楚，让本地 AI 助手帮你完成。**
+
+Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 [![官网](https://img.shields.io/badge/官网-miao--claw.com-b98a3e)](https://miao-claw.com)
-[![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-blue)](https://miao-claw.com/#download)
-[![Android](https://img.shields.io/badge/Android-App%20%2F%20PWA-3ddc84)](https://app.miao-claw.com)
-[![为什么好用](https://img.shields.io/badge/深度解读-为什么妙爪干得好-8a6d3b)](https://miao-claw.com/why)
-[![English](https://img.shields.io/badge/English-homepage-lightgrey)](https://miao-claw.com/en/)
+[![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-487b86)](https://miao-claw.com/#download)
+[![手机伴侣](https://img.shields.io/badge/手机伴侣-Android%20%2F%20PWA-6d8464)](https://app.miao-claw.com)
 
-最新：v3.3.4 · 免费软件 · 数据全在本机 · 模型你自选（DeepSeek / Kimi / GLM / Qwen 等 60+ 家）
+最新：v3.3.5 · 本地优先 · 自选模型 · 免费下载
 
-[⬇ 下载 Windows 版](https://miao-claw.com/#download) · [📱 手机版](https://app.miao-claw.com) · [📖 使用说明](https://miao-claw.com/guide) · [💬 问题反馈](https://miao-claw.com/feedback)
+[下载 Windows 版](https://miao-claw.com/#download) · [手机端](https://app.miao-claw.com) · [使用说明](https://miao-claw.com/guide.html) · [问题反馈](https://miao-claw.com/feedback.html)
 
 </div>
 
-<!-- miaoclaw-product-hero:start -->
 <p align="center">
-  <a href="https://miao-claw.com/#download"><img src=".github/assets/miaoclaw-hero.svg" alt="Miaoclaw 妙爪：把任务交代清楚，拿回能打开的结果" width="100%"></a>
+  <a href="https://miao-claw.com"><img src=".github/assets/chat-office.png" alt="Miaoclaw 在对话中处理 Excel 并交付文件" width="100%"></a>
 </p>
-<p align="center"><strong>聊清楚 → 用工具 → 核对 → 交付</strong>　数据留在本机，模型由你选择。</p>
-<!-- miaoclaw-product-hero:end -->
+
+## 从一句话，到可继续使用的结果
+
+| 你想做的事 | 妙爪可以怎样帮忙 |
+| --- | --- |
+| **整理办公文件** | 读取和修改 Word、Excel、PowerPoint、PDF，在对话中预览、下载，并继续提出修改要求。 |
+| **核对资料与数据** | 分析表格、查阅 PDF、联网检索，把结论与引用来源一起整理。实际能力与验证记录见 [Office 证据页](https://miao-claw.com/benchmarks.html)。 |
+| **写代码、改项目** | 读取本地项目、编辑文件、运行命令和检查结果，聊天与开发共用同一工作入口。 |
+| **处理日常事务** | 用喵喵手帐记录信息，安排定时任务，语音输入，并按你的设置使用长期记忆。 |
+| **在手机上继续** | Android App 或浏览器扫码配对，经加密连接使用自己电脑上的助手；电脑需保持在线。 |
+
+## 三步开始
+
+1. 从 [官网](https://miao-claw.com/#download) 或 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/latest) 下载安装包。
+2. 在设置中接入你选择的模型服务。模型费用由你与服务商直接结算。
+3. 输入需求，或上传文件开始工作。结果还需调整时，直接在原对话继续说明。
+
+下载和安装的常见问题见 [使用说明](https://miao-claw.com/guide.html)。
+
+### 3.3.5 更新亮点
+
+- **聊天更顺手**：**文件与语音入口集中在一起**：加号菜单可添加多个文件、选择照片并切换语音方式；桌面支持添加文件夹、选择麦克风，手机保…
+- **连接与执行更稳**：**长任务可以继续接着做**：超过摘要模型单次容量的历史按完整工具往返分批整理，单份超长结果再按可追溯分页处理；全部完成…
+- **文件与交付检查**：**补齐 Excel 公式检查**：识别脚本生成的部分 Excel 函数缺少必要命名空间的问题，交付前提供定位和修正信息…
+- **你需要做什么**：**电脑端**：使用完整安装包覆盖安装，沿用原位置；安装完成后从托盘完全退出 Miaoclaw 再打开，无需重启电脑
+
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.3.5)。
 
 ---
 
-## 你交代事情，它交付结果
+## 日常工作，也有顺手的入口
 
-| 能力 | 一句话 |
-|---|---|
-| 📄 **办公文档** | 真的打开你电脑里的 Word / Excel / PPT / PDF 动手改：套模板、填公式、加批注；按「第几段/第几个表」精确定位，同一句话出现十次也不改错地方；原文件永不覆盖 |
-| 👀 **做完自己看一眼** | 生成的 PPT / 文档会渲染出页面自查版式，发现问题自己修好再交 |
-| 📑 **读 PDF 像人一样** | 两栏/三栏论文按正常阅读顺序读；页眉页码不混进正文；拼不出的表格诚实标注；扫描件本机离线 OCR |
-| 🔎 **联网调研出成品** | 说一句话，分头搜集、交叉整理，交一份带对比表格的 Word/PDF 报告；老网站不乱码、网页广告导航自动剥掉 |
-| 🧪 **模型能力靠实测** | 模型能不能看图，是真发一张图测出来的，不是抄文档；多把 Key 自动轮换，报错说人话 |
-| 📱 **手机随时接上** | 扫码配对、端到端加密（中转服务器只见密文），任何网络可用；安卓 App + 浏览器双形态 |
-| 🗒️ **日常小事** | 喵喵手帐随手记自动分类、定时任务到点自动跑、语音说话直接转文字（可离线）、桌面像素猫（可选） |
+| 联网整理资料 | 手机连接自己的电脑 |
+| --- | --- |
+| ![联网调研](https://miao-claw.com/assets/img/shots/research.png) | ![手机访问](https://miao-claw.com/assets/img/shots/mobile.png) |
 
-**为什么这些做得好？** 每一条背后的工程细节：[miao-claw.com/why](https://miao-claw.com/why)
-
-## 真实交付，不是界面示意
-
-上传 Excel，说一句话，Miaoclaw 会在副本中完成修改、核对结果，并把能直接打开的文件交回来。下图来自真实任务：312 行考勤逐项核对、两班倒标红、汇总表写回同一份交付文件。
-
-<p align="center">
-  <img src=".github/assets/chat-office.png" alt="Miaoclaw 在真实 Excel 文件中标记异常并交付修改后的文件" width="100%">
-</p>
-
-## 更多真实界面
-
-| 联网调研，成稿带对比表格 | 手机加密连回自己的电脑 |
-|---|---|
-| ![联网调研出报告](https://miao-claw.com/assets/img/shots/research.png) | ![手机端加密访问](https://miao-claw.com/assets/img/shots/mobile.png) |
-
-| 随手记自动分类成手帐 | 定时任务到点自动跑 |
-|---|---|
+| 随手记录 | 定时处理 |
+| --- | --- |
 | ![喵喵手帐](https://miao-claw.com/assets/img/shots/notes.png) | ![定时任务](https://miao-claw.com/assets/img/shots/schedules.png) |
-## 三步上手
 
-1. **下载安装**：[官网下载](https://miao-claw.com/#download)（约 260MB，含全部运行时，双击一路下一步）；下载慢可用[百度网盘](https://pan.baidu.com/s/11cMkfjOXg8JsZOi39cy9PQ?pwd=v3bk)（提取码 v3bk）或本仓库 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases)
-2. **贴一把 Key**：去 DeepSeek / Kimi 等官网领 API Key（约 5 分钟，多数厂商注册送额度），贴进设置或直接发到对话框
-3. **直接说人话**：「把这份 Excel 里的加班记录标出来」「调研这个行业写份报告」——说就行
+## About
 
-> 首次运行如遇「Windows 已保护你的电脑」：点「更多信息」→「仍要运行」。个人开发软件暂未购买代码签名证书，只从官网 / 网盘 / 本仓库下载即可放心。
+Miaoclaw is a local-first AI assistant for Windows, with an Android and PWA companion. Work with Office files, research, code and everyday tasks through a conversation. Connect your preferred model provider; model usage is billed by that provider.
 
-### 3.3.4 更新亮点
-
-- **这次有什么变化**：**手机 App 可以检查并启用新版界面**：新版安卓 App 打开或回到前台时会检查更新，下载完成后提示启用，也可在“…
-- **修好了什么**：**办公文件更容易核对和继续修改**：读取 Excel 时提供更完整的条件颜色、颜色筛选与显示格式信息；批量内容可以直接…
-- **你需要做什么**：**要不要重启**：电脑端使用完整安装包，沿用原安装位置
-
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.3.4)。
+Latest: v3.3.5 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
 
 ---
 
-## English
+本仓库提供安装包和更新资料。[官网](https://miao-claw.com) · [更新日志](https://miao-claw.com/changelog.html) · [反馈](https://github.com/FeixueCode/miaoclaw-releases/issues)
 
-**Miaoclaw** is a local-first AI assistant that lives on your own PC. It doesn't just chat — it opens your actual Office files and gets the work done.
-
-Latest: v3.3.4 · Free · Local-first · Bring your own model key (60+ providers supported)
-
-- **Real Office editing** — edits your existing Word/Excel/PPT/PDF with structure-aware addressing; originals never overwritten; renders its own output to self-review layout
-- **PDF that reads like a human** — multi-column reading order, header/footer stripping, honest table extraction, fully offline OCR
-- **Web research to finished reports** — charset sniffing, boilerplate stripping, hedged fetching
-- **Model truth by live probing** — capabilities verified by real test calls, not docs; multi-key rotation
-- **Phone access, end-to-end encrypted** — QR pairing, relay sees only ciphertext, works on any network
-
-[Download for Windows](https://miao-claw.com/#download) · [English homepage](https://miao-claw.com/en/) · Note: UI is currently Chinese-first; English UI is on the roadmap.
-
----
-
-## 关于本仓库
-
-本仓库只存放**发布产物**（安装包、更新描述文件）。Miaoclaw 是安装在你自己电脑上的软件；AI 能力由你接入的模型服务商提供，费用与服务商直接结算，妙爪不经手、不抽成。
-
-- 官网：[miao-claw.com](https://miao-claw.com) · 手机版：[app.miao-claw.com](https://app.miao-claw.com)
-- 更新日志：[miao-claw.com/changelog](https://miao-claw.com/changelog)
-- 问题反馈：[miao-claw.com/feedback](https://miao-claw.com/feedback) 或本仓库 [Issues](https://github.com/FeixueCode/miaoclaw-releases/issues)
+<sub>开发者飞雪先生FeixueCode，未经授权，不可用于商业用途</sub>
