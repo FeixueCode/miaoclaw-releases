@@ -12,7 +12,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-487b86)](https://miao-claw.com/#download)
 [![手机伴侣](https://img.shields.io/badge/手机伴侣-Android%20%2F%20PWA-6d8464)](https://app.miao-claw.com)
 
-最新：v3.4.1 · 本地优先 · 自选模型
+最新：v4.0.1 · 本地优先 · 自选模型
 
 [下载 Windows 版](https://miao-claw.com/#download) · [手机端](https://app.miao-claw.com) · [使用说明](https://miao-claw.com/guide.html) · [问题反馈](https://miao-claw.com/feedback.html)
 
@@ -40,17 +40,13 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 下载和安装的常见问题见 [使用说明](https://miao-claw.com/guide.html)。
 
-### 3.4.1 更新亮点
+### 4.0.1 更新亮点
 
-- **桌面上的妙爪**：**当前小猫有完整动作衔接**：本版围绕当前形象提供 13 个独立动作组，包括日常陪伴、吐槽、博学及拖放；两个人格各可用…
-- **选择桌宠模型前先测一次**：**先测一次，再选模型**：设置页按你已配置的模型列出候选，关闭日常“大模型互动”时，也可明确点击一次标准图响应测试
-- **文件制作更自由**：**按内容选择制作方式**：Word、Excel、PPT、PDF 可使用结构化工具或实际可用的文档库脚本，不再要求先尝试…
-- **手机与电脑之间继续工作**：**多台电脑分别保存状态**：手机可添加、命名和切换已配对电脑；会话、草稿、附件、待同步手帐和连接事件按电脑隔离，切换时…
-- **模型、连续任务和扩展**：**按实际接入映射模型能力**：逐项检查内置模型的上下文、独立输入上限、输出容量、思考档位和采样参数；更换地址、协议或实…
-- **日常互动与设置**：**本地猫语与问候**：沿用本地短句开关，以低频猫语、表情和开窗问候陪伴；自然休息显示小 Zzz，正文及操作时隐藏
-- **更新与验证边界**：**版本**：桌面应用与新版网页界面为 3.4.1；Android 原生壳保持 0.4.0，本次没有原生壳改动
+- **这次有什么变化**：**多种办公文件一起处理**：可结合表格、文档、PDF 和其中的图片制作交付文件，继续核对数据、修改内容和调整排版
+- **修好了什么**：**读资料时少漏内容**：修复部分 Word 内容控件、PPT 组合对象和图表数据漏读，以及长路径下图片提取失败的问题；…
+- **你需要做什么**：**要不要重启**：本次使用完整安装包
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v3.4.1)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v4.0.1)。
 
 ---
 
@@ -68,7 +64,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 Miaoclaw is a local-first AI assistant for Windows, with an Android and PWA companion. Work with Office files, research, code and everyday tasks through a conversation. Connect your preferred model provider; model usage is billed by that provider.
 
-Latest: v3.4.1 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
+Latest: v4.0.1 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
 
 ---
 
