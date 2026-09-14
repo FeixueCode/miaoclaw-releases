@@ -1,0 +1,41 @@
+name: One-time public 4.0.2 download byte verification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-downloads:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download public installer and hot archive and verify exact bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          target_dir="$RUNNER_TEMP/miaoclaw-public-402"
+          mkdir -p "$target_dir"
+          verify_download() {
+            local name="$1" expected_bytes="$2" expected_sha="$3"
+            local url="https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.2/$name"
+            local target="$target_dir/$name"
+            curl --fail --location --proto '=https' --tlsv1.2 --retry 2 --retry-delay 2 --connect-timeout 20 --max-time 600 --output "$target" "$url"
+            python3 - "$target" "$url" "$expected_bytes" "$expected_sha" <<'PY'
+          import hashlib, json, pathlib, sys
+          path = pathlib.Path(sys.argv[1])
+          digest = hashlib.sha256()
+          with path.open('rb') as stream:
+              for block in iter(lambda: stream.read(1024 * 1024), b''):
+                  digest.update(block)
+          actual_bytes, actual_sha = path.stat().st_size, digest.hexdigest()
+          passed = actual_bytes == int(sys.argv[3]) and actual_sha == sys.argv[4]
+          print(json.dumps({'url': sys.argv[2], 'bytes': actual_bytes, 'sha256': actual_sha, 'expectedBytes': int(sys.argv[3]), 'expectedSha256': sys.argv[4], 'passed': passed}), flush=True)
+          if not passed:
+              raise SystemExit('Public download bytes do not match the authorized release artifact')
+          PY
+          }
+          verify_download 'Miaoclaw-Setup-4.0.2.exe' '294329705' '94a1535198861d2676f370e04d3f8cfac9838167bba815000ce9707ec07f9c8a'
+          verify_download 'miaoclaw-hot-4.0.2.zip' '84368921' '9e9edb26367a3175b0f6b80355c10d31e6a74cc33e4baa2241dab900817caf4d'
+          echo 'PASS: both public GET downloads match exact release sizes and SHA-256 hashes.'
