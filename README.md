@@ -12,7 +12,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-487b86)](https://miao-claw.com/#download)
 [![手机伴侣](https://img.shields.io/badge/手机伴侣-Android%20%2F%20PWA-6d8464)](https://app.miao-claw.com)
 
-最新：v4.0.2 · 本地优先 · 自选模型
+最新：v4.0.3 · 本地优先 · 自选模型
 
 [下载 Windows 版](https://miao-claw.com/#download) · [手机端](https://app.miao-claw.com) · [使用说明](https://miao-claw.com/guide.html) · [问题反馈](https://miao-claw.com/feedback.html)
 
@@ -40,13 +40,13 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 下载和安装的常见问题见 [使用说明](https://miao-claw.com/guide.html)。
 
-### 4.0.2 更新亮点
+### 4.0.3 更新亮点
 
-- **这次有什么变化**：Chrome 授权页面试验版：把指定页面交给指定对话，读取内容、填写和操作控件，可随时停止
-- **修好了什么**：改善从旧版应用内升级、中文或特殊安装路径、自定义数据目录以及安装中断后的恢复
-- **你需要做什么**：**要不要重启**：更新后从托盘完全退出 Miaoclaw，再重新打开
+- **这次有什么变化**：桌宠增加阿比西尼亚猫，和暹罗猫各有自己的动作与气质
+- **修好了什么**：两只猫闭眼到睁眼稍快，保留自然停顿；右键手动选择继续优先接管，连续选择及时响应
+- **你需要做什么**：**要不要重启**：按应用提示完成更新后，从托盘完全退出 Miaoclaw 再打开
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v4.0.2)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v4.0.3)。
 
 ---
 
@@ -64,7 +64,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 Miaoclaw is a local-first AI assistant for Windows, with an Android and PWA companion. Work with Office files, research, code and everyday tasks through a conversation. Connect your preferred model provider; model usage is billed by that provider.
 
-Latest: v4.0.2 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
+Latest: v4.0.3 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
 
 ---
 
