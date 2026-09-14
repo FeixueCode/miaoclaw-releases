@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-09-14T05:18:46.550Z",
+  "publishedAt": "2026-09-13T12:34:06.029Z",
   "resources": [
     {
       "id": "ocr",
@@ -98,31 +98,24 @@
     }
   ],
   "providerCatalog": {
-    "version": "2026-09-14.2",
-    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-14.2.json",
-    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-14.2.json",
-    "sha256": "049ce374c36132a6fbe9abcd7dbe09f88a180f3d4da3ebdaaf2ed625631d6be7"
+    "version": "2026-09-12.1",
+    "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-12.1.json",
+    "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-12.1.json",
+    "sha256": "4c439628ea745f691fc26dc0a6d9d585c3123fa1c02f750ca762c7a3c452882f"
   },
   "latest": {
-    "version": "4.0.2",
-    "notes": "# Miaoclaw 4.0.2\n\n## 这次有什么变化\n\n- Chrome 授权页面试验版：把指定页面交给指定对话，读取内容、填写和操作控件，可随时停止。首次需要在 Chrome 加载扩展；每次点击在扩展内许可。\n- 轻量开发可以保留运行中的命令，在聊天里查看输出、输入或停止；文件修改和验证有记录，文件变化后会提示重新验证。\n- 设置按用途分组，交付记录集中到工作台，定时任务与文件夹便利贴集中到“自动任务”。原有角色、各自配置和历史调用仍可使用。\n- 聊天与桌宠使用一致的模型目录。官方 DeepSeek 只列 Flash 和 Pro；更新 Agnes、阶跃星辰与 GLM 的资料，保留 Step Plan 快速配置。\n- 看图优先使用所选模型的原生能力。自动生图、视频优先选择已核实免费的 Agnes 新模型，付费和价格未知的型号会明确区别。\n\n## 修好了什么\n\n- 改善从旧版应用内升级、中文或特殊安装路径、自定义数据目录以及安装中断后的恢复。\n- 已完成安装后，不再因更早的失败记录持续提示“安装没有完成”。\n- 桌宠右键互动优先响应，连续选择会及时切换到新动作；正常待机沿用原来的节奏。\n- 没有记录时收起无用列表；读取失败明确提示重试，不会当作没有内容。\n\n## 你需要做什么\n\n- **要不要重启**：更新后从托盘完全退出 Miaoclaw，再重新打开。兼容的连续版本优先使用热更包；若基础组件不兼容，会提供完整安装包。\n- **运行中的工程命令**：普通重启可重连仍在运行的命令；完整安装更新前会停止这些命令。未确认停止时不会启动安装器。\n- **手机上要做什么**：手机 App 检查并启用新版界面，浏览器刷新页面；正常更新无需重新配对。\n- **数据会不会丢**：正常覆盖升级保留对话、手帐、记忆、模型配置和其他设置。恢复文件副本时，当前文件有变化会拒绝覆盖。\n- **还不能做什么**：Chrome 试验版只操作明确授权的页面，不包含完整桌面控制、嵌入框架、文件上传或密码/验证码输入。持续命令提供文本输入输出，部分需要专用交互终端的软件不适用。OpenAI Agents API 后端未接入。",
+    "version": "4.0.1",
+    "notes": "# Miaoclaw 4.0.1\n\n本次重点改善 Office 文件制作、桌宠互动，以及助手、扩展和日常操作之间的配合。把材料和要求放进对话，由主助手完成读取、制作、检查和交付，并接着修改。\n\n## 这次有什么变化\n\n- **多种办公文件一起处理**：可结合表格、文档、PDF 和其中的图片制作交付文件，继续核对数据、修改内容和调整排版。\n- **PPT 与 Word 更自由地表达内容**：根据资料选择文字、图片、图表、表格和布局，也可沿用自己的模板。操作指南按需开启，提供方法与示例。\n- **Excel 的文字和计算各就其位**：支持明确保留等号开头的说明文字；有可用的 Excel 时可重算、检查输入变化后的结果，并预览打印页面。\n- **从成品导出同版 PDF**：Word、Excel、PPT 可通过当前可用的导出工具生成 PDF，修改后可继续导出并保留版本记录。\n- **桌宠正面待机、互动更完整**：右键菜单补齐当前可用的 10 项动作，改善休息、唤醒、拖动和互动结束后的衔接。\n- **Kimi K2.8 更容易找到**：Kimi Coding 的 kimi-for-coding 显示对应的 K2.8 Preview 名称，保留自定义名称；自动选择结合当前配置与任务，不强制把所有任务切到新模型。\n\n## 修好了什么\n\n- **读资料时少漏内容**：修复部分 Word 内容控件、PPT 组合对象和图表数据漏读，以及长路径下图片提取失败的问题；长附件会说明读取范围并支持继续读取。\n- **成品排版检查更有帮助**：改善圆角内文字间距、换行、图例和表格显示，补充实际相交和越界提示；可分批查看多页后继续修订。\n- **主助手与帮手配合更准确**：修复部分扩展影响正常文件工具、只读帮手拿不到附件，以及角色说明与实际能力不一致的问题。主助手继续负责判断和交付。\n- **记忆和搜索结果更贴合本次任务**：改善记忆生效范围和停用状态，修复部分网页正文漏读与 Skill 来源说明缺失。\n- **操作结果更清楚**：修复部分设置和文件操作失败不显示、旧请求覆盖新页面，以及便利贴任务和手机切换电脑后的状态问题。\n- **错误原因更准确**：修复地址或请求编号中的数字被误认成登录、欠费或限频错误的问题，保留实际网络失败的提示。\n- **应用内更新更稳定**：改善旧程序占用、特殊安装路径和失败提示，保留原有数据保护与恢复流程。\n\n## 你需要做什么\n\n- **要不要重启**：本次使用完整安装包。按提示安装，从托盘完全退出 Miaoclaw 再打开；不用重启电脑。\n- **手机上要做什么**：浏览器刷新页面；安卓 App 在“设置 → 手机界面更新”检查并启用 4.0.1 界面。本次沿用 App 0.4.0，不用重新安装或重新配对。\n- **数据会不会丢**：正常覆盖升级保留对话、手帐、记忆、工作文件和模型配置，不要先卸载或删除数据目录。\n- **还不能做什么**：文档质量仍受资料、模型和本机可用软件影响，重要数据与最终版面仍需核对。预览提示帮助发现问题，不保证覆盖所有排版情况；部分原生 Office 偶发失败和异常中断后的资源回收仍有限制。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.2/Miaoclaw-Setup-4.0.2.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.2/Miaoclaw-Setup-4.0.2.exe",
-      "sha256": "94a1535198861d2676f370e04d3f8cfac9838167bba815000ce9707ec07f9c8a",
-      "sizeBytes": 294329705
-    },
-    "hot": {
-      "baseline": "4.0.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.2/miaoclaw-hot-4.0.2.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.2/miaoclaw-hot-4.0.2.zip",
-      "sha256": "9e9edb26367a3175b0f6b80355c10d31e6a74cc33e4baa2241dab900817caf4d",
-      "sizeBytes": 84368921
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.1/Miaoclaw-Setup-4.0.1.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.1/Miaoclaw-Setup-4.0.1.exe",
+      "sha256": "f052cb36ae0879e0b121772ebe6e4ef0520db9318818498952a7bbd51e6fc1b0",
+      "sizeBytes": 294226243
     },
     "android": {
       "shellVersion": "0.4.0",
-      "feVersion": "4.0.2",
+      "feVersion": "4.0.1",
       "sha256": "ccae37ec336fcab335a0ed9a183dd27150aaa4a8b229c9997e11cca1e1e73eb8",
       "sizeBytes": 6932695,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.0.apk",
