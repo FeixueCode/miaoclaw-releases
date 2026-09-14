@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-09-14T05:59:36.560Z",
+  "publishedAt": "2026-09-14T13:00:39.936Z",
   "resources": [
     {
       "id": "ocr",
@@ -104,25 +104,25 @@
     "sha256": "049ce374c36132a6fbe9abcd7dbe09f88a180f3d4da3ebdaaf2ed625631d6be7"
   },
   "latest": {
-    "version": "4.0.2",
-    "notes": "# Miaoclaw 4.0.2\n\n## 这次有什么变化\n\n- Chrome 授权页面试验版：把指定页面交给指定对话，读取内容、填写和操作控件，可随时停止。首次需要在 Chrome 加载扩展；每次点击在扩展内许可。\n- 轻量开发可以保留运行中的命令，在聊天里查看输出、输入或停止；文件修改和验证有记录，文件变化后会提示重新验证。\n- 设置按用途分组，交付记录集中到工作台，定时任务与文件夹便利贴集中到“自动任务”。原有角色、各自配置和历史调用仍可使用。\n- 聊天与桌宠使用一致的模型目录。官方 DeepSeek 只列 Flash 和 Pro；更新 Agnes、阶跃星辰与 GLM 的资料，保留 Step Plan 快速配置。\n- 看图优先使用所选模型的原生能力。自动生图、视频优先选择已核实免费的 Agnes 新模型，付费和价格未知的型号会明确区别。\n\n## 修好了什么\n\n- 改善从旧版应用内升级、中文或特殊安装路径、自定义数据目录以及安装中断后的恢复。\n- 已完成安装后，不再因更早的失败记录持续提示“安装没有完成”。\n- 桌宠右键互动优先响应，连续选择会及时切换到新动作；正常待机沿用原来的节奏。\n- 没有记录时收起无用列表；读取失败明确提示重试，不会当作没有内容。\n\n## 你需要做什么\n\n- **要不要重启**：更新后从托盘完全退出 Miaoclaw，再重新打开。兼容的连续版本优先使用热更包；若基础组件不兼容，会提供完整安装包。\n- **运行中的工程命令**：普通重启可重连仍在运行的命令；完整安装更新前会停止这些命令。未确认停止时不会启动安装器。\n- **手机上要做什么**：手机 App 检查并启用新版界面，浏览器刷新页面；正常更新无需重新配对。\n- **数据会不会丢**：正常覆盖升级保留对话、手帐、记忆、模型配置和其他设置。恢复文件副本时，当前文件有变化会拒绝覆盖。\n- **还不能做什么**：Chrome 试验版只操作明确授权的页面，不包含完整桌面控制、嵌入框架、文件上传或密码/验证码输入。持续命令提供文本输入输出，部分需要专用交互终端的软件不适用。OpenAI Agents API 后端未接入。",
+    "version": "4.0.3",
+    "notes": "# Miaoclaw 4.0.3\n\n## 这次有什么变化\n\n- 桌宠增加阿比西尼亚猫，和暹罗猫各有自己的动作与气质。每次重新召唤随机出现一只，两只猫可分别起名字。\n- 两只猫有轻微眨眼、耳尾活动和睡眠呼吸，睡觉时 Zzz 轻轻起伏。改善左右位置对应的朝向和拖起、落地、互动结束后的衔接。\n- 各自保存最近的相处记录；你告诉桌宠的称呼与表达偏好、知识卡共用。名字分别设置，大脑、安静时段与互动程度仍共用。\n- Chrome 扩展默认“新建对话并授权当前页”，交给已有对话放在次要入口。授权后可回到对应 Miaoclaw 对话输入任务。\n\n## 修好了什么\n\n- 两只猫闭眼到睁眼稍快，保留自然停顿；右键手动选择继续优先接管，连续选择及时响应。\n- 修复吐槽或博学回复因引号异常而显示整段结构的问题，气泡、相处记录和知识卡保留可读正文；不完整的回复会提示重试。\n- 定时任务和文件夹便利贴生成的运行标题使用本地时间，改善周报标题比实际运行时间相差八小时的问题。历史标题和你改过的标题保留。\n- 切换猫、改名、清除相处记录时，迟到回复不会串到另一只猫或恢复已经清除的记录。知识卡仍在共同的卡片列表中。\n\n## 你需要做什么\n\n- **要不要重启**：按应用提示完成更新后，从托盘完全退出 Miaoclaw 再打开。符合兼容条件优先使用热更，无法热更时提供完整安装包。\n- **Chrome 扩展**：已经加载旧扩展的用户，在 Chrome 扩展管理页重新加载准备好的扩展目录；按 Miaoclaw 设置页提示更新。每次授权仅对应当前页面，每次点击仍需许可，可随时停止。\n- **手机上要做什么**：App 检查并启用新版界面，浏览器刷新；正常更新保留已有配对，本次无需更换 Android 外壳。\n- **数据会不会丢**：正常覆盖升级保留对话、手帐、记忆和模型配置。原有桌宠自定义名字归暹罗猫；可在桌宠设置中分别修改两只猫的名字。\n- **还不能做什么**：Chrome 授权页面仍读取网页文字与控件，尚不直接采集视频画面或声音。视频内容分析可将可用的视频文件交给 Miaoclaw；完整桌面控制未纳入本版。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.2/Miaoclaw-Setup-4.0.2.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.2/Miaoclaw-Setup-4.0.2.exe",
-      "sha256": "94a1535198861d2676f370e04d3f8cfac9838167bba815000ce9707ec07f9c8a",
-      "sizeBytes": 294329705
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.3/Miaoclaw-Setup-4.0.3.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.3/Miaoclaw-Setup-4.0.3.exe",
+      "sha256": "47208b479728315305afe1a621c5a4c62f6e8397f84efc1403d02cf750ac5d67",
+      "sizeBytes": 348680704
     },
     "hot": {
       "baseline": "4.0.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.2/miaoclaw-hot-4.0.2.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.2/miaoclaw-hot-4.0.2.zip",
-      "sha256": "9e9edb26367a3175b0f6b80355c10d31e6a74cc33e4baa2241dab900817caf4d",
-      "sizeBytes": 84368921
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.3/miaoclaw-hot-4.0.3.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.3/miaoclaw-hot-4.0.3.zip",
+      "sha256": "e08073a461b35cb7451c699b655b7ec2622a303df552673a3722012802456476",
+      "sizeBytes": 138599364
     },
     "android": {
       "shellVersion": "0.4.0",
-      "feVersion": "4.0.2",
+      "feVersion": "4.0.3",
       "sha256": "ccae37ec336fcab335a0ed9a183dd27150aaa4a8b229c9997e11cca1e1e73eb8",
       "sizeBytes": 6932695,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.0.apk",
