@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-09-21T06:43:30.944Z",
+  "publishedAt": "2026-09-21T14:46:40.471Z",
   "resources": [
     {
       "id": "ocr",
@@ -99,26 +99,33 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-09-21.2",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-21.2.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-21.2.json",
-      "sha256": "e5039d5bf2ab0a891670f0af09a037c6ab1179bd503e34bc8022d28eefca3a40",
+      "version": "2026-09-21.3",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-21.3.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-21.3.json",
+      "sha256": "926c7300d2ced01252e0a7ccb2025afe60a480c1dc9d97ebec8ba926a98a462f",
       "minAppVersion": "4.0.4"
     }
   ],
   "latest": {
-    "version": "4.0.4",
-    "notes": "# Miaoclaw 4.0.4\n\n## 这次有什么变化\n\n- Chrome 扩展可以把选区、当前网页或可见区域截图记到手帐，也能搜索已有手帐。保存的图文、表格和静态图表可直接阅读，原资料与后续整理结果分别保留。\n- 手帐支持按需整理已有字幕、转写可取得的音频，以及对指定视频片段有限抽帧。处理前可查看所需组件和范围；原资料不被摘要覆盖。\n- 对话会自动生成简洁标题，电脑和手机共用同一记录。手动改名优先，原始需求和历史名称仍可用于查找。\n- 增加 GLM-5.3-FlashX 标准 API 型号，复核内置模型和快捷接入资料。已有自定义地址、协议和名称继续保留。\n- Firecrawl 可配置为搜索与网页提取的补充来源；搜索来源、正文读取与失败情况分别记录，支持把多份原文交给模型综合。\n\n## 修好了什么\n\n- 修复斜杠 Skill 菜单闪烁、手机流式文字不连贯，以及工作台交付与便利贴持续显示刷新的问题。\n- 改善带附加尾数据的 JPEG 粘贴与上传，以及网页图片在手机聊天中的显示；无法读取的图片用简短提示说明。\n- 改善直连与代理的退让、慢网络下的读取和取消；不再让单一路径耗尽其他路径的尝试机会。\n- 长命令可以继续跟踪进程和回执；改善中断后的恢复、真实桌面路径和 Office 运行环境识别，避免把等待结束直接当成执行失败。\n- 修复安装目录识别、跨目录升级和备份恢复后的断连判断。手机首次配对继承电脑端填写的名称。\n- 两只桌宠的眨眼、耳朵、尾巴可独立活动，改善呼吸、转向和互动衔接；清理绿边、内部格式外露及重复对白。\n- 上下文用量使用简洁的 K/M 单位，区分上下文容量与输出上限。\n\n## 你需要做什么\n\n- **更新方式**：本版更新了随包运行组件，从 4.0.3 升级使用完整安装包；其他版本以应用的兼容性检查结果为准。正常覆盖升级保留对话、手帐、记忆和配置，完成后从托盘完全退出再打开。\n- **Chrome 扩展**：按设置页提示准备新版扩展，并在 Chrome 扩展管理页重新加载。点扩展按钮即可保存内容；网页操作仍需要明确授权。\n- **手机端**：检查并启用新版界面，浏览器刷新即可；Android 外壳仍为 0.4.0，正常更新保留已有配对。\n- **按需组件**：普通网页保存不调用模型，也不下载整段视频。音频转写、视频抽帧仅在需要时运行相应组件；缺少组件时会说明准备方法。\n- **适用范围**：网页保存保留可取得的内容和静态图表，不承诺复现所有动态交互；受保护或无法取得的音视频会明确说明。邮箱收发尚未纳入本版。",
+    "version": "4.0.5",
+    "notes": "# Miaoclaw 4.0.5\n\n## 这次修好了什么\n\n- 桌宠自主活动与发言分开调度，正常待机可自然出现看书、喝咖啡或玩耍；右键动作优先响应，结束后继续原来的自主和休息安排。电脑持续空闲时小猫会休息，回来后再醒来。\n- 两只猫的眨眼、耳朵、尾巴可独立出现或自然组合。待机保留原有轮廓，只加入轻微起伏；睡眠连续播放，改善动作切换，以及吐槽、知识卡与动作的对应关系。\n- 全量安装更可靠地识别已有安装位置，避开源码目录，保留原数据绑定；确认残留进程退出后再切换文件。成功安装经核验后，旧失败提示归入历史。\n- 新对话的短主题也能归纳标题；已开启自动命名时，空闲期间逐条整理符合条件的旧自动名称。手动名称优先，旧名仍可查找，对话 ID 和内容不变。\n- Chrome 扩展弹窗和侧栏适应浏览器尺寸、缩放和长内容，改善按钮、搜索框与正文挤压；网页控制仍按原有授权范围执行。\n- 桌宠模型响应记录默认收起，展开后可测试、刷新和取消；修正 Step 5 Preview 将上下文容量误作输出上限的配置。\n\n## 更新与使用\n\n- 应用会根据已安装版本和运行组件选择兼容热更或完整安装包；正常覆盖更新保留对话、手帐、记忆和配置。更新后按提示退出并重新打开。\n- Chrome 用户在设置中准备新版扩展后，到扩展管理页重新加载。\n- 手机检查并启用 4.0.5 界面；Android 外壳保持 0.4.0。\n- 本版保持现有记忆架构，移动通知策略不变。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.4/Miaoclaw-Setup-4.0.4.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.4/Miaoclaw-Setup-4.0.4.exe",
-      "sha256": "fd56e8d7ab13a60ff1df12023ea361ba37025572c28dbdf3d757f04c19095440",
-      "sizeBytes": 349609515
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.5/Miaoclaw-Setup-4.0.5.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.5/Miaoclaw-Setup-4.0.5.exe",
+      "sha256": "f21cf6add8920447402c8ce03600648cfdefcd1ae8521a4d39f393145cc5ae2a",
+      "sizeBytes": 363119468
+    },
+    "hot": {
+      "baseline": "4.0.4",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.5/miaoclaw-hot-4.0.5.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.5/miaoclaw-hot-4.0.5.zip",
+      "sha256": "54c61071b94fa933ad93a6ba92802efa120809d9818fbd3171c3917a86b5aa49",
+      "sizeBytes": 152307524
     },
     "android": {
       "shellVersion": "0.4.0",
-      "feVersion": "4.0.4",
+      "feVersion": "4.0.5",
       "sha256": "ccae37ec336fcab335a0ed9a183dd27150aaa4a8b229c9997e11cca1e1e73eb8",
       "sizeBytes": 6932695,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.0.apk",
