@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-09-22T10:56:17.455Z",
+  "publishedAt": "2026-09-21T14:46:40.471Z",
   "resources": [
     {
       "id": "ocr",
@@ -71,16 +71,16 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.152",
+      "verifiedVersion": "1.0.151",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-09-22",
+      "verifiedAt": "2026-09-21",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.152",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.152/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.152/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.152/NOTICE",
-        "artifactSha256": "047705402974c3690a4437e55f620d03afac4beba4fdd28fdb59af610a3afff2",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.151",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.151/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.151/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.151/NOTICE",
+        "artifactSha256": "57cd0e597514a4948ca034ea187637a18ad5b44a6e6729dfb7799414e06a083f",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
@@ -88,7 +88,7 @@
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.152",
+        "expectedVersion": "1.0.151",
         "formats": [
           "docx",
           "xlsx",
@@ -99,33 +99,33 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-09-22.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-22.1.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-22.1.json",
-      "sha256": "14695a178e0db221752f9712138fb551957eefd0482ad8b4da7312eab6f25124",
-      "minAppVersion": "4.0.6"
+      "version": "2026-09-21.3",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-21.3.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-21.3.json",
+      "sha256": "926c7300d2ced01252e0a7ccb2025afe60a480c1dc9d97ebec8ba926a98a462f",
+      "minAppVersion": "4.0.4"
     }
   ],
   "latest": {
-    "version": "4.0.6",
-    "notes": "# Miaoclaw 4.0.6\n\n## 这次有什么变化\n\n- 会话菜单增加“归纳标题”，可以先看建议再采用；手动名称受到保护，旧名称仍可搜索。\n- 手机对话里的图片可直接放大、缩放和拖动，关闭后回到原位置。\n- 生成的视频和音频可在对话内直接播放、拖动进度；加载失败可重新加载。\n- Agnes 国内站和国际站使用独立配置入口与各自的 Key，默认优先当前免费的最新模型。\n- 展开的侧栏增加 FeiXuecode 落款，窗口较小或进入迷你模式时自动隐藏。\n\n## 修好了什么\n\n- 查看旧对话、修改设置或整理标题不再把对话日期变成今天；能从消息记录确认的历史活动日期会恢复，消息内容保留。\n- 删除空会话或当前会话后，不再被迟到的列表响应重新选中；不存在会话的工程进度停止反复报错。\n- 自动命名继续处理符合条件的旧会话，也能从问候后的正式话题归纳标题。\n- 修正两只猫眨眼时残留眼缝、耳朵动作被裁切的问题；吐槽和博学表达更合理地使用各自动作组。\n- 搜索回答在交付前核对来源与条件，支持继续查证；读取范围和版本分别保留，重复内容不冒充多份独立证据。来源标题只显示来源数量。\n- 重复工具调用中的工作说明不再被当成实际进展；正常有进展的长任务继续执行。\n- 记忆空闲回顾让位前台任务，设置说明与实际触发时机一致；保存数量改为“可供参考”，避免误认为每条记忆都已被使用。\n- 媒体服务暂时拒绝请求时保留恢复信息；提交结果不明时避免重复生成，取消等待不会再被误记为已经提交。\n- 视频已经受理但查询遇到限流时，保留原任务继续查询；重启后仍按原站点取回，不重复生成。\n\n## 你需要做什么\n\n- **要不要重启**：更新后按提示从托盘完全退出 Miaoclaw，再打开；不必重启电脑。\n- **手机上要做什么**：检查并启用4.0.6界面；Android外壳沿用0.4.0，不需要重新配对。\n- **数据会不会丢**：正常覆盖升级保留对话、手帐、记忆和设置；会话日期修复不改消息内容。\n- **还不能做什么**：联网结论仍需结合来源判断；图片首次加载受网络影响。Agnes视频遇供应商队列满时可能暂时无法生成，会如实保留失败或原任务状态，不把未完成说成成品。",
+    "version": "4.0.5",
+    "notes": "# Miaoclaw 4.0.5\n\n## 这次修好了什么\n\n- 桌宠自主活动与发言分开调度，正常待机可自然出现看书、喝咖啡或玩耍；右键动作优先响应，结束后继续原来的自主和休息安排。电脑持续空闲时小猫会休息，回来后再醒来。\n- 两只猫的眨眼、耳朵、尾巴可独立出现或自然组合。待机保留原有轮廓，只加入轻微起伏；睡眠连续播放，改善动作切换，以及吐槽、知识卡与动作的对应关系。\n- 全量安装更可靠地识别已有安装位置，避开源码目录，保留原数据绑定；确认残留进程退出后再切换文件。成功安装经核验后，旧失败提示归入历史。\n- 新对话的短主题也能归纳标题；已开启自动命名时，空闲期间逐条整理符合条件的旧自动名称。手动名称优先，旧名仍可查找，对话 ID 和内容不变。\n- Chrome 扩展弹窗和侧栏适应浏览器尺寸、缩放和长内容，改善按钮、搜索框与正文挤压；网页控制仍按原有授权范围执行。\n- 桌宠模型响应记录默认收起，展开后可测试、刷新和取消；修正 Step 5 Preview 将上下文容量误作输出上限的配置。\n\n## 更新与使用\n\n- 应用会根据已安装版本和运行组件选择兼容热更或完整安装包；正常覆盖更新保留对话、手帐、记忆和配置。更新后按提示退出并重新打开。\n- Chrome 用户在设置中准备新版扩展后，到扩展管理页重新加载。\n- 手机检查并启用 4.0.5 界面；Android 外壳保持 0.4.0。\n- 本版保持现有记忆架构，移动通知策略不变。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.6/Miaoclaw-Setup-4.0.6.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.6/Miaoclaw-Setup-4.0.6.exe",
-      "sha256": "1b83f37b6ee85d2b4e44be75c4730aa3210998ed6beef37063033e8d611cd839",
-      "sizeBytes": 363112178
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.5/Miaoclaw-Setup-4.0.5.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.5/Miaoclaw-Setup-4.0.5.exe",
+      "sha256": "f21cf6add8920447402c8ce03600648cfdefcd1ae8521a4d39f393145cc5ae2a",
+      "sizeBytes": 363119468
     },
     "hot": {
       "baseline": "4.0.4",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.6/miaoclaw-hot-4.0.6.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.6/miaoclaw-hot-4.0.6.zip",
-      "sha256": "63340589d0f910d6e1356347fde9109927bb95563107f09b962a729f96246dd2",
-      "sizeBytes": 152325470
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.5/miaoclaw-hot-4.0.5.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.5/miaoclaw-hot-4.0.5.zip",
+      "sha256": "54c61071b94fa933ad93a6ba92802efa120809d9818fbd3171c3917a86b5aa49",
+      "sizeBytes": 152307524
     },
     "android": {
       "shellVersion": "0.4.0",
-      "feVersion": "4.0.6",
+      "feVersion": "4.0.5",
       "sha256": "ccae37ec336fcab335a0ed9a183dd27150aaa4a8b229c9997e11cca1e1e73eb8",
       "sizeBytes": 6932695,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.0.apk",
