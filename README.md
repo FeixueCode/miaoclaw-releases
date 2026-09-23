@@ -12,7 +12,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-487b86)](https://miao-claw.com/#download)
 [![手机伴侣](https://img.shields.io/badge/手机伴侣-Android%20%2F%20PWA-6d8464)](https://app.miao-claw.com)
 
-最新：v4.0.7 · 本地优先 · 自选模型
+最新：v4.0.7v1 · 本地优先 · 自选模型
 
 [下载 Windows 版](https://miao-claw.com/#download) · [手机端](https://app.miao-claw.com) · [使用说明](https://miao-claw.com/guide.html) · [问题反馈](https://miao-claw.com/feedback.html)
 
@@ -40,13 +40,12 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 下载和安装的常见问题见 [使用说明](https://miao-claw.com/guide.html)。
 
-### 4.0.7 更新亮点
+### 4.0.7v1 更新亮点
 
-- **这次有什么变化**：对话支持选择多条消息后复制、复制原文，或导出 Markdown、文本和 JSON
-- **修好了什么**：已生成的本地图片、附件和对话中的图片链接可继续用于图片编辑及图生视频，不再误用聊天视觉预算拒绝生成参考图
-- **你需要做什么**：**要不要重启**：更新后按提示从托盘完全退出 Miaoclaw，再打开；不必重启电脑
+- **修好了什么**：移除遮挡聊天正文的常驻“选择消息”按钮
+- **怎样更新**：已安装 4.0.7：在“设置 → 关于与更新”下载轻量更新，完成后重启 Miaoclaw 生效
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v4.0.7)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v4.0.7-1)。
 
 ---
 
@@ -64,7 +63,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 Miaoclaw is a local-first AI assistant for Windows, with an Android and PWA companion. Work with Office files, research, code and everyday tasks through a conversation. Connect your preferred model provider; model usage is billed by that provider.
 
-Latest: v4.0.7 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
+Latest: v4.0.7v1 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
 
 ---
 
