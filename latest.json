@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-09-23T09:29:00.056Z",
+  "publishedAt": "2026-10-06T03:47:03.287Z",
   "resources": [
     {
       "id": "ocr",
@@ -71,16 +71,16 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.152",
+      "verifiedVersion": "1.0.154",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-09-22",
+      "verifiedAt": "2026-10-06",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.152",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.152/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.152/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.152/NOTICE",
-        "artifactSha256": "047705402974c3690a4437e55f620d03afac4beba4fdd28fdb59af610a3afff2",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.154",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.154/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.154/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.154/NOTICE",
+        "artifactSha256": "50a57626ff7c5b11034c23368312cdafbd436cf81eb149c81dc488e027a56e7e",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
@@ -88,7 +88,7 @@
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.152",
+        "expectedVersion": "1.0.154",
         "formats": [
           "docx",
           "xlsx",
@@ -99,38 +99,31 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-09-22.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-09-22.1.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-09-22.1.json",
-      "sha256": "14695a178e0db221752f9712138fb551957eefd0482ad8b4da7312eab6f25124",
+      "version": "2026-10-06.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-06.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-06.1.json",
+      "sha256": "25c95869cd7f6c115d8d270b3a1f02cdd8991c57c58c2ed4c0b3e87243bbefd6",
       "minAppVersion": "4.0.6"
     }
   ],
   "latest": {
-    "version": "4.0.7-1",
-    "displayVersion": "4.0.7v1",
-    "notes": "# Miaoclaw 4.0.7v1\n\n保留 4.0.7 全部功能，整理对话界面中的消息选择入口。\n\n## 修好了什么\n\n- 移除遮挡聊天正文的常驻“选择消息”按钮。长按消息后拖动即可框选，鼠标停在上下边缘仍会自动滚动。\n- 选中后继续支持多轮复制、复制原文和导出；图片引用、Agnes 国内优先、粘贴资料及公众号读取保持可用。\n- 程序和前端显示 4.0.7v1。后续同一版本的小修复使用 v2、v3 等修订号区分。\n\n## 怎样更新\n\n- 已安装 4.0.7：在“设置 → 关于与更新”下载轻量更新，完成后重启 Miaoclaw 生效。\n- 较早版本或首次安装：使用官网完整安装包；不能仅靠本次热更补齐旧版运行组件。\n- 手机/PWA：检查并启用新版界面；Android 原生壳仍为 0.4.0，不必卸载或重新配对。\n- 更新保留原配置、会话、资料和其他用户数据。请先完成正在进行的任务再重启。",
+    "version": "4.0.8",
+    "displayVersion": "4.0.8",
+    "notes": "# Miaoclaw 4.0.8\n\n改善手机连接、文件传输和连续使用体验。\n\n## 本次更新\n\n- 改善电脑与手机断网、唤醒后的自动恢复，重新连接后继续取得原会话和任务进度。\n- 按当前用户的网络与代理设置处理 API、媒体和更新下载，本地及排除地址保持直连，改善不同网络环境下的兼容性。\n- 手机大文件分块传输，支持视频与音频按需播放、跳播、取消和中断后继续取回；大图片与 PDF 使用受限预览，原文件完整保留。\n- 优化长对话和流式文字更新，减少重复排版，查看旧消息时保持位置，回到最新后继续跟随输出。\n- 修复视频剪辑尺寸与比例识别；本地语音在开始录音时预热，连续听写复用模型，空闲后释放。\n- Chrome 授权页需要登录时可交给你操作，登录后在扩展点击“继续原对话”，接着完成原任务。\n- 复核供应商、套餐与中转入口，更新已确认的新模型和参数规则；Agnes 历史型号不再显示未经确认的免费价格。\n- 更新内置运行组件。桌面需要完整安装升级，Android 需要覆盖安装 0.4.1；保留原有配置、会话与数据绑定。\n- 组件巡检区分“发现新版本”和“来源或校验失败”，发布前仍执行严格校验。\n\n## 怎样更新\n\n- 电脑：在“设置 → 关于与更新”下载安装完整安装包，完成正在执行的任务后按提示覆盖升级。此次运行组件改变，不提供轻量热更。\n- 重启：需要从托盘完全退出 Miaoclaw，覆盖安装后重新打开；只关闭窗口不算退出，无需重启 Windows。\n- Android：覆盖安装 0.4.1 APK；不要先卸载，正常覆盖保留配对。仅更新网页界面不能补齐本版原生文件能力。\n- 浏览器：刷新并启用新界面。Chrome 扩展用户请在扩展管理页重新加载 4.0.8 扩展。\n- 升级保留原有配置、对话、资料和数据绑定。\n- 语音输入：支持点击开始、再次点击结束，也支持按住说话、松开结束；两种方式都在录音结束后转写。\n- 当前限制：手机访问电脑中的文件需要电脑保持在线。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.7-1/Miaoclaw-Setup-4.0.7-1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.7-1/Miaoclaw-Setup-4.0.7-1.exe",
-      "sha256": "9a34ee88a09c05c8c6890e76dec34bd22a50d7c0d81955715ce1f29162849086",
-      "sizeBytes": 363318666
-    },
-    "hot": {
-      "baseline": "4.0.7",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.7-1/miaoclaw-hot-4.0.7-1.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.7-1/miaoclaw-hot-4.0.7-1.zip",
-      "sha256": "2dc4df12749ff88679bc89051da936637819978fd514f9c2c62fb0431bc2bc7a",
-      "sizeBytes": 152339326
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.0.8/Miaoclaw-Setup-4.0.8.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.8/Miaoclaw-Setup-4.0.8.exe",
+      "sha256": "28be23dade2bc9ad3a3839eda2cd96c90941caa1feaf53fce56fadca21a3943a",
+      "sizeBytes": 363393458
     },
     "android": {
-      "shellVersion": "0.4.0",
-      "feVersion": "4.0.7+web.1",
-      "sha256": "ccae37ec336fcab335a0ed9a183dd27150aaa4a8b229c9997e11cca1e1e73eb8",
-      "sizeBytes": 6932695,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.0.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v3.3.4/Miaoclaw-android-0.4.0.apk"
+      "shellVersion": "0.4.1",
+      "feVersion": "4.0.8",
+      "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
+      "sizeBytes": 5841505,
+      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.8/Miaoclaw-android-0.4.1.apk"
     }
   }
 }
