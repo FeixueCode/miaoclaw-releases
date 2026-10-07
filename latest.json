@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-07T05:58:56.458Z",
+  "publishedAt": "2026-10-07T09:34:01.629Z",
   "resources": [
     {
       "id": "ocr",
@@ -107,19 +107,26 @@
     }
   ],
   "latest": {
-    "version": "4.1.1",
-    "displayVersion": "4.1.1",
-    "notes": "# Miaoclaw 4.1.1\n\n更新 Windows 桌面运行环境，延续 4.1.0 的功能与数据格式。\n\n## 本次更新\n\n- Electron 从 42.11.10 升级至 44.6.0，同时更新其随附的 Chromium、Node.js 与许可证文件。\n- 此次更新通过完整安装包替换桌面运行环境；不提供不能替换 Electron 的应用热更新包。\n- 修复小容量模型读取较长路径文件时，分页结果可能触发容量不足的问题。\n\n## 更新方式\n\n使用应用提供的完整更新安装包，沿用原有安装目录和数据绑定。安装期间关闭旧桌面进程，完成后重新打开。\n\n安装后重启 Miaoclaw。手机网页界面同步为 4.1.1，Android 原生 App 仍为 0.4.1；已安装的用户只需检查并启用新版手机界面，正常更新保留配对。\n\n聊天记录、设置、模型配置及已安装的独立组件继续使用原数据目录。本次不新增功能开关，也不改变模型选择或默认启用状态。",
+    "version": "4.1.1-1",
+    "displayVersion": "4.1.1v1",
+    "notes": "# Miaoclaw 4.1.1v1\n\n修复压缩响应被误判为下载不完整的问题，已安装 4.1.1 的用户可通过热更新获得修复。\n\n## 本次更新\n\n- 修复 Office 组件自动更新时，完整的许可证文件被错误判定为“下载内容不完整”，导致更新中止的问题。\n- 正确处理服务器压缩传输的文件，应用更新和媒体下载同步获得修复，下载进度按实际文件大小显示。\n- 保留文件哈希校验、解压后的大小限制、超时与取消处理；失败的组件更新继续保留原来可用的版本。\n\n## 更新方式\n\n已安装 4.1.1：在“关于与更新”下载热更新，完成后完全退出并重新打开 Miaoclaw。已有 Office 更新失败状态的用户，可在重启后再次检查组件更新，应用也会按原自动更新流程重试。\n\n4.1.0 及更早的基础安装：使用 4.1.1v1 完整安装包，直接升级到本修订。Electron 保持 44.6.0，模型配置、聊天记录和数据目录绑定继续保留。\n\n手机界面同步为 4.1.1v1，Android 原生 App 沿用 0.4.1，无需重新安装或重新配对。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.1/Miaoclaw-Setup-4.1.1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.1/Miaoclaw-Setup-4.1.1.exe",
-      "sha256": "42c709c55a9989529c80a1ad8ff5f5c0191c25f185f31db90eacf3e185ef65ca",
-      "sizeBytes": 371892089
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.1-1/Miaoclaw-Setup-4.1.1-1.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.1-1/Miaoclaw-Setup-4.1.1-1.exe",
+      "sha256": "70da0967eef92e644b5156e0fc408681cd12a430fcda3afe1c03eb1013c57cbb",
+      "sizeBytes": 371907270
+    },
+    "hot": {
+      "baseline": "4.1.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.1-1/miaoclaw-hot-4.1.1-1.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.1-1/miaoclaw-hot-4.1.1-1.zip",
+      "sha256": "f9f52ab7ff6686de38a97de4d430482bd0275ff3a66de2ed430764e6a9ee63e9",
+      "sizeBytes": 152434552
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.1",
+      "feVersion": "4.1.1+web.1",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
