@@ -12,7 +12,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-487b86)](https://miao-claw.com/#download)
 [![手机伴侣](https://img.shields.io/badge/手机伴侣-Android%20%2F%20PWA-6d8464)](https://app.miao-claw.com)
 
-最新：v4.1.0 · 本地优先 · 自选模型
+最新：v4.1.1 · 本地优先 · 自选模型
 
 [下载 Windows 版](https://miao-claw.com/#download) · [手机端](https://app.miao-claw.com) · [使用说明](https://miao-claw.com/guide.html) · [问题反馈](https://miao-claw.com/feedback.html)
 
@@ -40,12 +40,11 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 下载和安装的常见问题见 [使用说明](https://miao-claw.com/guide.html)。
 
-### 4.1.0 更新亮点
+### 4.1.1 更新亮点
 
-- **本次更新**：修复长期记忆局部更正丢失其他字段的问题，保留来源和历史；不同事件独立保存
-- **使用方式**：资料跟进：电脑端“自动任务 → 资料跟进”开启，再在聊天中指明资料和目标
+- **本次更新**：Electron 从 42.11.10 升级至 44.6.0，同时更新其随附的 Chromium、Node.js 与许可…
 
-完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v4.1.0)。
+完整更新说明见 [Releases](https://github.com/FeixueCode/miaoclaw-releases/releases/tag/v4.1.1)。
 
 ---
 
@@ -63,7 +62,7 @@ Word · Excel · PowerPoint · PDF · 代码 · 日常事务
 
 Miaoclaw is a local-first AI assistant for Windows, with an Android and PWA companion. Work with Office files, research, code and everyday tasks through a conversation. Connect your preferred model provider; model usage is billed by that provider.
 
-Latest: v4.1.0 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
+Latest: v4.1.1 · [English homepage](https://miao-claw.com/en/) · [Download](https://miao-claw.com/#download)
 
 ---
 
