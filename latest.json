@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-07T09:34:01.629Z",
+  "publishedAt": "2026-10-08T11:04:17.238Z",
   "resources": [
     {
       "id": "ocr",
@@ -99,34 +99,27 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-10-06.2",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-06.2.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-06.2.json",
+      "version": "2026-10-08.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-08.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-08.1.json",
       "sha256": "25c95869cd7f6c115d8d270b3a1f02cdd8991c57c58c2ed4c0b3e87243bbefd6",
       "minAppVersion": "4.0.6"
     }
   ],
   "latest": {
-    "version": "4.1.1-1",
-    "displayVersion": "4.1.1v1",
-    "notes": "# Miaoclaw 4.1.1v1\n\n修复压缩响应被误判为下载不完整的问题，已安装 4.1.1 的用户可通过热更新获得修复。\n\n## 本次更新\n\n- 修复 Office 组件自动更新时，完整的许可证文件被错误判定为“下载内容不完整”，导致更新中止的问题。\n- 正确处理服务器压缩传输的文件，应用更新和媒体下载同步获得修复，下载进度按实际文件大小显示。\n- 保留文件哈希校验、解压后的大小限制、超时与取消处理；失败的组件更新继续保留原来可用的版本。\n\n## 更新方式\n\n已安装 4.1.1：在“关于与更新”下载热更新，完成后完全退出并重新打开 Miaoclaw。已有 Office 更新失败状态的用户，可在重启后再次检查组件更新，应用也会按原自动更新流程重试。\n\n4.1.0 及更早的基础安装：使用 4.1.1v1 完整安装包，直接升级到本修订。Electron 保持 44.6.0，模型配置、聊天记录和数据目录绑定继续保留。\n\n手机界面同步为 4.1.1v1，Android 原生 App 沿用 0.4.1，无需重新安装或重新配对。",
+    "version": "4.1.2",
+    "displayVersion": "4.1.2",
+    "notes": "# Miaoclaw 4.1.2\n\n音频可以先试听、再按需要理解或编辑；手动选择的主模型保持固定，文件修改和任务恢复更可靠。\n\n## 本次更新\n\n- 上传的音频、视频在发送前即可播放；原文件保留，聊天交付和重新打开历史后仍可使用。\n- 音频附件不再一上传就自动转写。支持原生音频的接入可直接读取；需要语音文字时，由主模型按任务调用转写。录音按钮的听写方式保留。\n- 在办公权限下即可准确剪切、转码、拼接和混音，也可调整音量与淡入淡出；支持 WAV、MP3、M4A、FLAC、OGG、Opus 输出，原文件与旧版本保留。\n- 可取回公开音视频原文件链接，保存后播放、继续编辑。网页播放器和登录页不会被当成媒体文件，文件下载也不会被当成已经听懂内容。\n- 手动选择主模型后，遇到错误或容量不足会明确说明，不再悄悄切换成其他模型。自动选择模式继续遵循已配置的使用范围。\n- 修复受信任目录中文件修改的路径判断，改善命令任务中断后回收、模型超时诊断和长输入容量处理。\n- 转写保留原文件身份和任务状态；重启后继续查询已受理任务，避免重复提交。生成结果保存失败时保留原任务和链接，继续取回同一结果。\n- 更新官方模型与接入资料，补充 Claude Haiku 5.5 参数以及原生音频接入格式；已保存的有效配置不会被静默替换。\n- 更新桌面运行组件与基础依赖，纳入网络请求、地址解析和公式显示相关修复。\n\n## 更新方式\n\n本版升级了桌面运行组件，需要完整安装包；“关于与更新”会提供对应更新。完成后从托盘完全退出，再打开 Miaoclaw；无需重启电脑。保留原安装位置和数据目录绑定，模型配置与聊天记录继续使用。\n\n手机界面同步更新为 4.1.2。Android 原生 App 沿用 0.4.1，无需重新安装或重新配对。\n\n音频理解范围取决于实际模型、接入方式与文件格式；转写文字不能代替音乐或全部声音的理解。大文件可先选取片段或转换格式，应用会说明未读取的范围，不截断后冒充完整理解。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.1-1/Miaoclaw-Setup-4.1.1-1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.1-1/Miaoclaw-Setup-4.1.1-1.exe",
-      "sha256": "70da0967eef92e644b5156e0fc408681cd12a430fcda3afe1c03eb1013c57cbb",
-      "sizeBytes": 371907270
-    },
-    "hot": {
-      "baseline": "4.1.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.1-1/miaoclaw-hot-4.1.1-1.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.1-1/miaoclaw-hot-4.1.1-1.zip",
-      "sha256": "f9f52ab7ff6686de38a97de4d430482bd0275ff3a66de2ed430764e6a9ee63e9",
-      "sizeBytes": 152434552
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.2/Miaoclaw-Setup-4.1.2.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.2/Miaoclaw-Setup-4.1.2.exe",
+      "sha256": "ca4962ac18698d02c5536b4b25a39e2b0e35e7103e994ced1e8798aa46741df2",
+      "sizeBytes": 372002050
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.1+web.1",
+      "feVersion": "4.1.2",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
