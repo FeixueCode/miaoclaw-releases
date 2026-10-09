@@ -126,5 +126,23 @@
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
       "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.8/Miaoclaw-android-0.4.1.apk"
     }
-  }
+  },
+  "fileEditorUpdates": [
+    {
+      "schema": 1,
+      "id": "file-editor",
+      "version": "1.0.0",
+      "revision": 9,
+      "platform": "win32-x64",
+      "host": {
+        "protocol": "miaoclaw-file-editor-v1",
+        "minVersion": "4.1.3",
+        "maxVersionExclusive": "5.0.0"
+      },
+      "manifestSha256": "c34a42fe02b9d74a0b45a873eedf75a7066b5dc2d094b072663df601bdfe6fb3",
+      "sha256": "79e7b520fcd96553f07fb78db0c3ad2d4db9d139f5fbc7720a713d97acddeaba",
+      "sizeBytes": 37681162,
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/file-editor/1.0.0-r9/win32-x64/file-editor-1.0.0-r9.tar.gz"
+    }
+  ]
 }
