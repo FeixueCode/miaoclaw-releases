@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-09T09:45:19.459Z",
+  "publishedAt": "2026-10-12T05:14:04.188Z",
   "resources": [
     {
       "id": "ocr",
@@ -72,16 +72,16 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.155",
+      "verifiedVersion": "1.0.156",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-10-06",
+      "verifiedAt": "2026-10-11",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.155",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.155/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.155/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.155/NOTICE",
-        "artifactSha256": "66757c7a3ac4e8b181d54534e82b9486cf734e21e5851eff9cfad4a3287ff50c",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.156",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.156/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.156/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.156/NOTICE",
+        "artifactSha256": "70b4e26695cf3197694fb10033a1035395480cad409581eff8ca029f198ed37f",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
@@ -89,7 +89,7 @@
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.155",
+        "expectedVersion": "1.0.156",
         "formats": [
           "docx",
           "xlsx",
@@ -98,35 +98,6 @@
       }
     }
   ],
-  "providerCatalogUpdates": [
-    {
-      "version": "2026-10-08.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-08.1.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-08.1.json",
-      "sha256": "25c95869cd7f6c115d8d270b3a1f02cdd8991c57c58c2ed4c0b3e87243bbefd6",
-      "minAppVersion": "4.0.6"
-    }
-  ],
-  "latest": {
-    "version": "4.1.3",
-    "displayVersion": "4.1.3",
-    "notes": "# Miaoclaw 4.1.3\n\n从一份文件开始：自己动手修改，也能让喵喵接着处理当前内容，检查后再保存。\n\n## 本次更新\n\n- 新增“文件”入口，可打开、编辑和保存 Word（.docx）、Excel（.xlsx）、PowerPoint（.pptx）、Markdown 和 HTML。多个文件分别保留标签与自己的对话，切换文件后可继续处理。\n- 手动修改与 AI 配合使用。点击“问喵喵”打开当前文件的对话；选中内容后可以围绕选区提问，AI 修改当前草稿后可在编辑器里检查，再保存到原文件。\n- 保存前检查原文件是否被其他程序改动。发生冲突时保留草稿，可查看磁盘版本、另存草稿，或核对后再保存；不会因为自动保存覆盖一个未经核对的新版本。\n- 编辑器中断后可尝试恢复，重新打开应用时可找回已有的草稿备份。界面会说明备份时间和可能遗漏的最后几次修改；无法读取原文件时仍可先另存草稿。\n- PDF 使用只读阅读器，可翻页、缩放、选择文字、整页或框选区域提问。扫描页的选区可作为图像交给具备相应能力的模型；阅读和提问不改动原 PDF。\n- 改善 Markdown、HTML 的图片与其他资源呈现。文件预览中的“取回完整副本”可打包已完整取得的原文与资源，解压后离线阅读；资源缺失或仍依赖在线服务时会明确说明。\n- 文件编辑组件可在设置中安装、更新、修复或恢复上一版。完整安装包内附组件，首次安装组件可离线完成；后续组件更新失败时保留原来可用的版本，打开的文件不会中途切换编辑器。\n- 搜索与跨工具处理材料时，核对已取得的网页正文、图片索引和实际图片；遇到验证页面或内容缺失时，说明尚未取得的材料和未确认的范围。\n- 侧栏保留聊天、文件等常用入口，其他功能集中到“更多”，在窄窗口中也便于切换。\n- 文件区适配明暗主题与窄窗口；官网中英文使用指引、版本信息和规范链接同步补齐。\n\n## 更新方式\n\n本版新增文件编辑组件，旧版本升级需要完整安装包。先保存正在进行的工作，沿用原安装位置与数据目录绑定，按“关于与更新”的提示安装；完成后从托盘完全退出，再打开 Miaoclaw。无需重启电脑，已有模型配置、聊天和其他本地资料继续保留。\n\n首次打开文件若提示尚未安装组件，请在“设置 → 帮助与更新 → 关于与更新 → 文件编辑组件”点击“安装组件”。手机界面随正式发布更新到 4.1.3；Android 外壳继续使用 0.4.1，按手机界面更新提示操作，不要为此卸载应用或删除配对。\n\n## 使用范围\n\n手机文件工作区本版提供已授权电脑文件的阅读、提问和下载，不提供原文件编辑、保存或组件管理；电脑需保持在线。\n\nPDF 在文件工作区中只读。Office 文件中的复杂模板、特殊字体、图表或嵌入对象仍需检查实际显示与保存结果。草稿恢复以已成功记录的备份为准；单独另存 Markdown 或 HTML 草稿时，相对路径引用的资源仍需与原文件夹配套保留。",
-    "minSupported": "2.0.0",
-    "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.3/Miaoclaw-Setup-4.1.3.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.3/Miaoclaw-Setup-4.1.3.exe",
-      "sha256": "991081b439ed69a03c6481ea87def9f0faba07b722358cf2a43d4ad415be66d7",
-      "sizeBytes": 410980121
-    },
-    "android": {
-      "shellVersion": "0.4.1",
-      "feVersion": "4.1.3",
-      "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
-      "sizeBytes": 5841505,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.8/Miaoclaw-android-0.4.1.apk"
-    }
-  },
   "fileEditorUpdates": [
     {
       "schema": 1,
@@ -144,5 +115,34 @@
       "sizeBytes": 37681162,
       "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/file-editor/1.0.0-r9/win32-x64/file-editor-1.0.0-r9.tar.gz"
     }
-  ]
+  ],
+  "providerCatalogUpdates": [
+    {
+      "version": "2026-10-12.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-12.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-12.1.json",
+      "sha256": "e638d7f9bc6a4ade2b9928c897fde6c9cc30eecc194a58c2119f3048d56979c8",
+      "minAppVersion": "4.1.4"
+    }
+  ],
+  "latest": {
+    "version": "4.1.4",
+    "displayVersion": "4.1.4",
+    "notes": "# Miaoclaw 4.1.4\n\n文件和对话能接着用，更新过程更清楚，联网查资料时更好地保留原文与来源。\n\n## 本次更新\n\n- 文件助手在首次发送时创建对话，打开或收起助手不会留下空会话；不同文件分别保留未发送的输入，关闭后重新打开可接回关联对话。\n- 对话中新增可折叠的“本次对话的文件”。手动或 AI 保存后的版本可在原对话中预览、下载，关闭文件后仍能找到已经记录的版本。\n- 文件操作支持另存副本、Word/Excel/PPT 导出 PDF、预览和恢复历史版本。恢复前保留未保存草稿；导出不会覆盖原文件。跨格式内容整理可交给当前模型生成新文件。\n- TXT 现在可从文件页、拖入、文件卡或系统右键打开，直接编辑纯文本、让 AI 读取或修改当前草稿，并保存、另存和恢复版本；手机也可上传、编辑和取回。支持 2 MB 以内的 UTF-8、带 BOM 的 UTF-16 和可完整回读的 GB18030，保留原编码和未修改的换行。\n- PDF 支持填写普通表单、添加文字和批注、旋转和调整页序，以及撤销、重做、保存和取回。中文表单填写会同时保存可见外观；签名、加密或复杂动态表单保留阅读模式。\n- 桌面拖入本机文件后可保存到原位置。改善手动缩放、PDF 页码和阅读位置在切换界面与改变窗口后的保持，并修复快速关闭后重开同一文件的冲突。\n- 手机可选择自己的文件，上传到当前连接的电脑后阅读、提问和取回结果。切换电脑会取消原连接尚未完成的文件打开，避免把文件带入另一台电脑的会话。\n- 手机图片上传按实际传输显示进度，发送前可预览；改善发送后、历史记录及短暂断联后的图片恢复，取回保留原始文件。重连和刷新不重复显示当天已确认的问候，Android 通知权限也不再反复请求。\n- Office 预览组件优先复用完整安装包及已校验缓存，显示实际下载进展；中断后可继续，失败不丢弃已经下载成功的资源。更新失败保留当前可用版本，手动回退后不立即自动装回同一版。本版内置 OfficeCLI 1.0.156。\n- 联网工具支持按次选择搜索来源、并行读取独立资料，以及按已取得的原文版本定位和续读。资料的日期、范围和失败状态继续交给所选模型判断；内部核对内容与最终正文分开处理。\n- 修复超长输入读完后恢复工具目录时可能出现的容量误判；按完整事务整理历史并核对实际容量，继续保留原始要求和读取进度。\n- 修复因容量误判导致的连续对话与整理失败，补齐 Kimi Coding 和 GLM Coding 的模型参数。继续中断任务时使用当前选择的模型和思考强度。\n- 搜索来源按数量、标题和链接简明展示，长摘要可按需展开。改善设置开关的加载、键盘与禁用行为，避免旧安装记录被显示成当前更新状态。\n- 修复 Agnes 两站和 SudoCode 的失效取 Key 链接；Kimi Coding 和 Brave Search 改为直接进入控制台入口或登录页。\n- 官网中英文下载入口直接定位到下载按钮，并保留当前视频首页。\n\n## 更新方式\n\n本版更新内置运行组件，需要完整安装包。先保存正在进行的工作，沿用原安装位置与数据目录绑定，按“关于与更新”的提示安装；从托盘完全退出后重新打开。已有模型配置、聊天和本地资料继续保留。\n\n## 使用范围\n\nPDF 简单编辑不包含修改既有正文、扫描文字、合并文件或安全删密。手机可编辑 TXT，也可对自己打开的普通 PDF 做上述编辑，并另存和取回；其他 Office 文件的原位编辑及组件管理仍在电脑上完成，连接电脑需在线。跨格式内容整理依赖当前模型，版式会按目标格式重组。",
+    "minSupported": "2.0.0",
+    "full": {
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4/Miaoclaw-Setup-4.1.4.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4/Miaoclaw-Setup-4.1.4.exe",
+      "sha256": "2459b8f2721a3d77a53e37b735d5417aab676f56df2572d1eedef342a30268f8",
+      "sizeBytes": 411395038
+    },
+    "android": {
+      "shellVersion": "0.4.1",
+      "feVersion": "4.1.4",
+      "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
+      "sizeBytes": 5841505,
+      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.8/Miaoclaw-android-0.4.1.apk"
+    }
+  }
 }
