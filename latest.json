@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-12T11:06:15.092Z",
+  "publishedAt": "2026-10-13T13:12:53.708Z",
   "resources": [
     {
       "id": "ocr",
@@ -72,16 +72,16 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.156",
+      "verifiedVersion": "1.0.157",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-10-11",
+      "verifiedAt": "2026-10-13",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.156",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.156/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.156/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.156/NOTICE",
-        "artifactSha256": "70b4e26695cf3197694fb10033a1035395480cad409581eff8ca029f198ed37f",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.157",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.157/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.157/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.157/NOTICE",
+        "artifactSha256": "bd64eba587e56cc71709cdd1f38ae9ac77cd65a9c8ea744b0996897c0557e343",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
@@ -89,7 +89,7 @@
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.156",
+        "expectedVersion": "1.0.157",
         "formats": [
           "docx",
           "xlsx",
@@ -126,19 +126,19 @@
     }
   ],
   "latest": {
-    "version": "4.1.4-1",
-    "displayVersion": "4.1.4v1",
-    "notes": "# Miaoclaw 4.1.4v1\n\n修复部分 PDF 无法打开，以及文件内人工修改与 AI 编辑、保存后重开过程中发现的问题。\n\n## 本次修复\n\n- 修复部分 PDF 在电脑和手机上读取大段内容时失败的问题，保留分块传输、缩放和重新读取。\n- AI 编辑统一使用当前草稿的准确版本。缺少或传错版本参数时明确要求重新读取，保留人工尚未保存的修改。\n- PDF 编辑向模型提供每页实际尺寸、裁切和旋转信息，并明确添加文字与批注的坐标规则，改善指定位置的准确性。\n- Excel 保存时同步更新跨工作表公式结果与普通单一区域引用的图表缓存；重新打开和导出时，明细、汇总及图表保持一致。\n- Excel 首次读取等待目标单元格加载及公式计算完成；等待超过时限时明确提示重试，避免把尚未计算的结果当作空值。\n- Excel 导出 PDF 时保留文件原有打印设置，修复浮动图表被裁切的问题，并刷新此前的预览缓存。\n- 修复从文件页点击侧栏、搜索结果或手机历史中的关联对话后，误返回之前普通会话的问题。\n- 修复离开文件页后，保留在后台的文档编辑器仍覆盖对话画面的问题。\n- 使用自定义配置连接 Kimi 官方 Coding 端点时，两种官方域名均发送准确的客户端标识，保留用户选择的地址及其他请求头。\n\n## 更新方式\n\n本轮修复包含新的文件编辑组件。现有应用热更新包不携带该组件归档，因此使用完整安装包，继续保留原安装位置、数据目录、模型设置和聊天记录。\n\n安装前保存正在编辑的文件。安装完成后，从托盘完全退出 Miaoclaw，再重新打开；不需要重启 Windows。手机页面刷新一次即可使用新版，不需要重新扫码或更换现有手机安装包。\n\n更新后可在“设置 → 关于与更新”核对文件编辑组件。开启组件自动更新时会在空闲期间安装；关闭该选项的用户可手动更新组件。已打开的文件先保存并关闭，再重新打开使用新组件。\n\nPDF 仍为简单编辑：填写普通表单、叠加文字与批注、旋转及调整页序，不包含改写既有正文。Office 文件的原位编辑在电脑上完成；手机继续支持 TXT 和普通 PDF 的相应编辑、另存及取回。",
+    "version": "4.1.4-2",
+    "displayVersion": "4.1.4v2",
+    "notes": "# Miaoclaw 4.1.4v2\n\n把电脑操作、Chrome 页面和收到的分享接回对话，同时修复图片发送、手机命令权限及定时任务暂停提示。\n\n## 本次更新\n\n- 直接在本机对话中交代电脑任务，首次在对话里确认授权。支持查看画面、切换应用、点击、输入和快捷键；执行时显示当前步骤、屏幕边框与停止浮层，按 ESC 或点击停止即可接管。修复高 DPI 下执行边框错位。\n- 修复 Chrome 侧栏打开失败、后台标签页输入和断线后的状态衔接。动作结果不确定时先观察，不自动重复点击；原有记下网页、选区和附件入口继续使用。\n- Chrome 授权页可按任务读取可取得的视频文件、字幕或指定片段；实际模型路线支持时优先传入原生视频。无法取得、超出范围或音轨理解尚未确认时明确说明，保留原文件。\n- 新增“微信与系统分享”安装向导：在 Edge 安装正式分享入口并自动连接电脑，分别检查系统注册与连接状态。收到的文字、链接和文件先保存，断线后继续传输；选择对话、放入草稿并检查后再发送。保留 ZIP 原包和可读资料；自动识别旧入口，核对迁移全部内容后引导移除，避免误选旧实验入口。\n- 图片发送后立即保留预览，避免等待模型回复时变成空白。修复回复同步较慢时错误提示重新发送的问题，减少重复任务。\n- 手机在同一对话申请并获得电脑批准的完全访问后，可按任务执行电脑命令；权限降低、设备撤销和排队期间的权限变化会重新核对。\n- 定时任务的原定时间与实际运行时间分别显示。暂停或失败说明原因，主界面提供处理入口；旧任务可核对后恢复自动运行，手动运行一次不替代未来授权。资料不足时交付已核实的有用内容并说明缺口。\n- 复核官方模型和接入资料，更新 OpenCode Go 新建预设的入口；保留用户已保存的路线，并支持新旧入口的会话连续性。\n- 更新 Office 文件预览组件，修复 PPT 标题继承、隐藏图形与母版层级；更新 PDF 组件，修复循环结构处理及表单外观问题。\n\n## 更新方式\n\n本版更新 Office/PDF 运行组件，所有旧版本均使用完整安装包；应用会提供对应的全量更新。保留原安装位置、数据目录、模型设置和聊天记录。更新前保存正在编辑的文件，按应用提示重新打开 Miaoclaw，无需重启 Windows。\n\n手机界面同步更新，Android 外壳继续沿用 0.4.1。已加载 Chrome 扩展的用户，请在 Miaoclaw 设置中准备新版扩展目录，再到 Chrome 扩展管理页重新加载。\n\n首次从微信分享，请打开“设置 → 权限与连接 → 微信与系统分享”，点击“继续安装与连接”。安装前，微信的分享列表里不会出现 Miaoclaw。已有旧分享入口时，按向导迁入暂存内容、确认保存，再移除旧入口并保留浏览数据。\n\n电脑操作仅在本机 Windows 对话开放，登录、密码和验证码由你完成。网页视频受原网站的登录、付费和播放权限限制。Windows 系统分享由 Edge 安装的网页应用注册；收到的内容先成为草稿，不会自动提交给模型。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-1/Miaoclaw-Setup-4.1.4-1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-1/Miaoclaw-Setup-4.1.4-1.exe",
-      "sha256": "8d48154a4a5fec80e2909bd4ef8a17b0802b90b04787054fbc096895de9ea38a",
-      "sizeBytes": 411439662
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-2/Miaoclaw-Setup-4.1.4-2.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-2/Miaoclaw-Setup-4.1.4-2.exe",
+      "sha256": "cd52c4350f7291fc87f8c247ee136ab3f6fd1913cf1303acc1ce9bd628ffe0f8",
+      "sizeBytes": 411457802
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.4+web.1",
+      "feVersion": "4.1.4+web.2",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
