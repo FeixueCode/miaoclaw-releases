@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-13T13:12:53.708Z",
+  "publishedAt": "2026-10-14T15:09:15.778Z",
   "resources": [
     {
       "id": "ocr",
@@ -118,27 +118,34 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-10-12.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-12.1.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-12.1.json",
-      "sha256": "e638d7f9bc6a4ade2b9928c897fde6c9cc30eecc194a58c2119f3048d56979c8",
+      "version": "2026-10-14.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-14.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-14.1.json",
+      "sha256": "6b04ff1e4da040da19c033eccf8aae69436c05f5a1b821cdf4b4137fb62f7e5f",
       "minAppVersion": "4.1.4"
     }
   ],
   "latest": {
-    "version": "4.1.4-2",
-    "displayVersion": "4.1.4v2",
-    "notes": "# Miaoclaw 4.1.4v2\n\n把电脑操作、Chrome 页面和收到的分享接回对话，同时修复图片发送、手机命令权限及定时任务暂停提示。\n\n## 本次更新\n\n- 直接在本机对话中交代电脑任务，首次在对话里确认授权。支持查看画面、切换应用、点击、输入和快捷键；执行时显示当前步骤、屏幕边框与停止浮层，按 ESC 或点击停止即可接管。修复高 DPI 下执行边框错位。\n- 修复 Chrome 侧栏打开失败、后台标签页输入和断线后的状态衔接。动作结果不确定时先观察，不自动重复点击；原有记下网页、选区和附件入口继续使用。\n- Chrome 授权页可按任务读取可取得的视频文件、字幕或指定片段；实际模型路线支持时优先传入原生视频。无法取得、超出范围或音轨理解尚未确认时明确说明，保留原文件。\n- 新增“微信与系统分享”安装向导：在 Edge 安装正式分享入口并自动连接电脑，分别检查系统注册与连接状态。收到的文字、链接和文件先保存，断线后继续传输；选择对话、放入草稿并检查后再发送。保留 ZIP 原包和可读资料；自动识别旧入口，核对迁移全部内容后引导移除，避免误选旧实验入口。\n- 图片发送后立即保留预览，避免等待模型回复时变成空白。修复回复同步较慢时错误提示重新发送的问题，减少重复任务。\n- 手机在同一对话申请并获得电脑批准的完全访问后，可按任务执行电脑命令；权限降低、设备撤销和排队期间的权限变化会重新核对。\n- 定时任务的原定时间与实际运行时间分别显示。暂停或失败说明原因，主界面提供处理入口；旧任务可核对后恢复自动运行，手动运行一次不替代未来授权。资料不足时交付已核实的有用内容并说明缺口。\n- 复核官方模型和接入资料，更新 OpenCode Go 新建预设的入口；保留用户已保存的路线，并支持新旧入口的会话连续性。\n- 更新 Office 文件预览组件，修复 PPT 标题继承、隐藏图形与母版层级；更新 PDF 组件，修复循环结构处理及表单外观问题。\n\n## 更新方式\n\n本版更新 Office/PDF 运行组件，所有旧版本均使用完整安装包；应用会提供对应的全量更新。保留原安装位置、数据目录、模型设置和聊天记录。更新前保存正在编辑的文件，按应用提示重新打开 Miaoclaw，无需重启 Windows。\n\n手机界面同步更新，Android 外壳继续沿用 0.4.1。已加载 Chrome 扩展的用户，请在 Miaoclaw 设置中准备新版扩展目录，再到 Chrome 扩展管理页重新加载。\n\n首次从微信分享，请打开“设置 → 权限与连接 → 微信与系统分享”，点击“继续安装与连接”。安装前，微信的分享列表里不会出现 Miaoclaw。已有旧分享入口时，按向导迁入暂存内容、确认保存，再移除旧入口并保留浏览数据。\n\n电脑操作仅在本机 Windows 对话开放，登录、密码和验证码由你完成。网页视频受原网站的登录、付费和播放权限限制。Windows 系统分享由 Edge 安装的网页应用注册；收到的内容先成为草稿，不会自动提交给模型。",
+    "version": "4.1.4-3",
+    "displayVersion": "4.1.4v3",
+    "notes": "# Miaoclaw 4.1.4v3\n\n修复长任务中断后难以续接、Office 成品未进入复核，以及复核过程和协作历史难以查看的问题。\n\n## 本次更新\n\n- **保留 Excel 原始数据**：向下填充公式默认不再复制相邻普通值，避免凭证、审批、原报金额等列被第一行覆盖；只有明确请求才复制常量。\n- **首次接入更清楚**：首屏直接进入不依赖模型的设置页，区分保存配置与连接成功。现有连接失效时引导到设置修正，具体失败原因在刷新后的聊天中仍可查看；新对话标题在截短前隐藏可识别的 Key。\n- **复核依据连续保留**：提供主模型与帮手实际读取的本地来源回执，保留原范围和版本；不把后来变化的文件当成当时的依据。\n- **减少重复复核**：来源正文与结构信息分开，容量允许时保留已读原文供跨段比较；审阅模型可主动调用精确计算器，或按自己确定的条件查询已取得的原始表格，核对数量、合计、缺失编号和字段差异；结果与来源版本一起留痕。规则应用区分原表状态与实际适用条件。\n- **长任务接着做**：补充要求会排队交给主模型；只读帮手中断后保留已取得的有效证据，可在来源未变时继续使用。已发生或结果不明的写入仍按实际回执检查，避免重复执行。\n- **保留完整进度**：长篇工作摘要独立保存并核对完整性；恢复提示与实际可续接状态保持一致。模型仍在正常请求或输出时，不再仅凭工具回执间隔判定帮手停滞。\n- **Office 成品进入复核**：直接读取最终文件，区分完整正文、局部读取和无法读取。长材料由审阅模型选择检查重点和所需片段，按实际模型容量分段读取，并显示真实覆盖范围。\n- **复核修改可以核对**：主模型依据原始材料逐条判断回复和文件意见，可接受、驳回或保留待核实项；回复只作必要的局部修改，再核对修改处。文件意见不会绕过主模型判断，也不会阻止其他回复问题的修订。记录检查范围、意见、采纳理由及前后片段；无法完成、证据不足或仍待处理时明确显示。文件本身有问题时会说明，不把回复修改当成文件已经修改。\n- **单一模型也能使用复核**：优先选择已配置的另一家供应商，其次同厂其他模型；只有一个可用模型时明确显示为自检。实际调用、耗时及用量仍计入记录，不默认开启。\n- **协作历史可翻页**：显示实际总数和前后页，可查看仍保留的较早记录；复核详情可展开阅读。修复只显示最近少量记录却误当全部的问题。\n- **补齐诊断事实**：取消的请求保留可取得的用量与状态；桌面异常退出记录近期进程内存，便于定位原因。减少高频状态挤占任务关键事件。\n- **更新模型资料**：恢复 Agnes 2.5 Pro Beta 的已上线付费说明，更新 Ling 新建预设；已保存的模型接入路线保持原样。\n\n## 更新方式\n\n从 4.1.4v2 升级可按应用兼容检查使用轻量更新；更早版本使用完整安装包。保留原安装位置、数据目录、模型设置和聊天记录。更新前保存正在编辑的文件，完成后按提示重启 Miaoclaw。\n\n手机网页与官网同步更新，Android 外壳继续沿用 0.4.1。交叉复核仍由你在“设置 → 能力扩展 → 帮手（Agent）→ 智能编排”选择开启；长任务、来源数量和所用模型都会影响耗时与费用。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-2/Miaoclaw-Setup-4.1.4-2.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-2/Miaoclaw-Setup-4.1.4-2.exe",
-      "sha256": "cd52c4350f7291fc87f8c247ee136ab3f6fd1913cf1303acc1ce9bd628ffe0f8",
-      "sizeBytes": 411457802
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-3/Miaoclaw-Setup-4.1.4-3.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-3/Miaoclaw-Setup-4.1.4-3.exe",
+      "sha256": "027ba9e5ab7e67599a49357999bcef7ef673f5f3591f701effb78b549ca94beb",
+      "sizeBytes": 411501214
+    },
+    "hot": {
+      "baseline": "4.1.4-2",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-3/miaoclaw-hot-4.1.4-3.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-3/miaoclaw-hot-4.1.4-3.zip",
+      "sha256": "7ea9ea401c0e63f3d64da58dd96abdb7526fb8f7888749db9639ffb1525a15b9",
+      "sizeBytes": 152815782
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.4+web.2",
+      "feVersion": "4.1.4+web.3",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
