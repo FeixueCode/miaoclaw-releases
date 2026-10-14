@@ -6,7 +6,7 @@
 
 **在自己的电脑上，把一句需求变成能继续使用的文件和结果。**
 
-Windows 10 / 11 · 本地优先 · 自选模型 · 最新：v4.1.4v2
+Windows 10 / 11 · 本地优先 · 自选模型 · 最新：v4.1.4v3
 
 **[下载 Windows 版](https://miao-claw.com/#download)**　[更新说明](https://github.com/FeixueCode/miaoclaw-releases/releases/latest) · [使用指南](https://miao-claw.com/guide.html) · [官网](https://miao-claw.com)
 
@@ -55,7 +55,7 @@ Word、Excel、PowerPoint、Markdown 和 HTML 可以在同一个文件入口打�
 
 **Turn a request into useful files and finished work, on your own PC.**
 
-Windows 10 / 11 · Local-first · Your choice of model · Latest: v4.1.4v2
+Windows 10 / 11 · Local-first · Your choice of model · Latest: v4.1.4v3
 
 **[Download for Windows](https://miao-claw.com/en/#download)**　[Release notes](https://github.com/FeixueCode/miaoclaw-releases/releases/latest) · [User guide](https://miao-claw.com/en/guide.html) · [Website](https://miao-claw.com/en/)
 
