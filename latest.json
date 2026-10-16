@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-15T07:08:15.723Z",
+  "publishedAt": "2026-10-16T15:54:54.446Z",
   "resources": [
     {
       "id": "ocr",
@@ -126,26 +126,19 @@
     }
   ],
   "latest": {
-    "version": "4.1.4-4",
-    "displayVersion": "4.1.4v4",
-    "notes": "# Miaoclaw 4.1.4v4\n\n改善跨会话找回与接续旧讨论，修复手机计划面板遮挡其他页面的问题。\n\n## 本次修复\n\n- **旧话题更容易找回**：多个话题、不同说法和较早记录可继续检索；明确区分部分匹配、尚未查完和没有结果，不把一次未命中当成记录丢失。按日期查找时覆盖完整一天。\n- **找回后能读前后文**：召回可直接提供命中会话的原始对话、后续修改及任务完成状态；长内容按模型实际容量分页继续读取。接续旧任务时，可以结合旧要求和新查询完成规划，不必先逐步询问“还记不记得”。\n- **保留来源与更正**：区分用户原话、助手建议和历史任务状态；已删除、已变化或无法核验的来源不以旧答复重新带入。阅读范围不完整时保留继续查看的入口。\n- **计划只在对话中显示**：手机和电脑切换到文件、手帐、记忆、自动任务、工作台或设置时隐藏计划面板；返回对话后保留该会话的计划和展开状态，切换会话时显示各自的计划。\n\n## 更新方式\n\n4.1.4v2、4.1.4v3 可按应用兼容检查使用热更新；更早版本使用完整安装包。保留原安装位置、数据目录、模型设置和聊天记录。保存正在编辑的文件，完成更新后按提示重启 Miaoclaw。\n\n官网与手机界面同步更新，Android 外壳继续沿用 0.4.1。手机网页刷新后启用新界面；Android App 按“设置 → 检查更新”的提示启用。跨会话读取由连接的电脑完成，电脑端也需更新。模型仍负责理解材料和组织回答，涉及现行政策、文件现状和不完整证据时须继续核实。",
+    "version": "4.1.4-5",
+    "displayVersion": "4.1.4v5",
+    "notes": "# Miaoclaw 4.1.4v5\n\n修复首次模型配置、离线识别组件安装和历史附件接续问题。\n\n## 本次修复\n\n- **保存 Key 后立即可选模型**：设置页与对话使用同一份模型状态。首次接入、修改和删除配置后，对话和新建会话立即同步，无需退出重开。连接是否可用仍以实际测试为准。\n- **组件下载失败后可继续重试**：离线语音与 OCR 使用有时限的下载重试，为备用下载源保留时间；支持经过哈希校验的包缓存和断点续传，保留语音模型下载缓存。安装失败不影响当前可用组件，界面显示下载量、下载来源和失败阶段。\n- **历史附件可继续使用**：修复对话保存时丢失来源校验记录，以及旧记录的失效状态持续影响后续新对话的问题。保留原附件路径、文件身份和校验信息；内部资料状态不再作为助手答复带入，模型可按当前要求重新读取附件并继续任务。\n- **按原文件名继续修改**：明确要求覆盖原文件时，文档修改和 PDF 同步导出可保留原路径，不再被先前的另存副本拦住；仍检查文件版本冲突，并保留可恢复的旧版内容。\n\n历史来源已被删除或变更时，仍会重新核验，不以旧答复代替当前资料。原有聊天记录不做改写。\n\n- **连续列表编号**：Word、PDF 及内容块转换使用一致的编号规则；未指定序号时自动连续，分组后重新开始，显式起始编号仍生效。\n\n本版同步更新内置 PDF 与桌面运行时，包含 PDF 解析安全修复。\n\n## 更新方式\n\n本版内置运行时有更新，所有旧版本均使用完整安装包覆盖升级。无需先卸载旧版。保留原安装位置、数据目录、模型设置和聊天记录。保存正在编辑的文件，完成更新后按提示重启 Miaoclaw。\n\n官网与手机界面同步更新，Android 外壳继续沿用 0.4.1。手机网页刷新后启用新界面；Android App 按“设置 → 手机界面更新”的提示启用。附件读取及组件安装由连接的电脑完成，电脑端也需更新。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-4/Miaoclaw-Setup-4.1.4-4.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-4/Miaoclaw-Setup-4.1.4-4.exe",
-      "sha256": "d8f5591bc2c0dd2e4d673deb68f3511f18f76d9ce5ab3bb55ecbb42a71c74a87",
-      "sizeBytes": 411507999
-    },
-    "hot": {
-      "baseline": "4.1.4-2",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-4/miaoclaw-hot-4.1.4-4.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-4/miaoclaw-hot-4.1.4-4.zip",
-      "sha256": "7685e28b615a951e94679fece758c1c4a60633ba78a89be4bddece3ee979d03c",
-      "sizeBytes": 152824998
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-5/Miaoclaw-Setup-4.1.4-5.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-5/Miaoclaw-Setup-4.1.4-5.exe",
+      "sha256": "86c53c82154ce7442206f0fe907303dd04bae2deafb9df4b5120916fc489a144",
+      "sizeBytes": 411692530
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.4+web.4",
+      "feVersion": "4.1.4+web.5",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
