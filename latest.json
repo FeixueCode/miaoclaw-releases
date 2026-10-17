@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-16T15:54:54.446Z",
+  "publishedAt": "2026-10-17T15:49:28.329Z",
   "resources": [
     {
       "id": "ocr",
-      "revision": 1,
+      "revision": 2,
       "pipName": "rapidocr",
       "verifiedVersion": "3.10.0",
       "name": "本地文字识别",
-      "verifiedAt": "2026-10-09",
+      "verifiedAt": "2026-10-17",
       "verification": {
         "realInference": true,
         "contract": "rapidocr-image-v2",
@@ -21,8 +21,8 @@
       },
       "installation": {
         "constraintFile": "installer/component-locks/ocr-3.10.0.txt",
-        "constraintSha256": "ad133eb3be18989b8ecfc123fdcc4f61b3783f52d9755992850a2f407e1382ac",
-        "constraintContent": "# Miaoclaw fully hashed RapidOCR 3.10.0 dependency set (Windows x64, Python 3.12).\r\nantlr4-python3-runtime==4.9.3 --hash=sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b\r\ncertifi==2026.7.22 --hash=sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775\r\ncharset-normalizer==3.5.1 --hash=sha256:3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2\r\ncolorama==0.4.6 --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6\r\ncolorlog==6.12.0 --hash=sha256:30d392604e9110045a2c2aeefc27d7a017abbab63f3a8aee594eac0801df784e\r\nflatbuffers==25.12.19 --hash=sha256:7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4\r\nidna==3.19 --hash=sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4\r\nnumpy==2.5.2 --hash=sha256:28ac63476ec7651484215ee7fa15a1f78b57c14621f01e392afe17b9a1390ce4\r\nomegaconf==2.3.1 --hash=sha256:3d701d14e9a8828f1edd28bb70b725908b34277cdd72cf7d6a83f94dadc6b6a0\r\nonnxruntime==1.29.0 --hash=sha256:4acf2b4948b7ede87221ca6332344b8facdc8059d6ac751a7d367d04532b02dd\r\nopencv-python-headless==5.0.0.93 --hash=sha256:829717b6a95554f273e49e357cee3b3a2a26b6f4842fbc1bed2b45bdd8f87e0e\r\npackaging==26.3 --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c\r\npillow==12.3.0 --hash=sha256:a2b55dd6b2a4c4b7d87ffa56bdb33fdc5fdb9a462173861a7bc097f17d91cb09\r\nprotobuf==7.36.1 --hash=sha256:51139351435d9b43d88a55eaa49fb6f737fbb478fb0cbf2cf694d1a04a9d3363\r\npyclipper==1.4.0 --hash=sha256:d1e5498d883b706a4ce636247f0d830c6eb34a25b843a1b78e2c969754ca9037\r\nPyYAML==6.0.3 --hash=sha256:5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b\r\nrapidocr==3.10.0 --hash=sha256:2fc34e26cd0f48514804a94f8832283039c7334076bff60768b1fed9ad068050\r\nrequests==2.34.2 --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0\r\nsetuptools==81.0.0 --hash=sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6\r\nshapely==2.1.2 --hash=sha256:743044b4cfb34f9a67205cee9279feaf60ba7d02e69febc2afc609047cb49179\r\nsix==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274\r\ntqdm==4.70.0 --hash=sha256:7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953\r\nurllib3==2.7.0 --hash=sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897\r\nwheel==0.48.0 --hash=sha256:3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab\r\n"
+        "constraintSha256": "1667034521534d66924d1c2baf3737a678a300e765bf216f98ccb416339fd0db",
+        "constraintContent": "# Miaoclaw fully hashed RapidOCR 3.10.0 dependency set (Windows x64, Python 3.12).\r\nantlr4-python3-runtime==4.9.3 --hash=sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b\r\ncertifi==2026.7.22 --hash=sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775\r\ncharset-normalizer==3.5.1 --hash=sha256:3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2\r\ncolorama==0.4.6 --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6\r\ncolorlog==6.12.0 --hash=sha256:30d392604e9110045a2c2aeefc27d7a017abbab63f3a8aee594eac0801df784e\r\nflatbuffers==25.12.19 --hash=sha256:7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4\r\nidna==3.19 --hash=sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4\r\nnumpy==2.5.2 --hash=sha256:28ac63476ec7651484215ee7fa15a1f78b57c14621f01e392afe17b9a1390ce4\r\nomegaconf==2.3.1 --hash=sha256:3d701d14e9a8828f1edd28bb70b725908b34277cdd72cf7d6a83f94dadc6b6a0\r\nonnxruntime==1.29.0 --hash=sha256:4acf2b4948b7ede87221ca6332344b8facdc8059d6ac751a7d367d04532b02dd\r\nopencv-python-headless==5.0.0.93 --hash=sha256:829717b6a95554f273e49e357cee3b3a2a26b6f4842fbc1bed2b45bdd8f87e0e\r\npackaging==26.3 --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c\r\npillow==13.0.0 --hash=sha256:ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b\r\nprotobuf==7.36.1 --hash=sha256:51139351435d9b43d88a55eaa49fb6f737fbb478fb0cbf2cf694d1a04a9d3363\r\npyclipper==1.4.0 --hash=sha256:d1e5498d883b706a4ce636247f0d830c6eb34a25b843a1b78e2c969754ca9037\r\nPyYAML==6.0.3 --hash=sha256:5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b\r\nrapidocr==3.10.0 --hash=sha256:2fc34e26cd0f48514804a94f8832283039c7334076bff60768b1fed9ad068050\r\nrequests==2.34.2 --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0\r\nsetuptools==81.0.0 --hash=sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6\r\nshapely==2.1.2 --hash=sha256:743044b4cfb34f9a67205cee9279feaf60ba7d02e69febc2afc609047cb49179\r\nsix==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274\r\ntqdm==4.70.0 --hash=sha256:7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953\r\nurllib3==2.7.0 --hash=sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897\r\nwheel==0.48.0 --hash=sha256:3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab\r\n"
       },
       "source": {
         "registry": "https://pypi.org/project/rapidocr/3.10.0/",
@@ -118,27 +118,27 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-10-14.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-14.1.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-14.1.json",
-      "sha256": "6b04ff1e4da040da19c033eccf8aae69436c05f5a1b821cdf4b4137fb62f7e5f",
+      "version": "2026-10-17.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-17.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-17.1.json",
+      "sha256": "b03464831aac5ceedb2d2489d2022335bb41feb9c7d6159bfd56b54c61477ca9",
       "minAppVersion": "4.1.4"
     }
   ],
   "latest": {
-    "version": "4.1.4-5",
-    "displayVersion": "4.1.4v5",
-    "notes": "# Miaoclaw 4.1.4v5\n\n修复首次模型配置、离线识别组件安装和历史附件接续问题。\n\n## 本次修复\n\n- **保存 Key 后立即可选模型**：设置页与对话使用同一份模型状态。首次接入、修改和删除配置后，对话和新建会话立即同步，无需退出重开。连接是否可用仍以实际测试为准。\n- **组件下载失败后可继续重试**：离线语音与 OCR 使用有时限的下载重试，为备用下载源保留时间；支持经过哈希校验的包缓存和断点续传，保留语音模型下载缓存。安装失败不影响当前可用组件，界面显示下载量、下载来源和失败阶段。\n- **历史附件可继续使用**：修复对话保存时丢失来源校验记录，以及旧记录的失效状态持续影响后续新对话的问题。保留原附件路径、文件身份和校验信息；内部资料状态不再作为助手答复带入，模型可按当前要求重新读取附件并继续任务。\n- **按原文件名继续修改**：明确要求覆盖原文件时，文档修改和 PDF 同步导出可保留原路径，不再被先前的另存副本拦住；仍检查文件版本冲突，并保留可恢复的旧版内容。\n\n历史来源已被删除或变更时，仍会重新核验，不以旧答复代替当前资料。原有聊天记录不做改写。\n\n- **连续列表编号**：Word、PDF 及内容块转换使用一致的编号规则；未指定序号时自动连续，分组后重新开始，显式起始编号仍生效。\n\n本版同步更新内置 PDF 与桌面运行时，包含 PDF 解析安全修复。\n\n## 更新方式\n\n本版内置运行时有更新，所有旧版本均使用完整安装包覆盖升级。无需先卸载旧版。保留原安装位置、数据目录、模型设置和聊天记录。保存正在编辑的文件，完成更新后按提示重启 Miaoclaw。\n\n官网与手机界面同步更新，Android 外壳继续沿用 0.4.1。手机网页刷新后启用新界面；Android App 按“设置 → 手机界面更新”的提示启用。附件读取及组件安装由连接的电脑完成，电脑端也需更新。",
+    "version": "4.1.4-6",
+    "displayVersion": "4.1.4v6",
+    "notes": "# Miaoclaw 4.1.4v6\n\nDeepSeek Search / Fetch 加入现有搜索系统，复用官方模型 Key，并改善来源选择、失败反馈和原文核验。\n\n## 本次更新\n\n- **DeepSeek 搜索与网页读取**：已有 DeepSeek 官方模型 Key 可直接复用，无需重复填写。搜索设置可关闭复用或填写独立官方 Key；中转 Key 不会发给 DeepSeek 官方接口。\n- **按任务混合搜索**：DeepSeek 可与 Tavily、Keenable 等已配置来源及免 Key 来源共同使用。助手能看到哪些来源可调用、近期请求结果及筛选方法，按问题选单源或组合；结果薄弱时可换词、换来源或直接读取原文。\n- **保留失败和未完成信息**：搜索返回各来源的成功、空结果、失败及未调用情况；网页读取保留各阅读通道的实际尝试，批量读取也逐页显示失败。某个来源失败不会抹掉其他已取得的材料。\n- **根据证据决定何时回答**：原始材料、日期、覆盖范围和重复来源供模型判断。一份适用原文足够时可以停止；资料冲突或缺少关键事实时应保留具体分歧，不以搜索次数或来源数量替代核实。\n- **更新 DeepSeek Flash 对应版本**：官方 API ID 仍为 deepseek-flash，当前对应 DeepSeek-V4.1-Flash-1017；保留有效旧配置，并按 Flash 与 Pro 各自规则处理 top_p。接入说明同步当前官方资料。\n- **保留证据原始字符**：修复公式、代码及网页原文在审阅和历史上下文中被替换成相似全角字符的问题，保持原始文字与来源权限边界。\n- **长输入连续处理**：修复读完长输入后恢复完整工具清单时过早判定容量不足的问题；逐页原文和恢复续点保持完整。\n- **更新内置运行组件**：Electron 44.9.0、Pillow 13.0.0 和 pypdf 6.21.1；OCR 依赖也同步 Pillow 修复。\n\nDeepSeek Search 与 Fetch 分别按成功且有内容的请求计费，当前官方人民币标价均为每千次 5 元；与模型 token 费用分开。详见 [官方说明](https://api-docs.deepseek.com/zh-cn/guides/search/)。保存 Key 表示已配置，实际可用性仍以请求结果为准。\n\n## 更新方式\n\n本版包含图像、PDF 和桌面运行时更新，所有旧版本均需完整安装包覆盖升级。保留原安装位置与数据目录，无需先卸载。保存正在编辑的文件，完成更新后按提示重启 Miaoclaw。\n\n中英文官网与手机界面同步更新，Android 外壳继续沿用 0.4.1。手机网页刷新后启用新界面；Android App 按“设置 → 手机界面更新”的提示启用。搜索在连接的电脑上执行，电脑端也需更新。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-5/Miaoclaw-Setup-4.1.4-5.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-5/Miaoclaw-Setup-4.1.4-5.exe",
-      "sha256": "86c53c82154ce7442206f0fe907303dd04bae2deafb9df4b5120916fc489a144",
-      "sizeBytes": 411692530
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-6/Miaoclaw-Setup-4.1.4-6.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-6/Miaoclaw-Setup-4.1.4-6.exe",
+      "sha256": "e32b06a01e87474488bcef277c6d20bac81c79d1b1310c28b50bd9d35b84393c",
+      "sizeBytes": 411738220
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.4+web.5",
+      "feVersion": "4.1.4+web.6",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
