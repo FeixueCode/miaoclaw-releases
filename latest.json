@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-17T15:49:28.329Z",
+  "publishedAt": "2026-10-19T04:28:58.954Z",
   "resources": [
     {
       "id": "ocr",
@@ -126,19 +126,26 @@
     }
   ],
   "latest": {
-    "version": "4.1.4-6",
-    "displayVersion": "4.1.4v6",
-    "notes": "# Miaoclaw 4.1.4v6\n\nDeepSeek Search / Fetch 加入现有搜索系统，复用官方模型 Key，并改善来源选择、失败反馈和原文核验。\n\n## 本次更新\n\n- **DeepSeek 搜索与网页读取**：已有 DeepSeek 官方模型 Key 可直接复用，无需重复填写。搜索设置可关闭复用或填写独立官方 Key；中转 Key 不会发给 DeepSeek 官方接口。\n- **按任务混合搜索**：DeepSeek 可与 Tavily、Keenable 等已配置来源及免 Key 来源共同使用。助手能看到哪些来源可调用、近期请求结果及筛选方法，按问题选单源或组合；结果薄弱时可换词、换来源或直接读取原文。\n- **保留失败和未完成信息**：搜索返回各来源的成功、空结果、失败及未调用情况；网页读取保留各阅读通道的实际尝试，批量读取也逐页显示失败。某个来源失败不会抹掉其他已取得的材料。\n- **根据证据决定何时回答**：原始材料、日期、覆盖范围和重复来源供模型判断。一份适用原文足够时可以停止；资料冲突或缺少关键事实时应保留具体分歧，不以搜索次数或来源数量替代核实。\n- **更新 DeepSeek Flash 对应版本**：官方 API ID 仍为 deepseek-flash，当前对应 DeepSeek-V4.1-Flash-1017；保留有效旧配置，并按 Flash 与 Pro 各自规则处理 top_p。接入说明同步当前官方资料。\n- **保留证据原始字符**：修复公式、代码及网页原文在审阅和历史上下文中被替换成相似全角字符的问题，保持原始文字与来源权限边界。\n- **长输入连续处理**：修复读完长输入后恢复完整工具清单时过早判定容量不足的问题；逐页原文和恢复续点保持完整。\n- **更新内置运行组件**：Electron 44.9.0、Pillow 13.0.0 和 pypdf 6.21.1；OCR 依赖也同步 Pillow 修复。\n\nDeepSeek Search 与 Fetch 分别按成功且有内容的请求计费，当前官方人民币标价均为每千次 5 元；与模型 token 费用分开。详见 [官方说明](https://api-docs.deepseek.com/zh-cn/guides/search/)。保存 Key 表示已配置，实际可用性仍以请求结果为准。\n\n## 更新方式\n\n本版包含图像、PDF 和桌面运行时更新，所有旧版本均需完整安装包覆盖升级。保留原安装位置与数据目录，无需先卸载。保存正在编辑的文件，完成更新后按提示重启 Miaoclaw。\n\n中英文官网与手机界面同步更新，Android 外壳继续沿用 0.4.1。手机网页刷新后启用新界面；Android App 按“设置 → 手机界面更新”的提示启用。搜索在连接的电脑上执行，电脑端也需更新。",
+    "version": "4.1.5",
+    "displayVersion": "4.1.5",
+    "notes": "# Miaoclaw 4.1.5\r\n\r\n改善编写代码、运行命令和接入本地工具时的持续执行、环境复用与结果核验。\r\n\r\n## 本次更新\r\n\r\n- **手机长任务持续执行**：电脑已为配对会话授予完整权限时，手机发起的命令使用与桌面相同的持续运行机制。超过一次等待时间仍在运行的任务会保留任务编号和真实状态，可继续查看输出，不再被旧的30秒执行限制直接终止。每次后续操作仍检查权限。\r\n- **依赖环境更稳定**：命令、技能和 MCP 使用一致的依赖缓存位置；显式配置的工具环境和解释器优先保留。临时运行缓存与已安装工具分别处理，避免把一次缓存命中当成永久安装。\r\n- **恢复结果有据可查**：命令元数据缺失或损坏时，保留已有进程回执和任务编号，明确哪些输出尚未核验，避免把未知结果当成成功。\r\n- **修正 Windows 中文编码**：持续运行的 CMD 命令从启动时使用 UTF-8，修复终端输出正常但重定向生成的中文文件仍可能乱码的问题；命令窗口保持隐藏。\r\n\r\n## 更新方式\r\n\r\n4.1.4v6 在兼容检查通过后可使用轻量热更新；更早版本和新安装使用完整安装包。沿用原安装位置与数据目录，无需先卸载。保存正在编辑的文件，完成更新后按提示完全退出并重新打开 Miaoclaw。\r\n\r\n中英文官网与手机界面同步更新。Android 外壳仍为0.4.1；手机网页刷新，Android App 按“设置 → 手机界面更新”启用新版界面。远程任务在已连接的电脑上运行，电脑端也需更新并保持在线。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.4-6/Miaoclaw-Setup-4.1.4-6.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.4-6/Miaoclaw-Setup-4.1.4-6.exe",
-      "sha256": "e32b06a01e87474488bcef277c6d20bac81c79d1b1310c28b50bd9d35b84393c",
-      "sizeBytes": 411738220
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5/Miaoclaw-Setup-4.1.5.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5/Miaoclaw-Setup-4.1.5.exe",
+      "sha256": "7d7b067506a45f3767d29cc7841f1058a13871e0957e26d22c5bdfdf494081d9",
+      "sizeBytes": 411760842
+    },
+    "hot": {
+      "baseline": "4.1.4-6",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5/miaoclaw-hot-4.1.5.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5/miaoclaw-hot-4.1.5.zip",
+      "sha256": "f1c74402739a88a1d1c4f2a614f7524f8d358701cb0b65c1a752b7e407eea7f1",
+      "sizeBytes": 152843799
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.4+web.6",
+      "feVersion": "4.1.5",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
