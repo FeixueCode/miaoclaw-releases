@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-19T04:28:58.954Z",
+  "publishedAt": "2026-10-20T05:59:52.125Z",
   "resources": [
     {
       "id": "ocr",
@@ -126,26 +126,26 @@
     }
   ],
   "latest": {
-    "version": "4.1.5",
-    "displayVersion": "4.1.5",
-    "notes": "# Miaoclaw 4.1.5\r\n\r\n改善编写代码、运行命令和接入本地工具时的持续执行、环境复用与结果核验。\r\n\r\n## 本次更新\r\n\r\n- **手机长任务持续执行**：电脑已为配对会话授予完整权限时，手机发起的命令使用与桌面相同的持续运行机制。超过一次等待时间仍在运行的任务会保留任务编号和真实状态，可继续查看输出，不再被旧的30秒执行限制直接终止。每次后续操作仍检查权限。\r\n- **依赖环境更稳定**：命令、技能和 MCP 使用一致的依赖缓存位置；显式配置的工具环境和解释器优先保留。临时运行缓存与已安装工具分别处理，避免把一次缓存命中当成永久安装。\r\n- **恢复结果有据可查**：命令元数据缺失或损坏时，保留已有进程回执和任务编号，明确哪些输出尚未核验，避免把未知结果当成成功。\r\n- **修正 Windows 中文编码**：持续运行的 CMD 命令从启动时使用 UTF-8，修复终端输出正常但重定向生成的中文文件仍可能乱码的问题；命令窗口保持隐藏。\r\n\r\n## 更新方式\r\n\r\n4.1.4v6 在兼容检查通过后可使用轻量热更新；更早版本和新安装使用完整安装包。沿用原安装位置与数据目录，无需先卸载。保存正在编辑的文件，完成更新后按提示完全退出并重新打开 Miaoclaw。\r\n\r\n中英文官网与手机界面同步更新。Android 外壳仍为0.4.1；手机网页刷新，Android App 按“设置 → 手机界面更新”启用新版界面。远程任务在已连接的电脑上运行，电脑端也需更新并保持在线。",
+    "version": "4.1.5-1",
+    "displayVersion": "4.1.5v1",
+    "notes": "# Miaoclaw 4.1.5V1\n\n修复聊天回复中部分列表换行显示异常，让请求失败的原因和任务状态更准确。\n\n## 本次修复\n\n- **列表换行显示**：识别正文中结构明确、误写成转义字符的列表和标题换行。历史回复、流式回复结束后的显示、普通复制和会话导出保持一致；代码、路径、数据字符串和原始记录保留原样。\n- **服务方拒绝原因**：模型接口明确因内容或安全策略拒绝请求时，显示真实 HTTP 状态和经过脱敏的原因，本轮停止，不自动重试或切换模型。纯文本错误正文也能保留，不再只剩模糊的连接失败提示。\n- **任务进度准确结束**：任务已经受阻、失败或停止时，未完成的步骤不再持续显示“进行中”；没有完成回执的步骤不会被标为成功。已保存的历史失败记录也适用。\n\n## 更新方式\n\n4.1.4v6、4.1.5 在兼容检查通过后可使用轻量热更新；更早版本和新安装使用完整安装包。沿用原安装位置与数据目录，无需先卸载。保存正在编辑的文件，按提示完全退出并重新打开 Miaoclaw。\n\n中英文官网与手机界面同步更新。Android 外壳仍为 0.4.1；手机网页刷新，Android App 按“设置 → 手机界面更新”启用新版界面。电脑端也需更新并保持在线。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5/Miaoclaw-Setup-4.1.5.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5/Miaoclaw-Setup-4.1.5.exe",
-      "sha256": "7d7b067506a45f3767d29cc7841f1058a13871e0957e26d22c5bdfdf494081d9",
-      "sizeBytes": 411760842
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5-1/Miaoclaw-Setup-4.1.5-1.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5-1/Miaoclaw-Setup-4.1.5-1.exe",
+      "sha256": "601c78a91ae57b7498fc53b81f9e9eafcc1d3166dd34f339b4293094a331321f",
+      "sizeBytes": 411715560
     },
     "hot": {
       "baseline": "4.1.4-6",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5/miaoclaw-hot-4.1.5.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5/miaoclaw-hot-4.1.5.zip",
-      "sha256": "f1c74402739a88a1d1c4f2a614f7524f8d358701cb0b65c1a752b7e407eea7f1",
-      "sizeBytes": 152843799
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5-1/miaoclaw-hot-4.1.5-1.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5-1/miaoclaw-hot-4.1.5-1.zip",
+      "sha256": "84d893d026060fd4692bea26a8839a788ecafa59a03ab216b9acaa82a2c95c2d",
+      "sizeBytes": 152848028
     },
     "android": {
       "shellVersion": "0.4.1",
-      "feVersion": "4.1.5",
+      "feVersion": "4.1.5+web.1",
       "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
       "sizeBytes": 5841505,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
