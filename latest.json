@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-20T05:59:52.125Z",
+  "publishedAt": "2026-10-23T18:44:52.730Z",
   "resources": [
     {
       "id": "ocr",
-      "revision": 2,
+      "revision": 4,
       "pipName": "rapidocr",
       "verifiedVersion": "3.10.0",
       "name": "本地文字识别",
-      "verifiedAt": "2026-10-17",
+      "verifiedAt": "2026-10-23",
       "verification": {
         "realInference": true,
         "contract": "rapidocr-image-v2",
@@ -21,8 +21,8 @@
       },
       "installation": {
         "constraintFile": "installer/component-locks/ocr-3.10.0.txt",
-        "constraintSha256": "1667034521534d66924d1c2baf3737a678a300e765bf216f98ccb416339fd0db",
-        "constraintContent": "# Miaoclaw fully hashed RapidOCR 3.10.0 dependency set (Windows x64, Python 3.12).\r\nantlr4-python3-runtime==4.9.3 --hash=sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b\r\ncertifi==2026.7.22 --hash=sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775\r\ncharset-normalizer==3.5.1 --hash=sha256:3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2\r\ncolorama==0.4.6 --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6\r\ncolorlog==6.12.0 --hash=sha256:30d392604e9110045a2c2aeefc27d7a017abbab63f3a8aee594eac0801df784e\r\nflatbuffers==25.12.19 --hash=sha256:7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4\r\nidna==3.19 --hash=sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4\r\nnumpy==2.5.2 --hash=sha256:28ac63476ec7651484215ee7fa15a1f78b57c14621f01e392afe17b9a1390ce4\r\nomegaconf==2.3.1 --hash=sha256:3d701d14e9a8828f1edd28bb70b725908b34277cdd72cf7d6a83f94dadc6b6a0\r\nonnxruntime==1.29.0 --hash=sha256:4acf2b4948b7ede87221ca6332344b8facdc8059d6ac751a7d367d04532b02dd\r\nopencv-python-headless==5.0.0.93 --hash=sha256:829717b6a95554f273e49e357cee3b3a2a26b6f4842fbc1bed2b45bdd8f87e0e\r\npackaging==26.3 --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c\r\npillow==13.0.0 --hash=sha256:ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b\r\nprotobuf==7.36.1 --hash=sha256:51139351435d9b43d88a55eaa49fb6f737fbb478fb0cbf2cf694d1a04a9d3363\r\npyclipper==1.4.0 --hash=sha256:d1e5498d883b706a4ce636247f0d830c6eb34a25b843a1b78e2c969754ca9037\r\nPyYAML==6.0.3 --hash=sha256:5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b\r\nrapidocr==3.10.0 --hash=sha256:2fc34e26cd0f48514804a94f8832283039c7334076bff60768b1fed9ad068050\r\nrequests==2.34.2 --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0\r\nsetuptools==81.0.0 --hash=sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6\r\nshapely==2.1.2 --hash=sha256:743044b4cfb34f9a67205cee9279feaf60ba7d02e69febc2afc609047cb49179\r\nsix==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274\r\ntqdm==4.70.0 --hash=sha256:7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953\r\nurllib3==2.7.0 --hash=sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897\r\nwheel==0.48.0 --hash=sha256:3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab\r\n"
+        "constraintSha256": "3c3e644359a681e147e2872033f4fd2ccd6ed9808b3be14d631bf9db91e6a07e",
+        "constraintContent": "# Miaoclaw fully hashed RapidOCR 3.10.0 dependency set (Windows x64, Python 3.12).\r\nantlr4-python3-runtime==4.9.3 --hash=sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b\r\ncertifi==2026.10.23 --hash=sha256:e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1\r\ncharset-normalizer==3.5.1 --hash=sha256:3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2\r\ncolorama==0.4.6 --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6\r\ncolorlog==6.12.0 --hash=sha256:30d392604e9110045a2c2aeefc27d7a017abbab63f3a8aee594eac0801df784e\r\nflatbuffers==25.12.19 --hash=sha256:7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4\r\nidna==3.19 --hash=sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4\r\nnumpy==2.5.2 --hash=sha256:28ac63476ec7651484215ee7fa15a1f78b57c14621f01e392afe17b9a1390ce4\r\nomegaconf==2.3.1 --hash=sha256:3d701d14e9a8828f1edd28bb70b725908b34277cdd72cf7d6a83f94dadc6b6a0\r\nonnxruntime==1.29.0 --hash=sha256:4acf2b4948b7ede87221ca6332344b8facdc8059d6ac751a7d367d04532b02dd\r\nopencv-python-headless==5.0.0.93 --hash=sha256:829717b6a95554f273e49e357cee3b3a2a26b6f4842fbc1bed2b45bdd8f87e0e\r\npackaging==26.3 --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c\r\npillow==13.0.0 --hash=sha256:ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b\r\nprotobuf==7.36.1 --hash=sha256:51139351435d9b43d88a55eaa49fb6f737fbb478fb0cbf2cf694d1a04a9d3363\r\npyclipper==1.4.0 --hash=sha256:d1e5498d883b706a4ce636247f0d830c6eb34a25b843a1b78e2c969754ca9037\r\nPyYAML==6.0.3 --hash=sha256:5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b\r\nrapidocr==3.10.0 --hash=sha256:2fc34e26cd0f48514804a94f8832283039c7334076bff60768b1fed9ad068050\r\nrequests==2.34.2 --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0\r\nsetuptools==81.0.0 --hash=sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6\r\nshapely==2.1.2 --hash=sha256:743044b4cfb34f9a67205cee9279feaf60ba7d02e69febc2afc609047cb49179\r\nsix==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274\r\ntqdm==4.70.0 --hash=sha256:7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953\r\nurllib3==2.7.0 --hash=sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897\r\nwheel==0.48.0 --hash=sha256:3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab\r\npip==26.2.2 --hash=sha256:fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\r\n"
       },
       "source": {
         "registry": "https://pypi.org/project/rapidocr/3.10.0/",
@@ -33,11 +33,11 @@
     },
     {
       "id": "funasr",
-      "revision": 1,
+      "revision": 3,
       "pipName": "funasr",
       "verifiedVersion": "1.4.16",
       "name": "离线语音包",
-      "verifiedAt": "2026-09-21",
+      "verifiedAt": "2026-10-23",
       "verification": {
         "realInference": true,
         "contract": "sensevoice-whole-file-v2",
@@ -57,8 +57,8 @@
       },
       "installation": {
         "constraintFile": "installer/component-locks/funasr-1.4.16.txt",
-        "constraintSha256": "9e16020361598c6769019becae62db3a5f47ad5b1261a0b94900cdf2e0f35ef2",
-        "constraintContent": "# Miaoclaw fully hashed FunASR 1.4.16 dependency set (Windows x64, Python 3.12, CPU).\r\naliyun-python-sdk-core==2.16.1 --hash=sha256:0f25a6e8ec1ea29c76610278cff81cbff85149a6e692bf2398a6f9b77e5e7424\r\naliyun-python-sdk-kms==2.16.5 --hash=sha256:24b6cdc4fd161d2942619479c8d050c63ea9cd22b044fe33b60bbb60153786f0\r\nannotated-doc==0.0.5 --hash=sha256:117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101\r\nantlr4-python3-runtime==4.9.3 --hash=sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b\r\nanyio==4.14.2 --hash=sha256:9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494\r\naudioread==3.1.0 --hash=sha256:b30d1df6c5d3de5dcef0fb0e256f6ea17bdcf5f979408df0297d8a408e2971b4\r\ncertifi==2026.7.22 --hash=sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775\r\ncffi==2.1.1 --hash=sha256:f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a\r\ncharset-normalizer==3.5.1 --hash=sha256:3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2\r\nclick==8.5.0 --hash=sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360\r\ncolorama==0.4.6 --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6\r\ncrcmod==1.7 --hash=sha256:dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e\r\ncryptography==50.0.1 --hash=sha256:aed8db4f6d71c51efb89530e12d9464e7bf2923d46c3205dc794a2a93f8c0648\r\ndecorator==5.3.1 --hash=sha256:f47fe6fdbd2edd623ecfe36875d37aba411624e2670dd395dddae1358689bb3c\r\nfilelock==3.32.4 --hash=sha256:22e58ca3b1ae3b98993b762d7338367ae64fe50252bf78d59da3bfebcdf1cedd\r\nfsspec==2026.7.0 --hash=sha256:b57ddbafedfaef7018c1ecab32aa200a9d7ca26b77965f64e48b70061249d279\r\nfunasr==1.4.16 --hash=sha256:f95943f6a8111349a1b08907363b048a49e9cb9caa1e3afd8c92970d08bf450d\r\nh11==0.16.0 --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86\r\nhf-xet==1.6.0 --hash=sha256:fb4fadde1b2b70bf4c0c14a6dccbe7194b1c28947fefd5bbe3fed9d940676c3b\r\nhttpcore==1.0.9 --hash=sha256:2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55\r\nhttpx==0.28.1 --hash=sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad\r\nhuggingface_hub==1.29.0 --hash=sha256:b00f7782afc14db4bc6572763810a635bdfbab8623d957bfb553bd18e03852cd\r\nhydra-core==1.3.6 --hash=sha256:55951f49c7e19c29f4281cce2eeaa6e73ef6c5620093a4efb402a7e4b839fc38\r\nidna==3.19 --hash=sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4\r\njaconv==0.5.0 --hash=sha256:2914114fe761ca49fc7089e25e6ad4a400c26f262ffce84e13b176916b71610a\r\njamo==0.4.1 --hash=sha256:d4b94fd23324c606ed2fbc4037c603e2c3a7ae9390c05d3473aea1ccb6b1c3fb\r\njieba==0.42.1 --hash=sha256:055ca12f62674fafed09427f176506079bc135638a14e23e25be909131928db2\r\nJinja2==3.1.6 --hash=sha256:85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67\r\njmespath==1.1.0 --hash=sha256:a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64\r\njoblib==1.5.3 --hash=sha256:5fc3c5039fc5ca8c0276333a188bbd59d6b7ab37fe6632daa76bc7f9ec18e713\r\nkaldiio==2.18.1 --hash=sha256:397a4cd18977acaae7acabfba6807ee0a6978c620064381a266eac15b3c1a0a0\r\nlazy-loader==0.5 --hash=sha256:ab0ea149e9c554d4ffeeb21105ac60bed7f3b4fd69b1d2360a4add51b170b005\r\nlibrosa==0.11.0 --hash=sha256:0b6415c4fd68bff4c29288abe67c6d80b587e0e1e2cfb0aad23e4559504a7fa1\r\nllvmlite==0.49.0 --hash=sha256:3a9c9e3af4e214acfefa4f73ebe7bc3fb35854a62b654edb3953f5ae33c08ba3\r\nmarkdown-it-py==4.2.0 --hash=sha256:9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a\r\nMarkupSafe==3.0.3 --hash=sha256:26a5784ded40c9e318cfc2bdb30fe164bdb8665ded9cd64d500a34fb42067b1c\r\nmdurl==0.1.2 --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8\r\nmodelscope==1.39.1 --hash=sha256:c1567b9d319b11d815832d13c11f71a6413b19cf6374cef6937c54d830552a97\r\nmodelscope-hub==0.3.0 --hash=sha256:024952bb3a3cdb1a547455653fd676da5078b6b01664aac0b565d299e38fa729\r\nmpmath==1.3.0 --hash=sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c\r\nmsgpack==1.2.2 --hash=sha256:b68614fba0570349833b7dd999ff0aed4e5cc8d9eb6e3a7d4527be33c65e33d3\r\nnarwhals==2.25.0 --hash=sha256:1f0f403e8c7e4463cde9bfe78b12fdd809e3ae3dda6d9b2f802934fb9c7a6a8f\r\nnetworkx==3.6.1 --hash=sha256:d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762\r\nnumba==0.67.0 --hash=sha256:50e2b72406c18cda5dd7431b0082cb85ea94e06c64c33607248fc8bef92cfb81\r\nnumpy==1.26.4 --hash=sha256:08beddf13648eb95f8d867350f6a018a4be2e5ad54c8d8caed89ebca558b2818\r\nomegaconf==2.3.1 --hash=sha256:3d701d14e9a8828f1edd28bb70b725908b34277cdd72cf7d6a83f94dadc6b6a0\r\noss2==2.19.1 --hash=sha256:a8ab9ee7eb99e88a7e1382edc6ea641d219d585a7e074e3776e9dec9473e59c1\r\npackaging==26.3 --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c\r\nplatformdirs==4.11.5 --hash=sha256:89f8d42695853b89c7170bd49bc3dc593f98a71e695ede88e06a3b247bc4563b\r\npooch==1.9.0 --hash=sha256:f265597baa9f760d25ceb29d0beb8186c243d6607b0f60b83ecf14078dbc703b\r\nprotobuf==7.36.0 --hash=sha256:1781cc1de61249b750848029bca452c0a8b7e990080316b9bbc2518b2117b488\r\npycparser==3.0 --hash=sha256:b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992\r\npycryptodome==3.23.0 --hash=sha256:c75b52aacc6c0c260f204cbdd834f76edc9fb0d8e0da9fbf8352ef58202564e2\r\nPygments==2.21.0 --hash=sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9\r\npynndescent==0.6.0 --hash=sha256:dc8c74844e4c7f5cbd1e0cd6909da86fdc789e6ff4997336e344779c3d5538ef\r\nPyYAML==6.0.3 --hash=sha256:5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b\r\nRapidFuzz==3.14.6 --hash=sha256:cfca36e4612208875e08611a779164b6cb8900ab8bbd3d82d4cfdfae9efbfac9\r\nregex==2026.8.31 --hash=sha256:dbed5cea80c5a67c3f95f16d011d68174eb81a5efccf87a3ad0822b79d74baae\r\nrequests==2.34.2 --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0\r\nrich==15.0.0 --hash=sha256:33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb\r\nsafetensors==0.8.0 --hash=sha256:096ec1a98435df7beb08853bb5aa9081a84f23d0adc67ed1a0a10550f608373f\r\nscikit-learn==1.9.0 --hash=sha256:4306775fad04cc4b472a1b15af1ae9cede1540fbfcc17fbce3767cd8dc7ae283\r\nscipy==1.17.1 --hash=sha256:41b71f4a3a4cab9d366cd9065b288efc4d4f3c0b37a91a8e0947fb5bd7f31d87\r\nsentencepiece==0.2.2 --hash=sha256:7c6e7bf684dc12145bfa685d3060beaea55139134ba848289bee514ed42e7383\r\nsetuptools==81.0.0 --hash=sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6\r\nshellingham==1.5.4 --hash=sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686\r\nsix==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274\r\nsoundfile==0.14.0 --hash=sha256:299491d3499460fb1b74bb4bd78b57ffc2d243a5fafa7b6ec1b264875c78453e\r\nsoxr==1.1.0 --hash=sha256:6ae2a174bffea94e8ead857dad85999d3f49f091774dbad5b046c0417d7092f4\r\nsympy==1.14.0 --hash=sha256:e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5\r\ntensorboardX==2.6.5 --hash=sha256:c10b891d00af306537cb8b58a039b2ba41571f0da06f433a41c4ca8d6abe1373\r\nthreadpoolctl==3.6.0 --hash=sha256:43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb\r\ntiktoken==0.14.0 --hash=sha256:087538c080e5ff421abd3a0785ed63c5111d06af98e6cd0d374dbe5969147ca3\r\ntokenizers==0.23.1 --hash=sha256:e7bfaf995c1bdbbd21d13539decb6650967013759318627d85daeb7881af16b7\r\ntorch==2.11.0+cpu --hash=sha256:1abeaa46fa7532ed35ed79146f4de5d7a9d4b30462c98052ea4ddfe781ea3eca\r\ntorch-complex==0.4.4 --hash=sha256:6ab4ecd4f3a16e3adb70a7f7cd2e769a9dfd07d7a8e27d04ff9c621ebbe34b13\r\ntorchaudio==2.11.0+cpu --hash=sha256:95d517bd1a0a28dacd1c37550ced95cab64f3a7a4ef9b8219b41049388a71163\r\ntqdm==4.70.0 --hash=sha256:7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953\r\ntransformers==5.16.1 --hash=sha256:2f2d5b98a5ad3718713653734298fa620754ed683702a635ebb587df3ed29c7e\r\ntyper==0.27.2 --hash=sha256:b3a5fc4342d5fc8fda8fc3010b1cf117e9249aab7fae800c2eff62fd3842d97d\r\ntyping_extensions==4.16.0 --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8\r\numap-learn==0.5.12 --hash=sha256:f2a85d2a2adcb52b541bed9b27a23ca169b56bb1b23283abeebfb8dfb8a42fe5\r\nurllib3==2.7.0 --hash=sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897\r\nwebsockets==17.1 --hash=sha256:617243e19a0992095956f406ee9cd3bc4ba92862d83cb1d83bb59ce574412bec\r\nwheel==0.48.0 --hash=sha256:3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab\r\n"
+        "constraintSha256": "17e77edb610ea1fa82d8a55260c16e008fa7dcd66c24184b94bcabe60c217343",
+        "constraintContent": "# Miaoclaw fully hashed FunASR 1.4.16 dependency set (Windows x64, Python 3.12, CPU).\r\naliyun-python-sdk-core==2.16.1 --hash=sha256:0f25a6e8ec1ea29c76610278cff81cbff85149a6e692bf2398a6f9b77e5e7424\r\naliyun-python-sdk-kms==2.16.5 --hash=sha256:24b6cdc4fd161d2942619479c8d050c63ea9cd22b044fe33b60bbb60153786f0\r\nannotated-doc==0.0.5 --hash=sha256:117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101\r\nantlr4-python3-runtime==4.9.3 --hash=sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b\r\nanyio==4.14.2 --hash=sha256:9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494\r\naudioread==3.1.0 --hash=sha256:b30d1df6c5d3de5dcef0fb0e256f6ea17bdcf5f979408df0297d8a408e2971b4\r\ncertifi==2026.10.23 --hash=sha256:e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1\r\ncffi==2.1.1 --hash=sha256:f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a\r\ncharset-normalizer==3.5.1 --hash=sha256:3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2\r\nclick==8.5.0 --hash=sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360\r\ncolorama==0.4.6 --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6\r\ncrcmod==1.7 --hash=sha256:dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e\r\ncryptography==50.0.1 --hash=sha256:aed8db4f6d71c51efb89530e12d9464e7bf2923d46c3205dc794a2a93f8c0648\r\ndecorator==5.3.1 --hash=sha256:f47fe6fdbd2edd623ecfe36875d37aba411624e2670dd395dddae1358689bb3c\r\nfilelock==3.32.4 --hash=sha256:22e58ca3b1ae3b98993b762d7338367ae64fe50252bf78d59da3bfebcdf1cedd\r\nfsspec==2026.7.0 --hash=sha256:b57ddbafedfaef7018c1ecab32aa200a9d7ca26b77965f64e48b70061249d279\r\nfunasr==1.4.16 --hash=sha256:f95943f6a8111349a1b08907363b048a49e9cb9caa1e3afd8c92970d08bf450d\r\nh11==0.16.0 --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86\r\nhf-xet==1.6.0 --hash=sha256:fb4fadde1b2b70bf4c0c14a6dccbe7194b1c28947fefd5bbe3fed9d940676c3b\r\nhttpcore==1.0.9 --hash=sha256:2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55\r\nhttpx==0.28.1 --hash=sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad\r\nhuggingface_hub==1.29.0 --hash=sha256:b00f7782afc14db4bc6572763810a635bdfbab8623d957bfb553bd18e03852cd\r\nhydra-core==1.3.6 --hash=sha256:55951f49c7e19c29f4281cce2eeaa6e73ef6c5620093a4efb402a7e4b839fc38\r\nidna==3.19 --hash=sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4\r\njaconv==0.5.0 --hash=sha256:2914114fe761ca49fc7089e25e6ad4a400c26f262ffce84e13b176916b71610a\r\njamo==0.4.1 --hash=sha256:d4b94fd23324c606ed2fbc4037c603e2c3a7ae9390c05d3473aea1ccb6b1c3fb\r\njieba==0.42.1 --hash=sha256:055ca12f62674fafed09427f176506079bc135638a14e23e25be909131928db2\r\nJinja2==3.1.6 --hash=sha256:85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67\r\njmespath==1.1.0 --hash=sha256:a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64\r\njoblib==1.5.3 --hash=sha256:5fc3c5039fc5ca8c0276333a188bbd59d6b7ab37fe6632daa76bc7f9ec18e713\r\nkaldiio==2.18.1 --hash=sha256:397a4cd18977acaae7acabfba6807ee0a6978c620064381a266eac15b3c1a0a0\r\nlazy-loader==0.5 --hash=sha256:ab0ea149e9c554d4ffeeb21105ac60bed7f3b4fd69b1d2360a4add51b170b005\r\nlibrosa==0.11.0 --hash=sha256:0b6415c4fd68bff4c29288abe67c6d80b587e0e1e2cfb0aad23e4559504a7fa1\r\nllvmlite==0.49.0 --hash=sha256:3a9c9e3af4e214acfefa4f73ebe7bc3fb35854a62b654edb3953f5ae33c08ba3\r\nmarkdown-it-py==4.2.0 --hash=sha256:9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a\r\nMarkupSafe==3.0.3 --hash=sha256:26a5784ded40c9e318cfc2bdb30fe164bdb8665ded9cd64d500a34fb42067b1c\r\nmdurl==0.1.2 --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8\r\nmodelscope==1.39.1 --hash=sha256:c1567b9d319b11d815832d13c11f71a6413b19cf6374cef6937c54d830552a97\r\nmodelscope-hub==0.3.0 --hash=sha256:024952bb3a3cdb1a547455653fd676da5078b6b01664aac0b565d299e38fa729\r\nmpmath==1.3.0 --hash=sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c\r\nmsgpack==1.2.2 --hash=sha256:b68614fba0570349833b7dd999ff0aed4e5cc8d9eb6e3a7d4527be33c65e33d3\r\nnarwhals==2.25.0 --hash=sha256:1f0f403e8c7e4463cde9bfe78b12fdd809e3ae3dda6d9b2f802934fb9c7a6a8f\r\nnetworkx==3.6.1 --hash=sha256:d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762\r\nnumba==0.67.0 --hash=sha256:50e2b72406c18cda5dd7431b0082cb85ea94e06c64c33607248fc8bef92cfb81\r\nnumpy==1.26.4 --hash=sha256:08beddf13648eb95f8d867350f6a018a4be2e5ad54c8d8caed89ebca558b2818\r\nomegaconf==2.3.1 --hash=sha256:3d701d14e9a8828f1edd28bb70b725908b34277cdd72cf7d6a83f94dadc6b6a0\r\noss2==2.19.1 --hash=sha256:a8ab9ee7eb99e88a7e1382edc6ea641d219d585a7e074e3776e9dec9473e59c1\r\npackaging==26.3 --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c\r\nplatformdirs==4.11.5 --hash=sha256:89f8d42695853b89c7170bd49bc3dc593f98a71e695ede88e06a3b247bc4563b\r\npooch==1.9.0 --hash=sha256:f265597baa9f760d25ceb29d0beb8186c243d6607b0f60b83ecf14078dbc703b\r\nprotobuf==7.36.0 --hash=sha256:1781cc1de61249b750848029bca452c0a8b7e990080316b9bbc2518b2117b488\r\npycparser==3.0 --hash=sha256:b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992\r\npycryptodome==3.23.0 --hash=sha256:c75b52aacc6c0c260f204cbdd834f76edc9fb0d8e0da9fbf8352ef58202564e2\r\nPygments==2.21.0 --hash=sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9\r\npynndescent==0.6.0 --hash=sha256:dc8c74844e4c7f5cbd1e0cd6909da86fdc789e6ff4997336e344779c3d5538ef\r\nPyYAML==6.0.3 --hash=sha256:5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b\r\nRapidFuzz==3.14.6 --hash=sha256:cfca36e4612208875e08611a779164b6cb8900ab8bbd3d82d4cfdfae9efbfac9\r\nregex==2026.8.31 --hash=sha256:dbed5cea80c5a67c3f95f16d011d68174eb81a5efccf87a3ad0822b79d74baae\r\nrequests==2.34.2 --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0\r\nrich==15.0.0 --hash=sha256:33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb\r\nsafetensors==0.8.0 --hash=sha256:096ec1a98435df7beb08853bb5aa9081a84f23d0adc67ed1a0a10550f608373f\r\nscikit-learn==1.9.0 --hash=sha256:4306775fad04cc4b472a1b15af1ae9cede1540fbfcc17fbce3767cd8dc7ae283\r\nscipy==1.17.1 --hash=sha256:41b71f4a3a4cab9d366cd9065b288efc4d4f3c0b37a91a8e0947fb5bd7f31d87\r\nsentencepiece==0.2.2 --hash=sha256:7c6e7bf684dc12145bfa685d3060beaea55139134ba848289bee514ed42e7383\r\nsetuptools==81.0.0 --hash=sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6\r\nshellingham==1.5.4 --hash=sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686\r\nsix==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274\r\nsoundfile==0.14.0 --hash=sha256:299491d3499460fb1b74bb4bd78b57ffc2d243a5fafa7b6ec1b264875c78453e\r\nsoxr==1.1.0 --hash=sha256:6ae2a174bffea94e8ead857dad85999d3f49f091774dbad5b046c0417d7092f4\r\nsympy==1.14.0 --hash=sha256:e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5\r\ntensorboardX==2.6.5 --hash=sha256:c10b891d00af306537cb8b58a039b2ba41571f0da06f433a41c4ca8d6abe1373\r\nthreadpoolctl==3.6.0 --hash=sha256:43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb\r\ntiktoken==0.14.0 --hash=sha256:087538c080e5ff421abd3a0785ed63c5111d06af98e6cd0d374dbe5969147ca3\r\ntokenizers==0.23.1 --hash=sha256:e7bfaf995c1bdbbd21d13539decb6650967013759318627d85daeb7881af16b7\r\ntorch==2.11.0+cpu --hash=sha256:1abeaa46fa7532ed35ed79146f4de5d7a9d4b30462c98052ea4ddfe781ea3eca\r\ntorch-complex==0.4.4 --hash=sha256:6ab4ecd4f3a16e3adb70a7f7cd2e769a9dfd07d7a8e27d04ff9c621ebbe34b13\r\ntorchaudio==2.11.0+cpu --hash=sha256:95d517bd1a0a28dacd1c37550ced95cab64f3a7a4ef9b8219b41049388a71163\r\ntqdm==4.70.0 --hash=sha256:7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953\r\ntransformers==5.16.1 --hash=sha256:2f2d5b98a5ad3718713653734298fa620754ed683702a635ebb587df3ed29c7e\r\ntyper==0.27.2 --hash=sha256:b3a5fc4342d5fc8fda8fc3010b1cf117e9249aab7fae800c2eff62fd3842d97d\r\ntyping_extensions==4.16.0 --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8\r\numap-learn==0.5.12 --hash=sha256:f2a85d2a2adcb52b541bed9b27a23ca169b56bb1b23283abeebfb8dfb8a42fe5\r\nurllib3==2.7.0 --hash=sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897\r\nwebsockets==17.1 --hash=sha256:617243e19a0992095956f406ee9cd3bc4ba92862d83cb1d83bb59ce574412bec\r\nwheel==0.48.0 --hash=sha256:3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab\r\npip==26.2.2 --hash=sha256:fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70\r\n"
       },
       "source": {
         "registry": "https://pypi.org/project/funasr/1.4.16/",
@@ -72,16 +72,16 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.157",
+      "verifiedVersion": "1.0.158",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-10-13",
+      "verifiedAt": "2026-10-23",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.157",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.157/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.157/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.157/NOTICE",
-        "artifactSha256": "bd64eba587e56cc71709cdd1f38ae9ac77cd65a9c8ea744b0996897c0557e343",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.158",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.158/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.158/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.158/NOTICE",
+        "artifactSha256": "117545f3bc817d7c6d2e78a62e4f73f75b918ccd61558e404c60949a8cb9fd1f",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
@@ -89,7 +89,7 @@
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.157",
+        "expectedVersion": "1.0.158",
         "formats": [
           "docx",
           "xlsx",
@@ -118,38 +118,39 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-10-17.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-17.1.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-17.1.json",
-      "sha256": "b03464831aac5ceedb2d2489d2022335bb41feb9c7d6159bfd56b54c61477ca9",
-      "minAppVersion": "4.1.4"
+      "version": "2026-10-23.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-23.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-23.1.json",
+      "sha256": "3780de69b382a5ce5cfaf941be0d6973e4bb39bf316eab2a96f5a218949c1be8",
+      "minAppVersion": "4.1.6"
     }
   ],
   "latest": {
-    "version": "4.1.5-1",
-    "displayVersion": "4.1.5v1",
-    "notes": "# Miaoclaw 4.1.5V1\n\n修复聊天回复中部分列表换行显示异常，让请求失败的原因和任务状态更准确。\n\n## 本次修复\n\n- **列表换行显示**：识别正文中结构明确、误写成转义字符的列表和标题换行。历史回复、流式回复结束后的显示、普通复制和会话导出保持一致；代码、路径、数据字符串和原始记录保留原样。\n- **服务方拒绝原因**：模型接口明确因内容或安全策略拒绝请求时，显示真实 HTTP 状态和经过脱敏的原因，本轮停止，不自动重试或切换模型。纯文本错误正文也能保留，不再只剩模糊的连接失败提示。\n- **任务进度准确结束**：任务已经受阻、失败或停止时，未完成的步骤不再持续显示“进行中”；没有完成回执的步骤不会被标为成功。已保存的历史失败记录也适用。\n\n## 更新方式\n\n4.1.4v6、4.1.5 在兼容检查通过后可使用轻量热更新；更早版本和新安装使用完整安装包。沿用原安装位置与数据目录，无需先卸载。保存正在编辑的文件，按提示完全退出并重新打开 Miaoclaw。\n\n中英文官网与手机界面同步更新。Android 外壳仍为 0.4.1；手机网页刷新，Android App 按“设置 → 手机界面更新”启用新版界面。电脑端也需更新并保持在线。",
+    "version": "4.1.6",
+    "displayVersion": "4.1.6",
+    "notes": "# Miaoclaw 4.1.6\n\n安全更新：修补运行时的证书信任问题，加强更新来源验证，并修复已安装的文字识别与离线语音环境。\n\n## 本次修复\n\n- **网络连接安全**：更新内置 Node、Electron 和 Python 证书组件，采用上游安全修补，覆盖模型接口、文件下载和其他联网工具。\n- **更新来源验证**：完整安装包、轻量更新、组件和模型目录更新必须通过应用内固定公钥验签。签名缺失、内容被修改或旧缓存无法核验时，停止安装并保留当前版本。\n- **已有组件环境修复**：修复文字识别和离线语音的当前、旧版与回滚环境，避免重新安装或回滚时带回旧证书库。保留模型缓存、聊天记录和用户文件。\n- **Android 安全更新**：Android 外壳升级至 0.4.2，更新应用证书库，手机界面更新增加签名验证；旧的未签名界面缓存不再启用。\n- **文件打开稳定性**：修复编辑器初始化期间偶发的“只有阅读权限”提示和持续加载；连续打开同一文件会等待同一次初始化完成。\n\n## 更新方式\n\n本次必须使用完整安装包覆盖升级，不能通过普通代码热更新完成。保存正在编辑的文件，沿用原安装位置与数据目录，无需先卸载。升级后首次启动会检查并修复已有文字识别与离线语音环境。\n\n安装完成后，请从托盘完全退出 Miaoclaw 再打开，让新版生效；不用重启电脑。正常覆盖升级保留对话、手帐、记忆、设置和用户文件。\n\n更新验签从 4.1.6 开始生效。旧版首次升级请使用已安装最新安全更新的浏览器，从官网下载完整安装包。\n\nAndroid 用户请安装 0.4.2 外壳；只刷新手机界面不能替换原生证书与验签功能。浏览器用户刷新网页，并保持浏览器与操作系统安全更新。中英文官网与手机网页同步更新。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5-1/Miaoclaw-Setup-4.1.5-1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5-1/Miaoclaw-Setup-4.1.5-1.exe",
-      "sha256": "601c78a91ae57b7498fc53b81f9e9eafcc1d3166dd34f339b4293094a331321f",
-      "sizeBytes": 411715560
-    },
-    "hot": {
-      "baseline": "4.1.4-6",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.5-1/miaoclaw-hot-4.1.5-1.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.5-1/miaoclaw-hot-4.1.5-1.zip",
-      "sha256": "84d893d026060fd4692bea26a8839a788ecafa59a03ab216b9acaa82a2c95c2d",
-      "sizeBytes": 152848028
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.1.6/Miaoclaw-Setup-4.1.6.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.6/Miaoclaw-Setup-4.1.6.exe",
+      "sha256": "9a89d81b0cae558ff770c296b70bf0f9d3344002d7fca15cb1f8a574e473430c",
+      "sizeBytes": 411785726
     },
     "android": {
-      "shellVersion": "0.4.1",
-      "feVersion": "4.1.5+web.1",
-      "sha256": "6a1556247f6bf1d319324402886ba171044b2caa7abfcfcb20607feddb62905e",
-      "sizeBytes": 5841505,
-      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.1.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.0.8/Miaoclaw-android-0.4.1.apk"
+      "shellVersion": "0.4.2",
+      "feVersion": "4.1.6",
+      "sha256": "85ec04d9cea1240e192ce22dd954b03a2589f78d900d18db5e2524f9a7127420",
+      "sizeBytes": 6093090,
+      "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.4.2.apk",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.1.6/Miaoclaw-android-0.4.2.apk"
     }
+  },
+  "signature": {
+    "schema": "miaoclaw.update-manifest/v1",
+    "algorithm": "Ed25519",
+    "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
+    "sequence": 1792781092730,
+    "version": "4.1.6",
+    "value": "YMGaXHwUCU6RJt3d0/cXEhGzueyxWLXDWImBeeWKugF+tEfecOAXlTFaa8oiKIaZdElEhuI+19JPIXymzqYEAQ=="
   }
 }
