@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-24T11:25:15.806Z",
+  "publishedAt": "2026-10-28T10:23:49.052Z",
   "resources": [
     {
       "id": "ocr",
@@ -114,6 +114,22 @@
       "sha256": "79e7b520fcd96553f07fb78db0c3ad2d4db9d139f5fbc7720a713d97acddeaba",
       "sizeBytes": 37681162,
       "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/file-editor/1.0.0-r9/win32-x64/file-editor-1.0.0-r9.tar.gz"
+    },
+    {
+      "schema": 1,
+      "id": "file-editor",
+      "version": "1.0.0",
+      "revision": 16,
+      "platform": "win32-x64",
+      "host": {
+        "protocol": "miaoclaw-file-editor-v1",
+        "minVersion": "4.1.4",
+        "maxVersionExclusive": "5.0.0"
+      },
+      "manifestSha256": "b3c6246a0e680cbc2e36d21666606ddae1748b28b80a8748e562d9e16627398b",
+      "sha256": "0ee4af4ddbf02f35b307d3006a2407e8ce793b57604043e6a6822b356f189664",
+      "sizeBytes": 37947476,
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/file-editor/1.0.0-r16/win32-x64/file-editor-1.0.0-r16.tar.gz"
     }
   ],
   "providerCatalogUpdates": [
@@ -156,8 +172,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1792841115806,
+    "sequence": 1793183029052,
     "version": "4.1.6-1",
-    "value": "RLmYxUhDD7K7Q4TmvjMrP3DjIFkuHi14Z4/2rCQQbUApr8US2G3R0pb46Ekh4cTJPYxFIAA+3gqtXWVZjEYqAg=="
+    "value": "gLSXMChoRJsWmEuqpTdLFaYBK7cjROsa4/9xwnAr9N7eF88YDeoWOP8JAeeGy5ez0n/mT+/O8xDDNZmXyXKSBQ=="
   }
 }
