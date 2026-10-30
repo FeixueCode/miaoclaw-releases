@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-30T14:34:27.789Z",
+  "publishedAt": "2026-10-30T17:00:29.237Z",
   "resources": [
     {
       "id": "ocr",
@@ -142,26 +142,26 @@
     }
   ],
   "latest": {
-    "version": "4.2.1-1",
-    "displayVersion": "4.2.1v1",
-    "notes": "# Miaoclaw 4.2.1 V1\r\n\r\n本次热更新修复更新中断恢复、账户操作入口和旧资料迁移体验。\r\n\r\n- **更新中断恢复**：安装交接文件和结果回执放在账户关闭后仍可访问的位置，由桌面进程交接安装。重新启动后核对安装进程、实际版本和完成标记；中断后恢复重试入口。\r\n- **账户管理**：主界面的“更多”中增加“账户管理 · 密码与删除”和“退出登录”。账户页可直接进入修改密码；验证原密码后保存，新密码继续打开原资料。只有一个账户时，也能从已登录状态进入删除流程，经密码验证和明确确认后删除。\r\n- **同名账户**：新建账户不再允许重复名称。已有同名账户保留，在名称旁显示稳定的账户标识，并分别显示迁移状态。\r\n- **删除中断与强制删除**：已确认删除的账户显示“继续删除”，重启后可接续，不再要求解锁或输入口令。无法验证口令、初始化或恢复未完成时，可核对账户标识、勾选确认并输入“永久删除”强制清理。文件被系统占用时显示未完成并保留重试入口；不会仅隐藏账户就报成功。旧来源、外部备份、其他账户与共享组件保留。\r\n- **迁移进度**：首次迁入和继续迁入统一显示阶段、文件数、处理量与总量，大文件处理中持续更新。支持暂停后继续；操作过期时回到同一账户重新验证，不再停留在失效的恢复凭据确认界面。\r\n- **续迁与占用**：先核验并复用已完成的文件，只重做未完成或校验不符的内容。继续同一任务前回收它遗留的临时分片；已完成的加密备份经核验后复用，避免多次中断累积重复副本。\r\n- **迁移范围**：迁入前列出用户资料、组件候选、历史备份和可重建缓存。已核验的公共组件提前复用；历史快照、旧安装包和已知下载缓存保留在原位置。工作目录和无法确认用途的文件继续保留迁入，不自动清理已有账户或旧资料。\r\n- **名称与诊断**：修正定时任务中 Kimi K2.8 Preview 的显示名称，实际模型 ID 与供应商路线保持原设置。账户启动、存储准备与迁移失败可复制不含口令和恢复凭据的诊断信息。\r\n\r\n- **Office 预览组件**：提供已验证的 1.0.160 独立组件更新，检查 Word、Excel、PowerPoint 文件预览并保留回退；不改变本次桌面热更新的安装基线。\r\n\r\n## 更新方式\r\n\r\n已完整安装 **4.2.1** 的电脑可在“设置 → 关于与更新”安装 **4.2.1 V1 热更新**，保存工作后重启应用。\r\n\r\n如果旧版更新按钮一直显示“正在安装”，或无法进入账户主界面，请从官网下载安装 **4.2.1 V1 完整安装包**，覆盖原安装位置；不要先卸载，不要删除账户或另建同名账户。更早的版本同样使用完整安装包。安装后仍使用原账户与原数据目录。\r\n\r\n旧资料迁入中断后，选择标有“旧资料迁移待继续”的原账户，重新验证口令并选择同一来源继续。旧源保留；暂停与中断不会代替删除确认。界面列出的历史备份和缓存仍在原位置，未被自动删除。\r\n\r\n本次不更换 Android 外壳，继续使用 **0.5.1**；手机前端和 PWA 随 V1 更新。正常更新保留已有配对；恢复备份或迁入旧资料后按提示重新配对。",
+    "version": "4.2.1-2",
+    "displayVersion": "4.2.1v2",
+    "notes": "# Miaoclaw 4.2.1 V2\n\n## 账户删除立即生效\n\n- 确认删除后，账户立即从列表移除并停止登录资格。文件被占用、权限拒绝或清理中断，不再让账户一直挂在“删除未完成”。\n- V1 已确认删除但仍挂在列表中的账户，更新后自动从列表移除；无需再次输入口令或重复确认。\n- 残留资料由程序在未登录的空闲阶段分批清理；登录或开始其他账户操作时立即让出。补齐非空受限目录的清理，不在启动时扫描整棵残留目录。\n- 只清理被删除账户的私人目录及其恢复暂存副本；其他账户、公共组件、外部目录和导出备份不受影响。目录链接不穿透外部，硬链接不改动外部文件属性。\n\n## 定时任务按指定模型执行\n\n- 修复已确认的定时任务明确选择 Kimi Coding 后，“立即运行”和到点自动运行仍被本地套餐偏好暂停的问题。\n- 已确认任务中的模型选择优先于后台自动选模偏好。未指定模型的后台整理仍遵循服务商设置，不会擅自换供应商、地址、密钥或套餐。\n- 本地放行不代表服务商授权自动化；实际可用范围、额度和服务端响应仍以服务商为准。\n\n## 更新方式\n\n已完整安装 **4.2.1 或 4.2.1 V1** 的用户可在“设置 → 关于与更新”安装 **V2 热更新**，保存工作后重启。更早版本，或无法进入应用内更新的电脑，可从官网下载 **V2 完整安装包**覆盖原安装位置，无需先卸载。\n\n- **手机上要做什么**：重新打开手机页面或 App，按提示刷新前端即可。Android 外壳无需重装，原配对保留。\n- **数据会不会丢**：升级保留现有账户、对话、文件和设置；你已经确认删除的账户会按删除指令移除并清理。其他账户、公共组件、外部目录和导出备份保留。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-1/Miaoclaw-Setup-4.2.1-1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-1/Miaoclaw-Setup-4.2.1-1.exe",
-      "sha256": "104074868d1c547dedf28cde9d23d5e30fef3d14abf7a62b90dbf118af100fef",
-      "sizeBytes": 425765093
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-2/Miaoclaw-Setup-4.2.1-2.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-2/Miaoclaw-Setup-4.2.1-2.exe",
+      "sha256": "5f774c6cbe3ca95ef516105f8bb19edc6b58515432fde88ac76b1f9e11bfd681",
+      "sizeBytes": 425780653
     },
     "hot": {
       "baseline": "4.2.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-1/miaoclaw-hot-4.2.1-1.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-1/miaoclaw-hot-4.2.1-1.zip",
-      "sha256": "510a0d44b84462ce301b8484263cf54a08a5dcf0353a8c8572d601732564cdf6",
-      "sizeBytes": 153208683
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-2/miaoclaw-hot-4.2.1-2.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-2/miaoclaw-hot-4.2.1-2.zip",
+      "sha256": "82de8264b62cfd2983d2acac3851c6cdfed3b1efce799f2ddcba2a8e1db3f10f",
+      "sizeBytes": 153211678
     },
     "android": {
       "shellVersion": "0.5.1",
-      "feVersion": "4.2.1+web.1",
+      "feVersion": "4.2.1+web.2",
       "sha256": "f6e4c04875d00346316cf58c4e202eb41e9c7c8224848febaf5cfafa4077aac2",
       "sizeBytes": 6245832,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.1.apk",
@@ -172,8 +172,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1793370867789,
-    "version": "4.2.1-1",
-    "value": "xzkXqBGFhXin9wYHAbCTOlt5G+xoIDROQNkOygnQUZZ4zNd2XBotE1WG3s6uljohy0fJM9CQUHlzkFP5iV7AAQ=="
+    "sequence": 1793379629237,
+    "version": "4.2.1-2",
+    "value": "XIbdU9rY3uZvgVFXNKpZFX7xc237RTCrs9LRlVaoLGfmTBFey8vLQvyOfd317AtNeBN+45OlVPA9WSlW200aBA=="
   }
 }
