@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-30T02:17:53.579Z",
+  "publishedAt": "2026-10-30T14:34:27.789Z",
   "resources": [
     {
       "id": "ocr",
@@ -72,16 +72,16 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.159",
+      "verifiedVersion": "1.0.160",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-10-27",
+      "verifiedAt": "2026-10-30",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.159",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.159/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.159/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.159/NOTICE",
-        "artifactSha256": "572c0a4da35333cf866fa5a2fb8259a4a2a8c9922be031d6b7a86936282ef94e",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.160",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.160/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.160/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.160/NOTICE",
+        "artifactSha256": "c590ca9d464f2b03362825b0f2615efcae33ce3fc0edaeeef29f7ddacb4c5424",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
@@ -89,7 +89,7 @@
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.159",
+        "expectedVersion": "1.0.160",
         "formats": [
           "docx",
           "xlsx",
@@ -142,19 +142,26 @@
     }
   ],
   "latest": {
-    "version": "4.2.1",
-    "displayVersion": "4.2.1",
-    "notes": "# Miaoclaw 4.2.1\n\n本版完善账户恢复、加密备份、定时任务和手机连接，并修正桌面操作中遇到的启动、输入和布局问题。\n\n- **旧资料恢复**：在进入账户前完成旧目录或历史 ZIP 的迁入、逐文件核验和加密备份；中断后可继续。恢复完成后封存专项入口，新建或删除账户不会重新开放。原始资料和旧备份保留，清理仍需另行确认。\n- **账户管理**：最低口令改为 8 个字符，支持中文输入与显隐切换。可验证凭据后删除账户，撤销其手机连接并清理私人空间；其他账户、公共组件、外部文件及导出的备份保留。\n- **账户备份**：自动备份、手动导出和换电脑搬家统一使用加密 `.miaobackup`。每个账户可设置频率、位置和保留数量，包含私人资料与全部工作区文件；在登录页用原备份口令或恢复凭据恢复。公共组件、外部工作目录和临时缓存另行处理。\n- **桌面操作**：统一修复安装后的桌面及开始菜单入口，保留启动失败的具体诊断；修正窗口尺寸变化后的过期高度。PC 从消息空白区域拖框选择多条消息，普通文字仍可拖选、快捷键或右键复制；移除逐条消息多余按钮。\n- **手机交互**：保留系统长按选文，按上下滑手势显示或收起消息操作栏；“回到最新”保留在轮次导航。短暂断网、切后台和返回时继续验证并恢复原账户连接，草稿按账户保留。\n- **定时任务**：每个任务可选择模型与权限。聊天创建的自动任务在启用前需确认权限和模型；在表单中直接保存明确选择。任务按实际执行回执记录结果，未确认完成、需要处理或失败会分别说明。\n- **模型自检**：按供应商路线和凭据协调自检请求，限流后等待可重试时间；权限与套餐限制不再直接判作模型不支持。修复 Agnes 国内站视觉自检被本地能力门槛拦截的问题。\n- **传输与组件**：减少文件传输中的重复编码与串行等待，保留断点、哈希、取消及账户授权，优先发送小型交互响应。组件下载显示实际进度和速度，保留可复用缓存并选择经过校验的可用源；FunASR 更新到实际验证的 1.4.17。\n- **运行环境**：使用 Electron 45.1.0。安装升级增加完整资料备份及失败恢复检查。\n\n## 更新方式\n\n请使用 **4.2.1 完整安装包**覆盖原位置，不要先卸载。安装前保存正在编辑的文件。已有账户继续使用原凭据；需要恢复升级前资料时，在本机账户页选择对应旧目录或历史 ZIP，并核对恢复结果。旧明文不会自动删除。\n\n安装后从托盘完全退出 Miaoclaw，再重新打开；若驱动安装提示重启电脑，按提示完成。升级保留原数据目录、已有账户与资料，安装前备份的位置会在向导中显示。\n\nAndroid 覆盖安装 **0.5.1** 外壳，手机界面更新为 **4.2.1**；网页用户刷新页面。从 4.2.0 正常升级可继续使用现有账户配对，恢复备份或从更早版本迁入后须按账户重新配对。电脑需在线且相应账户已解锁。公网速度取决于两端网络路线及中继共享带宽。",
+    "version": "4.2.1-1",
+    "displayVersion": "4.2.1v1",
+    "notes": "# Miaoclaw 4.2.1 V1\r\n\r\n本次热更新修复更新中断恢复、账户操作入口和旧资料迁移体验。\r\n\r\n- **更新中断恢复**：安装交接文件和结果回执放在账户关闭后仍可访问的位置，由桌面进程交接安装。重新启动后核对安装进程、实际版本和完成标记；中断后恢复重试入口。\r\n- **账户管理**：主界面的“更多”中增加“账户管理 · 密码与删除”和“退出登录”。账户页可直接进入修改密码；验证原密码后保存，新密码继续打开原资料。只有一个账户时，也能从已登录状态进入删除流程，经密码验证和明确确认后删除。\r\n- **同名账户**：新建账户不再允许重复名称。已有同名账户保留，在名称旁显示稳定的账户标识，并分别显示迁移状态。\r\n- **删除中断与强制删除**：已确认删除的账户显示“继续删除”，重启后可接续，不再要求解锁或输入口令。无法验证口令、初始化或恢复未完成时，可核对账户标识、勾选确认并输入“永久删除”强制清理。文件被系统占用时显示未完成并保留重试入口；不会仅隐藏账户就报成功。旧来源、外部备份、其他账户与共享组件保留。\r\n- **迁移进度**：首次迁入和继续迁入统一显示阶段、文件数、处理量与总量，大文件处理中持续更新。支持暂停后继续；操作过期时回到同一账户重新验证，不再停留在失效的恢复凭据确认界面。\r\n- **续迁与占用**：先核验并复用已完成的文件，只重做未完成或校验不符的内容。继续同一任务前回收它遗留的临时分片；已完成的加密备份经核验后复用，避免多次中断累积重复副本。\r\n- **迁移范围**：迁入前列出用户资料、组件候选、历史备份和可重建缓存。已核验的公共组件提前复用；历史快照、旧安装包和已知下载缓存保留在原位置。工作目录和无法确认用途的文件继续保留迁入，不自动清理已有账户或旧资料。\r\n- **名称与诊断**：修正定时任务中 Kimi K2.8 Preview 的显示名称，实际模型 ID 与供应商路线保持原设置。账户启动、存储准备与迁移失败可复制不含口令和恢复凭据的诊断信息。\r\n\r\n- **Office 预览组件**：提供已验证的 1.0.160 独立组件更新，检查 Word、Excel、PowerPoint 文件预览并保留回退；不改变本次桌面热更新的安装基线。\r\n\r\n## 更新方式\r\n\r\n已完整安装 **4.2.1** 的电脑可在“设置 → 关于与更新”安装 **4.2.1 V1 热更新**，保存工作后重启应用。\r\n\r\n如果旧版更新按钮一直显示“正在安装”，或无法进入账户主界面，请从官网下载安装 **4.2.1 V1 完整安装包**，覆盖原安装位置；不要先卸载，不要删除账户或另建同名账户。更早的版本同样使用完整安装包。安装后仍使用原账户与原数据目录。\r\n\r\n旧资料迁入中断后，选择标有“旧资料迁移待继续”的原账户，重新验证口令并选择同一来源继续。旧源保留；暂停与中断不会代替删除确认。界面列出的历史备份和缓存仍在原位置，未被自动删除。\r\n\r\n本次不更换 Android 外壳，继续使用 **0.5.1**；手机前端和 PWA 随 V1 更新。正常更新保留已有配对；恢复备份或迁入旧资料后按提示重新配对。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1/Miaoclaw-Setup-4.2.1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1/Miaoclaw-Setup-4.2.1.exe",
-      "sha256": "a3cc2fb15785e1ffb74c0b43f6f0608054cd27ca579729072452fb2b3213a149",
-      "sizeBytes": 425676743
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-1/Miaoclaw-Setup-4.2.1-1.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-1/Miaoclaw-Setup-4.2.1-1.exe",
+      "sha256": "104074868d1c547dedf28cde9d23d5e30fef3d14abf7a62b90dbf118af100fef",
+      "sizeBytes": 425765093
+    },
+    "hot": {
+      "baseline": "4.2.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-1/miaoclaw-hot-4.2.1-1.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-1/miaoclaw-hot-4.2.1-1.zip",
+      "sha256": "510a0d44b84462ce301b8484263cf54a08a5dcf0353a8c8572d601732564cdf6",
+      "sizeBytes": 153208683
     },
     "android": {
       "shellVersion": "0.5.1",
-      "feVersion": "4.2.1",
+      "feVersion": "4.2.1+web.1",
       "sha256": "f6e4c04875d00346316cf58c4e202eb41e9c7c8224848febaf5cfafa4077aac2",
       "sizeBytes": 6245832,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.1.apk",
@@ -165,8 +172,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1793326673579,
-    "version": "4.2.1",
-    "value": "NcOgriB4QaNgdEAy5fJuq/6e6FO/egCtma980iQrO+2TLo3wNXuLoec66+YYMsYK4BPATFO5ISDo7x14TWpjDg=="
+    "sequence": 1793370867789,
+    "version": "4.2.1-1",
+    "value": "xzkXqBGFhXin9wYHAbCTOlt5G+xoIDROQNkOygnQUZZ4zNd2XBotE1WG3s6uljohy0fJM9CQUHlzkFP5iV7AAQ=="
   }
 }
