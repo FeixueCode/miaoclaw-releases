@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-10-30T17:00:29.237Z",
+  "publishedAt": "2026-10-31T09:57:41.406Z",
   "resources": [
     {
       "id": "ocr",
@@ -85,6 +85,11 @@
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
+      "mirrors": {
+        "artifactUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.160/c590ca9d464f2b03362825b0f2615efcae33ce3fc0edaeeef29f7ddacb4c5424/officecli.exe",
+        "licenseUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.160/7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1/LICENSE",
+        "noticeUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.160/3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b/NOTICE"
+      },
       "verification": {
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
@@ -134,34 +139,27 @@
   ],
   "providerCatalogUpdates": [
     {
-      "version": "2026-10-27.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-27.1.json",
-      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-27.1.json",
-      "sha256": "f84909ea007a33f81527ce73c524b27fb73b80e0b17346cb0609c5838daf0ada",
+      "version": "2026-10-31.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-10-31.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-10-31.1.json",
+      "sha256": "c395966584fcc0f3b4974695b9299644662dddabf100f985983f7d15c993ca9f",
       "minAppVersion": "4.2.0"
     }
   ],
   "latest": {
-    "version": "4.2.1-2",
-    "displayVersion": "4.2.1v2",
-    "notes": "# Miaoclaw 4.2.1 V2\n\n## 账户删除立即生效\n\n- 确认删除后，账户立即从列表移除并停止登录资格。文件被占用、权限拒绝或清理中断，不再让账户一直挂在“删除未完成”。\n- V1 已确认删除但仍挂在列表中的账户，更新后自动从列表移除；无需再次输入口令或重复确认。\n- 残留资料由程序在未登录的空闲阶段分批清理；登录或开始其他账户操作时立即让出。补齐非空受限目录的清理，不在启动时扫描整棵残留目录。\n- 只清理被删除账户的私人目录及其恢复暂存副本；其他账户、公共组件、外部目录和导出备份不受影响。目录链接不穿透外部，硬链接不改动外部文件属性。\n\n## 定时任务按指定模型执行\n\n- 修复已确认的定时任务明确选择 Kimi Coding 后，“立即运行”和到点自动运行仍被本地套餐偏好暂停的问题。\n- 已确认任务中的模型选择优先于后台自动选模偏好。未指定模型的后台整理仍遵循服务商设置，不会擅自换供应商、地址、密钥或套餐。\n- 本地放行不代表服务商授权自动化；实际可用范围、额度和服务端响应仍以服务商为准。\n\n## 更新方式\n\n已完整安装 **4.2.1 或 4.2.1 V1** 的用户可在“设置 → 关于与更新”安装 **V2 热更新**，保存工作后重启。更早版本，或无法进入应用内更新的电脑，可从官网下载 **V2 完整安装包**覆盖原安装位置，无需先卸载。\n\n- **手机上要做什么**：重新打开手机页面或 App，按提示刷新前端即可。Android 外壳无需重装，原配对保留。\n- **数据会不会丢**：升级保留现有账户、对话、文件和设置；你已经确认删除的账户会按删除指令移除并清理。其他账户、公共组件、外部目录和导出备份保留。",
+    "version": "4.2.1-3",
+    "displayVersion": "4.2.1v3",
+    "notes": "# Miaoclaw 4.2.1 V3\n\n修复旧资料副本清理受阻、清理界面混用迁移提示，以及 Office 预览组件下载问题。\n\n## 旧副本逐项核对与清理\n\n- 迁移后新增的文件和内容发生变化的文件留在原目录；已经迁入、内容核对一致的旧副本继续清理，不再因新增安装备份阻止整次清理。\n- 文件仅有时间等元数据变化时重新核对内容；保留账户内资料、完整加密备份、公共组件及未迁入内容。\n- 确认清理时复用本次核对结果，删除前检查文件身份和变化；减少重复读取备份、重复哈希与逐文件落盘记录。停止或中断后可重新核对剩余旧副本。\n- 清理入口、进度、确认、停止和错误提示均显示实际清理操作，诊断保留具体清理阶段；启动界面移除“最近多少秒暂无新增进度”的提示。\n\n## Office 预览组件下载\n\n- 完整安装包随带 OfficeCLI 1.0.160；后续更新资源增加国内镜像，程序、许可和说明文件均核对固定 SHA-256；保留官方来源作为回退。\n- 优先复用可用的随包资源和校验缓存；网络中断可重试并复用已下载内容，校验失败的文件不会启用。\n- 下载由后台任务执行，切换到其他窗口或离开设置页可继续；返回时刷新实际进度。锁定账户或退出应用会停止所属工作进程，重新进入后可重试。\n\n## 更新方式\n\n锁定私人空间时，会等待后台备份和写入实际完成，不再把正常但较慢的收尾误报为锁定失败。仍在写入或确有错误时，不会提前关闭加密空间。\n\n本次更新桌面运行时至 Electron 45.2.1，包含 Chromium 安全修复，**所有版本均需使用 V3 完整安装包**。保存工作后，从官网下载并覆盖原安装位置，无需先卸载；本次不提供热更新。\n\n- **旧资料清理**：更新后从账户入口重新核对并确认。新增或变化文件会显示保留数量，请按实际结果检查原目录。\n- **Office 下载**：在“关于与更新”的 Office 文件预览卡片重试安装或更新，无需删除现有可用组件。\n- **手机**：重新打开或刷新手机界面；Android 外壳继续使用 0.5.1，无需重复安装，现有配对保留。\n- **资料**：更新保留已有账户、对话、文件和设置；清理旧副本仍需在本机单独确认。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-2/Miaoclaw-Setup-4.2.1-2.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-2/Miaoclaw-Setup-4.2.1-2.exe",
-      "sha256": "5f774c6cbe3ca95ef516105f8bb19edc6b58515432fde88ac76b1f9e11bfd681",
-      "sizeBytes": 425780653
-    },
-    "hot": {
-      "baseline": "4.2.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-2/miaoclaw-hot-4.2.1-2.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-2/miaoclaw-hot-4.2.1-2.zip",
-      "sha256": "82de8264b62cfd2983d2acac3851c6cdfed3b1efce799f2ddcba2a8e1db3f10f",
-      "sizeBytes": 153211678
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-3/Miaoclaw-Setup-4.2.1-3.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-3/Miaoclaw-Setup-4.2.1-3.exe",
+      "sha256": "32e3045e71463a5a1a976fc49c7cdf9b1c99ca09f681212ea0fcd5a842c18055",
+      "sizeBytes": 425666718
     },
     "android": {
       "shellVersion": "0.5.1",
-      "feVersion": "4.2.1+web.2",
+      "feVersion": "4.2.1+web.3",
       "sha256": "f6e4c04875d00346316cf58c4e202eb41e9c7c8224848febaf5cfafa4077aac2",
       "sizeBytes": 6245832,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.1.apk",
@@ -172,8 +170,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1793379629237,
-    "version": "4.2.1-2",
-    "value": "XIbdU9rY3uZvgVFXNKpZFX7xc237RTCrs9LRlVaoLGfmTBFey8vLQvyOfd317AtNeBN+45OlVPA9WSlW200aBA=="
+    "sequence": 1793440661406,
+    "version": "4.2.1-3",
+    "value": "jePS8rpkSC7I7TzYmC/B4T68WE4CK8QoQ6IkmUPLvIkwBQPwtySfj35fDLUaR2YZBqUvSDmy7Zj3pjyGco3VBA=="
   }
 }
