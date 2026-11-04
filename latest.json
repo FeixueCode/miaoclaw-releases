@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-04T04:16:59.625Z",
+  "publishedAt": "2026-11-04T04:37:53.074Z",
   "resources": [
     {
       "id": "ocr",
@@ -163,15 +163,15 @@
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1+web.4/Miaoclaw-android-0.5.2.apk"
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-4/Miaoclaw-android-0.5.2.apk"
     }
   },
   "signature": {
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1793765819625,
+    "sequence": 1793767073074,
     "version": "4.2.1-4",
-    "value": "tUV0NOXyBIFRW3hvLZ/HNUEKSbfTfu3wNaUJzWs55AAfNocXyqYf3DQHkzlg385kmmeLH11h0pg58ICL0lf4Bg=="
+    "value": "du1aMMUbxZPg/OhbPqz8nDWd41TCFCmUxxcNc06HytaPJ1kXDjOtQdZSE9LVxNAyhlwN7sUREBC9fGBZjgnDDw=="
   }
 }
