@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-12T04:27:04.433Z",
+  "publishedAt": "2026-11-12T07:28:31.390Z",
   "resources": [
     {
       "id": "ocr",
@@ -161,19 +161,26 @@
     }
   ],
   "latest": {
-    "version": "4.2.1-7",
-    "displayVersion": "4.2.1v7",
-    "notes": "# Miaoclaw 4.2.1 V7\n\n修复图片生成时不合适的参数和型号判断，完善在线语音与本地识别，让主模型按任务选择已经可用的能力。\n\n## 图片与模型\n\n- **OpenAI 旧会话可以继续调用工具**：修复重新打开会话后，工具结果与原调用编号不一致造成的报错。已验证普通与流式对话、连续工具调用、保存后重开、压缩历史、切换模型，以及生图后继续追问；已有记录无需重写。\n- **图片生成可以继续完成**：修复部分对话模型把未选择的生图参数一并提交而导致的失败。OpenAI GPT Image 2.6 可用于图片生成，图像专用型号不会再误走对话自检；仅指定服务商时使用该服务商保存的默认型号。\n- **型号与思考强度更准确**：补充 Claude Fable 5.2 与 Gemini 4 Carbon 的正式接口参数。对话历史、提示或工具变化后，不再沿用不适用的 Claude 思考签名；已有连接地址、Key 和默认选择保留。\n- **错误提示更明确**：型号不存在或当前连接不可访问时，会如实说明尚不能区分原因，不再直接断言 Key 没有权限。\n\n## 语音输入与转写\n\n- **腾讯在线识别**：接入实时、一句话、极速和普通录音服务。自动模式按所选引擎、音频长度和说话人要求选择可用服务；短听写与兼容的整段录音优先使用较快的接口。各服务有独立资源包，界面区分已用量与尚未知的余量。\n- **听写先形成草稿**：录音中可显示实时识别进度，停止后把完整结果填回原聊天草稿，仍可编辑后发送。连接中断会保留当前页面里的录音供明确重试，不会自动重复提交。\n- **本地模型按任务选择**：SenseVoice 适合多语种听写；Paraformer 支持中文热词、标点和多人转写。组件安装会实际验证两套模型，再启用新版。\n- **保留 CPU，按需使用 GPU**：没有独立显卡也可使用本地识别；有合适的 NVIDIA 显卡时可安装 GPU 加速组件。开始录音时按需预热，后续复用，空闲或内存紧张时释放。加速幅度取决于录音与硬件。\n\n## 你需要做什么\n\n- **电脑**：V7 更新了桌面与 PDF 运行时，需要完整安装包。先保存工作，覆盖原安装位置并沿用原数据目录，然后完全退出并重新打开 Miaoclaw；无需先卸载，本次不提供桌面热更新。\n- **手机**：界面更新为 4.2.1+web.7，Android 外壳继续使用 0.5.2。已有该外壳无需重复安装；正常更新保留配对，恢复备份或迁入旧资料后重新配对。\n- **资料**：本次更新保留已有账户、对话、手帐、记忆和设置。组件安装与更新在设置中进行，新版验证成功后才切换，失败时保留可用版本。\n- **当前限制**：腾讯资源包余量仍需到控制台查看。SenseVoice 在较长语音段内可能合并不同说话人，中文多人转写优先选 Paraformer；嘈杂、重叠讲话和专业词汇仍需人工核对。GPU 加速不会自动提高识别准确率。",
+    "version": "4.2.1-8",
+    "displayVersion": "4.2.1v8",
+    "notes": "# Miaoclaw 4.2.1 V8\n\n按住说话更稳定，电脑支持自定义快捷键，手机录音时的按钮和识别文字也保持清晰分开。\n\n## 语音输入\n\n- **长按不再误停**：按住麦克风后，即使指针移出按钮或输入区变化，也会继续录音；松开时结束。录音按钮留在工具栏，实时识别文字在独立区域滚动。\n- **电脑按住 F8 说话**：在对话窗口中按住 F8，松开后填入原聊天草稿；输入框有焦点时也可使用。打开输入框的加号菜单，可以更改、停用或恢复默认快捷键。\n- **保护原有输入习惯**：普通文字、空格及常用编辑快捷键保持原用途；重复按键不会重复录音。切离窗口或按 Esc 会结束本段，识别结果仍需确认发送。\n- **手机保持简洁**：继续使用点击或长按麦克风，快捷键设置只显示在电脑端；识别预览与输入、录音和发送按钮分开，长文本不会把按钮推走。\n\n## 你需要做什么\n\n- **已安装 V7**：可在设置 → 帮助与更新中获取 V8 热更新，保存工作后按提示重启。V8 沿用 V7 的运行时。\n- **更早版本或新安装**：使用 V8 完整安装包，覆盖原安装位置并沿用原数据目录，无需先卸载。\n- **手机**：界面更新为 4.2.1+web.8，Android 外壳继续使用 0.5.2，无需重复安装。正常更新保留配对。\n- **语音结果**：松开后先形成可编辑草稿，不自动发送；单段录音最多 5 分钟。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-7/Miaoclaw-Setup-4.2.1-7.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-7/Miaoclaw-Setup-4.2.1-7.exe",
-      "sha256": "1f5b04b19dcb7f9e06d4c321a49f3d2c599c80cf986c7649d5c3c7678654996b",
-      "sizeBytes": 426295756
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-8/Miaoclaw-Setup-4.2.1-8.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-8/Miaoclaw-Setup-4.2.1-8.exe",
+      "sha256": "a4197ddfae4e1dd0fbfc7df157356fcd57f522226f5aea4c13cf8723b8dafc6f",
+      "sizeBytes": 426243843
+    },
+    "hot": {
+      "baseline": "4.2.1-7",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.2.1-8/miaoclaw-hot-4.2.1-8.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.2.1-8/miaoclaw-hot-4.2.1-8.zip",
+      "sha256": "af16bdbd980a0252380fa62b6b93e40d5be9894fc2cd87827bbab843f47c4698",
+      "sizeBytes": 153365924
     },
     "android": {
       "shellVersion": "0.5.2",
-      "feVersion": "4.2.1+web.7",
+      "feVersion": "4.2.1+web.8",
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
@@ -184,8 +191,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1794457624433,
-    "version": "4.2.1-7",
-    "value": "rCD3gsbAJddMWMH0726XEfC9b4EUrskCSWknlhl8LdAk30+eKwDWkCLbKblt5fUTlFD6UBlgv/QPJ2iz/558Cg=="
+    "sequence": 1794468511390,
+    "version": "4.2.1-8",
+    "value": "KSgtxcw1GIgPhIoWsDRi7BmeTMV/BJNgb356BvyUa8CVPkQ7At60a5vtDoxEsS4vs0mWAW4xKy4iM1GRIuVSDA=="
   }
 }
