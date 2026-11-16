@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-15T14:35:45.689Z",
+  "publishedAt": "2026-11-16T09:04:03.359Z",
   "resources": [
     {
       "id": "ocr",
@@ -161,19 +161,26 @@
     }
   ],
   "latest": {
-    "version": "4.3.0",
-    "displayVersion": "4.3.0",
-    "notes": "# Miaoclaw 4.3.0\n\n新增桌面全局语音、连续朗读和 DeepSeek 工具能力，保留现有模型选择、文档工作流与本地 OCR。\n\n## 能力与语音\n\n- 语音识别与朗读在语音设置中统一选择，可独立于主模型使用；显式选择和关闭优先，调用失败不会自动换到其他服务。\n- 桌面侧栏开启全局语音后，支持“猫猫你好”唤醒；窗口隐藏、最小化或切换聊天时保留监听。语音任务使用固定、可恢复的对话，沿用其中的模型和权限设置。\n- 唤醒词可自定义为 2 至 10 个汉字，重启后保留。只说唤醒词时回应“你好呀，需要我做什么”；连着说出要求时直接处理后续内容。\n- 主模型继续选择搜索、网页阅读、OCR、文件和 Office 工具。DeepSeek 官方连接提供可按需调用的实现，原有本地 OCR 和文档流程保留。\n- 语音识别新增 DeepSeek，保留腾讯云与本地离线识别。录音结果仍先进入可编辑草稿，确认后发送。\n- DeepSeek 默认使用海星女声；移动端 TTS 仅提供朗读。\n- 回复支持手动朗读、暂停、进度调整、停止和保存音频。长回答分段准备并连续播放，重听可复用已生成的音频。\n- 修复手机朗读在分段处的固定停顿，长文本提前缓冲以减少网络波动造成的中断；跳转后优先加载所选位置。自动朗读支持正文逐句接续和暂停，关闭后取消迟到音频。\n- 可以要求生成语音文件，像图片、视频一样在对话中播放、保存，并在历史对话中再次打开。\n- DeepSeek Flash 的深度思考可结合内置搜索、网页阅读和本地工具。网页来源及文件引用随对话保留；文件解析断线后先查询已提交结果，避免重复上传。\n\n## 图片与对话\n\n- OpenAI Images 2.6 Flare / Sunburst 支持复杂度、SVG、GIF 动画帧参数及标注编辑；生成文件可以预览、放大和保存原件。\n- 修复部分参考图片在聊天中可显示、用于生图却失败的问题，统一图片准备与校验，保留原文件。\n- 用户追加要求后的引导回执短暂显示，刷新不再留下重复提示，用户补充内容仍完整保留。\n- 修复工具执行前已显示的正文在终态或刷新后丢失的问题，历史对话保留完整回答。\n\n## 更新\n\n- 本次更新包含运行组件升级，请使用完整安装包，沿用原安装位置和数据目录。\n- 未配置 DeepSeek 的用户继续使用已有的模型及能力设置。GPT‑6.2 不属于本次更新。",
+    "version": "4.3.1",
+    "displayVersion": "4.3.1",
+    "notes": "# Miaoclaw 4.3.1\n\n朗读更专注于正文，切换对话后继续播放，暂停后接着听。\n\n## 朗读内容\n\n- **地址更简洁**：长网址和文件路径改读为来源或文件名，保留交付说明；页面原文和链接仍可查看。\n- **保留关键信息**：正文不改写成摘要。由当前模型逐段判断，独立复核后省略工具进度、额外邀约和正文之外的附属图卡说明；故事、数字、条件、必要步骤、实际交付结果和失败原因保留。有疑义的片段保留；核对未完成时暂停并提示重试，也可选择完整朗读原文。\n- **可完整朗读**：在朗读菜单中选择“完整朗读原文”，可听取地址、路径和代码等内容。\n- **流式内容一致**：表格、链接、公式和代码块按完整结构提取，减少边生成边朗读时的拆分遗漏。\n\n## 混合任务交付\n\n- **正文与图片一起保留**：修复正文与工具调用同时返回时，故事被放进折叠工作说明、最终只剩图片的情况。正文、图片和 Word 可以在同一任务中完整交付，保存、重开和导出保持一致。\n- **失败不覆盖正文**：工具失败、重试或中断续做时保留已经交付的正文，补充实际结果；自动朗读使用同一正文依据，过滤非必要过程说明。\n\n## 跨对话播放\n\n- **切换对话继续听**：同一账户内切换聊天或页面，手动朗读和普通自动朗读继续播放；返回原消息时进度保持一致。\n- **轻量播放栏**：底部显示来源、暂停或继续、停止入口，点击来源可返回原对话。播放栏使用正常布局，不遮挡正文和输入区。\n- **暂停后接着听**：暂停或停止后，在当前打开的应用中可从保留位置继续；新自动回复不会抢占已经打开或暂停的朗读。\n- **退出时取消**：账户锁定、退出或切换后停止相应私人音频，并取消尚未完成的读取。\n\n## 你需要做什么\n\n- 已完整安装 4.3.0 的用户可按应用提示使用轻量更新，完成后退出并重新打开；更早版本或首次安装请使用完整安装包，保留原安装位置和数据目录。\n- 手机界面更新为 4.3.1，Android 外壳继续使用 0.5.2，已有正式外壳无需重装。打开手机界面更新并启用新版，浏览器用户刷新页面。\n- 跨对话续播适用于同一账户、当前打开的应用；应用重启、手机锁屏或切换到其他应用后的续播不在本次承诺范围内。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.0/Miaoclaw-Setup-4.3.0.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.0/Miaoclaw-Setup-4.3.0.exe",
-      "sha256": "238dfe66dd6e3155ae89abd54a6c5ada7b5df4e393c86ac12509e00b767e021f",
-      "sizeBytes": 436774988
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1/Miaoclaw-Setup-4.3.1.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1/Miaoclaw-Setup-4.3.1.exe",
+      "sha256": "ebb8a1526d41dd0b057f70d9d12dd351a6ce9ab09f157efcd22d197123915b3b",
+      "sizeBytes": 436860081
+    },
+    "hot": {
+      "baseline": "4.3.0",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1/miaoclaw-hot-4.3.1.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1/miaoclaw-hot-4.3.1.zip",
+      "sha256": "5dea095624c7a37fe0bdcfff4860976b2476bdc844153ae2af77596ed5a03c6f",
+      "sizeBytes": 158417420
     },
     "android": {
       "shellVersion": "0.5.2",
-      "feVersion": "4.3.0+web.10",
+      "feVersion": "4.3.1+web.2",
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
@@ -184,8 +191,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1794753345689,
-    "version": "4.3.0",
-    "value": "mum+F7Xmv7UBarPWRW2aaS/39++jOduqpKlE+p9nYiZzBSH3YUGtmIE3iO6G8eY7jFn4WxpExRqSMjpiA5pfCQ=="
+    "sequence": 1794819843359,
+    "version": "4.3.1",
+    "value": "sT7pNhKJz5SkW9thJwh0peNFDQfRn7y1E44AB/YN7vjVWUasie8cx9vbOafDYMX15+QWIiw8IS6mH7ar10ZIBg=="
   }
 }
