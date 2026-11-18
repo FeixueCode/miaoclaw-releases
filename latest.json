@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-17T09:03:56.712Z",
+  "publishedAt": "2026-11-18T10:17:45.779Z",
   "resources": [
     {
       "id": "ocr",
@@ -158,29 +158,36 @@
       "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-11-02.1.json",
       "sha256": "6f64aafe45a05ec5820ec59eb40f0263889641c63554445052daade2509c2ac5",
       "minAppVersion": "4.2.0"
+    },
+    {
+      "version": "2026-11-18.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-11-18.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-11-18.1.json",
+      "sha256": "370555ac6dee3ce8818eb25091b84e35d42f7cab80e7eb0f57dd7de959ac8d97",
+      "minAppVersion": "4.3.1-4"
     }
   ],
   "latest": {
-    "version": "4.3.1-3",
-    "displayVersion": "4.3.1v3",
-    "notes": "# Miaoclaw 4.3.1v3\n\n改善大照片、多图和手机预览，保留完整原文件与混合任务交付。\n\n## 图片读取与连续处理\n\n- **大照片可以继续处理**：修复部分可正常打开的高分辨率照片被误报损坏，以及看图工具固定 8 MiB 限制导致任务绕行的问题。原件完整保存，默认画面未经缩放或质量重编码后提供给模型；文件还包含其他图像或附加数据时，会明确说明当前读取范围。\n- **多图保持身份与顺序**：不再因旧的视觉数量预算遗漏后面的图片。读取按资源排队；接口明确拒收时，主模型可继续分批读取或选择必要的派生图，保留原件和已有结果。\n- **失败说明更准确**：区分图片损坏、本机资源不足、接口容量拒收、网络失败与限流。请求未被接受时，不把它当成模型已经看过图片，也不自动更换模型。\n\n## 电脑与手机查看\n\n- **按需加载图片**：聊天中加载缩略图，点开加载适合屏幕的预览；需要完整分辨率时选择“查看原图”。“保存原图”取回完整原文件。\n- **预览更可靠**：修复较长 Windows 文件路径导致的图片和 PDF 预览失败，改善窄屏大图工具栏。\n- **GIF 保留完整动画**：上传、播放、保存、按时间抽帧及转换继续可用。较大的动图预览会明确提示只显示首帧；模型收到动画帧数与读取范围说明，不能把抽样画面当作看完全部动画。\n\n## 多媒体与混合任务\n\n- 修复普通 JPEG 在本地图片转换中的格式识别问题；取消任务时，视频抽帧验证也会停止等待。\n- 保留视频时段、音轨及原件，音频上传后仍由主模型决定原生读取或转写。正文、媒体和文件共同交付，工具失败不覆盖已有正文，历史重开保留内容。\n- 延续 4.3.1 的朗读内容复核、跨对话播放和暂停续播行为。\n\n## 更新\n\n- 已完整安装 4.3.0 的用户可使用应用提供的轻量更新；更早版本和首次安装使用完整安装包。保存正在进行的工作，按应用提示重启 Miaoclaw 后生效；保留原安装位置和数据目录，无需先卸载。\n- 手机界面更新为 **4.3.1v3**（`4.3.1+web.3`），Android 外壳继续使用 **0.5.2**，已有正式外壳无需重装。\n\nOffice 文件预览组件新增已验证的 1.0.162 独立更新，修复包内缺失部件的校验；已验证 Word、Excel、PowerPoint 读取、预览、启用及回滚，内置运行组件保持不变。\n\n离线语音包新增 1.4.27 更新，已验证 CPU 和 NVIDIA GPU 转写，以及更新失败后继续使用已有语音包。",
+    "version": "4.3.1-4",
+    "displayVersion": "4.3.1v4",
+    "notes": "# Miaoclaw 4.3.1v4\n\n## 模型与供应商\n\n- 在模型设置里刷新连接，可以获取已签名的模型资料和供应商当前返回的型号。对于已经适配的聊天接口，目录可以单独更新型号、容量、推理档位和停用状态。刷新遇到暂时故障时保留最近可用的资料。\n- OpenAI 官方连接支持 GPT‑6.2 Sol 和 Astra 的文本、图片输入及五档推理强度。工具调用使用 Responses API。相同型号在中转站或不同套餐上按各自连接的参数处理。\n- 千问 Qwen4‑Max 正式版和 Preview 分别使用对应的推理选项及输出上限。已有连接保存的型号继续可选。\n\n## 搜索与生图\n\n- 智能混合保留多个搜索接口合并后的排序与来源。中文搜索优化改进了连续中文的分词判断。搜索检测会分别提示需要 JavaScript、跳转到 HTTP、站点要求验证或请求限流。\n- 生图设置分别显示官方资料和当前连接最近的实际调用结果。使用指引补充了 OpenAI 图像质量、Agnes 两站的尺寸与比例，以及指定多张参考图的位置。工具记录实际提交的参考图数量。\n\n## 运行中补充与 3D 文件\n\n- 中途补充按发送顺序显示在所属任务的回复前。补充消息会显示当前任务是否已读取，或是否已转交后续任务。重新打开对话也能查看。\n- 可以直接要求 Miaoclaw 制作能离线旋转的 Three.js 模型，并交付网页和 GLB 文件。使用可调用本地命令的聊天模型，选择完全访问。采用 npm 的项目需要电脑能运行 npm，并按提示确认安装项目依赖。\n\n## 主人档案和记忆\n\n- 要求 Miaoclaw 记住称呼、生日或偏好时，它会核对你在本轮说过的话和已送达的补充。转述、假设或已撤回的话不会仅因模型摘出其中一句就成为已确认事实。空闲回顾过程中，如果你关闭回顾或更改对话，本次旧结果不会写入。\n\n## 更新方式\n\n- 已完整安装 4.3.0 及受支持后续版本的电脑可按应用提示轻量更新。保存工作并重启 Miaoclaw，沿用已绑定的数据目录、聊天、文件和供应商设置。首次安装或使用更早版本时，请使用完整安装包。\n- 手机端重新打开应用即可获取 4.3.1v4 界面（`4.3.1+web.4`）。已使用正式 Android 0.5.2 外壳的用户可继续使用现有安装。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1-3/Miaoclaw-Setup-4.3.1-3.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1-3/Miaoclaw-Setup-4.3.1-3.exe",
-      "sha256": "8e32b6eaa69b5ee8bdfcdf0db5451ab1adeb359af349bdd0cabcc6fcda8b03e6",
-      "sizeBytes": 436813629
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1-4/Miaoclaw-Setup-4.3.1-4.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1-4/Miaoclaw-Setup-4.3.1-4.exe",
+      "sha256": "97aea688999e5d7563290a10cce48c0e4b6abc9b497354573d2912cbfe82fec5",
+      "sizeBytes": 436862233
     },
     "hot": {
       "baseline": "4.3.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1-3/miaoclaw-hot-4.3.1-3.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1-3/miaoclaw-hot-4.3.1-3.zip",
-      "sha256": "ae9cce60ae993607bcde7d6fa8cfa3392b0f6806341bbaa8fa74419f9d9e0b94",
-      "sizeBytes": 158429375
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1-4/miaoclaw-hot-4.3.1-4.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1-4/miaoclaw-hot-4.3.1-4.zip",
+      "sha256": "fd54db9d643d0c68b673e461aeda725d7432671daae90584eb5df31903ffdf7f",
+      "sizeBytes": 158447702
     },
     "android": {
       "shellVersion": "0.5.2",
-      "feVersion": "4.3.1+web.3",
+      "feVersion": "4.3.1+web.4",
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
@@ -191,8 +198,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1794906236712,
-    "version": "4.3.1-3",
-    "value": "g8osvyGm2TGSsVcxmLpxSiMCD6JlJSGupzlnpKE4k68x0HgvsVIAmO46iyXrxhnKvz17Cay1LebFlLLrDVNlBw=="
+    "sequence": 1794997065779,
+    "version": "4.3.1-4",
+    "value": "ftcfNlMTKL9cprdcrBeSv3SXORWdVRrOLctoCLWj1zRGn5PLWIPrXgE+l/iCgq7M96QaUEjtvDBe3G/XEiJ6Dg=="
   }
 }
