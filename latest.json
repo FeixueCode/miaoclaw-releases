@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-18T10:17:45.779Z",
+  "publishedAt": "2026-11-21T01:30:47.240Z",
   "resources": [
     {
       "id": "ocr",
@@ -86,29 +86,29 @@
       "revision": 1,
       "kind": "binary",
       "platform": "win32-x64",
-      "verifiedVersion": "1.0.162",
+      "verifiedVersion": "1.0.163",
       "name": "Office 文件预览",
-      "verifiedAt": "2026-11-17",
+      "verifiedAt": "2026-11-20",
       "source": {
         "registry": "https://github.com/iOfficeAI/OfficeCLI",
-        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.162",
-        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.162/officecli-win-x64.exe",
-        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.162/LICENSE",
-        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.162/NOTICE",
-        "artifactSha256": "4ef5480e99cf60809b1db8817b2892f0a41062bbb9a9b34f700befe67ed3135c",
+        "release": "https://github.com/iOfficeAI/OfficeCLI/releases/tag/v1.0.163",
+        "artifactUrl": "https://github.com/iOfficeAI/OfficeCLI/releases/download/v1.0.163/officecli-win-x64.exe",
+        "licenseUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.163/LICENSE",
+        "noticeUrl": "https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/v1.0.163/NOTICE",
+        "artifactSha256": "8c351bff88728b538f2754bbfd3a09ea2cf6199c78a9e4feeca717d0135a9f56",
         "licenseSha256": "7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1",
         "noticeSha256": "3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b"
       },
       "mirrors": {
-        "artifactUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.162/4ef5480e99cf60809b1db8817b2892f0a41062bbb9a9b34f700befe67ed3135c/officecli.exe",
-        "licenseUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.162/7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1/LICENSE",
-        "noticeUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.162/3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b/NOTICE"
+        "artifactUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.163/8c351bff88728b538f2754bbfd3a09ea2cf6199c78a9e4feeca717d0135a9f56/officecli.exe",
+        "licenseUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.163/7e282402a5a6db33995fe638bb3fe79013f9884d8f7d15a42e481c1e86aadda1/LICENSE",
+        "noticeUrl": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/components/officecli/1.0.163/3a4715b268e148a8e9566f5e835f766f5c95c3da4d6e5ddd908806a258a2f07b/NOTICE"
       },
       "verification": {
         "realInference": true,
         "contract": "officecli-readonly-preview-v1",
         "fixture": "generated-docx-xlsx-pptx",
-        "expectedVersion": "1.0.162",
+        "expectedVersion": "1.0.163",
         "formats": [
           "docx",
           "xlsx",
@@ -168,26 +168,19 @@
     }
   ],
   "latest": {
-    "version": "4.3.1-4",
-    "displayVersion": "4.3.1v4",
-    "notes": "# Miaoclaw 4.3.1v4\n\n## 模型与供应商\n\n- 在模型设置里刷新连接，可以获取已签名的模型资料和供应商当前返回的型号。对于已经适配的聊天接口，目录可以单独更新型号、容量、推理档位和停用状态。刷新遇到暂时故障时保留最近可用的资料。\n- OpenAI 官方连接支持 GPT‑6.2 Sol 和 Astra 的文本、图片输入及五档推理强度。工具调用使用 Responses API。相同型号在中转站或不同套餐上按各自连接的参数处理。\n- 千问 Qwen4‑Max 正式版和 Preview 分别使用对应的推理选项及输出上限。已有连接保存的型号继续可选。\n\n## 搜索与生图\n\n- 智能混合保留多个搜索接口合并后的排序与来源。中文搜索优化改进了连续中文的分词判断。搜索检测会分别提示需要 JavaScript、跳转到 HTTP、站点要求验证或请求限流。\n- 生图设置分别显示官方资料和当前连接最近的实际调用结果。使用指引补充了 OpenAI 图像质量、Agnes 两站的尺寸与比例，以及指定多张参考图的位置。工具记录实际提交的参考图数量。\n\n## 运行中补充与 3D 文件\n\n- 中途补充按发送顺序显示在所属任务的回复前。补充消息会显示当前任务是否已读取，或是否已转交后续任务。重新打开对话也能查看。\n- 可以直接要求 Miaoclaw 制作能离线旋转的 Three.js 模型，并交付网页和 GLB 文件。使用可调用本地命令的聊天模型，选择完全访问。采用 npm 的项目需要电脑能运行 npm，并按提示确认安装项目依赖。\n\n## 主人档案和记忆\n\n- 要求 Miaoclaw 记住称呼、生日或偏好时，它会核对你在本轮说过的话和已送达的补充。转述、假设或已撤回的话不会仅因模型摘出其中一句就成为已确认事实。空闲回顾过程中，如果你关闭回顾或更改对话，本次旧结果不会写入。\n\n## 更新方式\n\n- 已完整安装 4.3.0 及受支持后续版本的电脑可按应用提示轻量更新。保存工作并重启 Miaoclaw，沿用已绑定的数据目录、聊天、文件和供应商设置。首次安装或使用更早版本时，请使用完整安装包。\n- 手机端重新打开应用即可获取 4.3.1v4 界面（`4.3.1+web.4`）。已使用正式 Android 0.5.2 外壳的用户可继续使用现有安装。",
+    "version": "4.4.0",
+    "displayVersion": "4.4.0",
+    "notes": "# Miaoclaw 4.4.0\n\n## 录屏讲解和会议记录\n\n在 Windows 聊天的「＋」里可以分别打开录屏讲解和会议记录。录屏可选择窗口、显示器或在屏幕上拖选区域，同时录麦克风与电脑声音。开始前可回听自己的声音或在所选输出设备播放测试音。录制条可拖动，在成片中隐藏。录好后预览视频，按需放入当前聊天草稿。两种功能各有最近记录和可设置的全局快捷键。\n\n会议记录支持现场录音和导入长录音。原稿显示时间和可辨别的发言人，可以逐段回听、更名、拆分和修订。核对后可一键生成会议纪要，也可把原稿带到聊天，按自己的问题或格式处理。原件和核对稿分别保存。\n\n## 说话、查找和换机\n\n按住说话或点击开始、再次点击结束，都能把识别文字接在输入框现有草稿后。连续语音对话在自然停顿后提交。Windows 完整安装包内含约 229 MiB 的轻量 SenseVoice 模型，首次离线即可听写和核对唤醒词。需要本地会议分人时，可安装完整语音组件。语音与识别设置按项展开，使用帮助可按主题和页码浏览。\n\n记忆搜索支持模糊提及，点开发言候选可以读到当时的原话及上下文。在有许多附件的对话中，Miaoclaw 会检查完整文件登记再选取本轮引用，也可以按上传时谈过的主题找到资料并继续查阅其他匹配文件。\n\n在「记忆 → Miaoclaw 对我的了解」可以生成个人快照，展开查看每段依据，再围绕其中一个主题连续追问。更新时可选择从以往对话补充本人说过的长期信息。轻量人格迁移会带走所选个人记忆及其支持的快照内容。完整账户备份仍可用于整体恢复。自动备份可勾选只保留最近两份有效备份。\n\n实验性的空闲回顾默认关闭。开启后可选择每天、每三天或每七天。到了间隔且电脑和 Miaoclaw 空闲时，系统才检查有变化的对话。设置会显示最近一轮使用的模型、候选数、写入数及下次最早检查时间。\n\n录屏编码使用 FFmpeg 9.1，默认播放混音，也保留麦克风和电脑声音各自的音轨。Office 预览组件更新到 1.0.163，可预览 Word、Excel 和 PowerPoint 文件。\n\n## 安装与数据\n\n在电脑上通过「设置 → 关于与更新」检查更新，按提示完成后完全退出并重新打开。使用完整安装包时选原安装位置，继续使用现有数据目录。已有账户、对话和文件随原数据保留。手机端沿用原配对，界面更新下载后重新打开即可。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1-4/Miaoclaw-Setup-4.3.1-4.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1-4/Miaoclaw-Setup-4.3.1-4.exe",
-      "sha256": "97aea688999e5d7563290a10cce48c0e4b6abc9b497354573d2912cbfe82fec5",
-      "sizeBytes": 436862233
-    },
-    "hot": {
-      "baseline": "4.3.0",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.3.1-4/miaoclaw-hot-4.3.1-4.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.3.1-4/miaoclaw-hot-4.3.1-4.zip",
-      "sha256": "fd54db9d643d0c68b673e461aeda725d7432671daae90584eb5df31903ffdf7f",
-      "sizeBytes": 158447702
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.0/Miaoclaw-Setup-4.4.0.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.0/Miaoclaw-Setup-4.4.0.exe",
+      "sha256": "3922207ddaf7bfe569ba7ed5a9c1561227f23494ccf57426069a8244bae033de",
+      "sizeBytes": 591156030
     },
     "android": {
       "shellVersion": "0.5.2",
-      "feVersion": "4.3.1+web.4",
+      "feVersion": "4.4.0",
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
@@ -198,8 +191,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1794997065779,
-    "version": "4.3.1-4",
-    "value": "ftcfNlMTKL9cprdcrBeSv3SXORWdVRrOLctoCLWj1zRGn5PLWIPrXgE+l/iCgq7M96QaUEjtvDBe3G/XEiJ6Dg=="
+    "sequence": 1795224647240,
+    "version": "4.4.0",
+    "value": "inZFZUXTMhoqo590mwZvBNomfFxBjW4PFoCIBqBedpV+RKk4c2XwUquYz+clIWjQC0AhApQ4Z/8EtzjpzwafDA=="
   }
 }
