@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-22T04:16:23.022Z",
+  "publishedAt": "2026-11-22T16:16:07.599Z",
   "resources": [
     {
       "id": "ocr",
@@ -168,26 +168,19 @@
     }
   ],
   "latest": {
-    "version": "4.4.1-1",
-    "displayVersion": "4.4.1v1",
-    "notes": "# Miaoclaw 4.4.1v1\n\n在 Windows 上开启“待唤醒”后，叫“猫猫你好”或自己设置的名字，妙爪才会回应。普通谈话、相近的名字和环境声会安静略过。没听到问候时，可以直接再叫一次。\n\n听完 DeepSeek 海星女声的问候，再说要做的事。指令可以停顿 2.4 秒，也可以用“说完了”提交。妙爪账户锁定时叫对名字，会听到原来的解锁提示。\n\n电脑按应用内提示更新并重启，继续使用原账户、唤醒词和已有数据。手机下次打开时会检查界面更新，已有配对继续有效。",
+    "version": "4.4.2-2",
+    "displayVersion": "4.4.2v2",
+    "notes": "# Miaoclaw 4.4.2v2\n\n在 Windows 上叫“猫猫你好”或自设唤醒词时，妙爪能更好地识别连读、轻声和语调变化。听完 DeepSeek 海星女声的问候就可以说指令，静音 2.4 秒或说“说完了”即可提交。普通谈话和环境声继续安静略过。\n\n自动朗读和手动朗读都会结合你这一轮的要求选取正文。听故事时，故事结尾和人物对白会读出来，额外的配图邀约及举例可以略过。如果你原本就要求配图建议，这些建议也会读。对账期限、未完成的交付、风险和需要你确认的问题都属于正文。想听每一句时，可以选择“完整朗读原文”。\n\n本版完整安装包也更新了 Excel 写入组件，修复了写入 1900 年 2 月 28 日带时间的日期时可能多算一天的问题。\n\n电脑按应用内提示更新并重启，继续使用原账户、唤醒词和已有数据。手机下次打开妙爪时会检查界面更新，已有配对可继续使用。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.1-1/Miaoclaw-Setup-4.4.1-1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.1-1/Miaoclaw-Setup-4.4.1-1.exe",
-      "sha256": "9898667b9db7a2106938d854142cf78aa2ab20bdb0c4089cdb6f0a2d7e6d4bef",
-      "sizeBytes": 591173444
-    },
-    "hot": {
-      "baseline": "4.4.1",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.1-1/miaoclaw-hot-4.4.1-1.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.1-1/miaoclaw-hot-4.4.1-1.zip",
-      "sha256": "0356c7ea803e40b6874760a38dff5e8444af61e53f6f25839475c8687e43b17c",
-      "sizeBytes": 158694901
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.2-2/Miaoclaw-Setup-4.4.2-2.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.2-2/Miaoclaw-Setup-4.4.2-2.exe",
+      "sha256": "b9430cbbb3bdcd9dbf0ea58be4fb857a70635ea1ca0b8208e68082206d119fe3",
+      "sizeBytes": 591236479
     },
     "android": {
       "shellVersion": "0.5.2",
-      "feVersion": "4.4.1+web.1",
+      "feVersion": "4.4.2+web.2",
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
@@ -198,8 +191,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1795320983022,
-    "version": "4.4.1-1",
-    "value": "STh2QhffJrPOed+v4zRbRv38QhKR0QyXLjsi42QVn0cireOdVFgkM7WwkAoTCfbJPYsPriH0ud3ZhgSqziLqBw=="
+    "sequence": 1795364167599,
+    "version": "4.4.2-2",
+    "value": "BS3TaTcHQepSW0kiHwIGhHAmX9eN4lVehSPvLVmqPYqCFYT8FGDLraOsikKT14vSAcUwjZXOIJdVrWsnh2njAg=="
   }
 }
