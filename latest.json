@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-21T16:59:44.035Z",
+  "publishedAt": "2026-11-22T04:16:23.022Z",
   "resources": [
     {
       "id": "ocr",
@@ -168,19 +168,26 @@
     }
   ],
   "latest": {
-    "version": "4.4.1",
-    "displayVersion": "4.4.1",
-    "notes": "# Miaoclaw 4.4.1\n\nWindows 在显示“待唤醒”前会准备好本地识别。叫一声“猫猫你好”或自定义唤醒词，妙爪会用固定的 DeepSeek 海星女声回应。听到“你好呀，需要我做什么”后再说要求。如果听到“对不起，我没有听清，能再说一次吗？”，请再叫一次唤醒词。两段提示都会完整播完。\n\n提出要求时可以停顿思考。唤醒后的指令和连续语音对话在静音 2.4 秒后提交，也可以说“说完了”提前结束。开启“说话打断朗读”后，正文朗读中说“停下”只停止本次播放，直接提出的新要求会送回原会话。侧栏“语音设置”会打开“声音与陪伴 → 语音与文字识别”。\n\n本版更新了内置 Python 证书、PDF 文字与表格提取库和可选离线语音组件 FunASR。电脑使用完整安装包升级，重启后用原账户解锁，即可继续使用已有对话、记忆与个人数据。手机下次打开时会检查界面更新，保留已有配对。",
+    "version": "4.4.1-1",
+    "displayVersion": "4.4.1v1",
+    "notes": "# Miaoclaw 4.4.1v1\n\n在 Windows 上开启“待唤醒”后，叫“猫猫你好”或自己设置的名字，妙爪才会回应。普通谈话、相近的名字和环境声会安静略过。没听到问候时，可以直接再叫一次。\n\n听完 DeepSeek 海星女声的问候，再说要做的事。指令可以停顿 2.4 秒，也可以用“说完了”提交。妙爪账户锁定时叫对名字，会听到原来的解锁提示。\n\n电脑按应用内提示更新并重启，继续使用原账户、唤醒词和已有数据。手机下次打开时会检查界面更新，已有配对继续有效。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.1/Miaoclaw-Setup-4.4.1.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.1/Miaoclaw-Setup-4.4.1.exe",
-      "sha256": "aaa07bf3cc0576db67b992f147e201cfc29177dbb1ed77c8d285decaeed2677a",
-      "sizeBytes": 591171542
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.1-1/Miaoclaw-Setup-4.4.1-1.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.1-1/Miaoclaw-Setup-4.4.1-1.exe",
+      "sha256": "9898667b9db7a2106938d854142cf78aa2ab20bdb0c4089cdb6f0a2d7e6d4bef",
+      "sizeBytes": 591173444
+    },
+    "hot": {
+      "baseline": "4.4.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.1-1/miaoclaw-hot-4.4.1-1.zip",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.1-1/miaoclaw-hot-4.4.1-1.zip",
+      "sha256": "0356c7ea803e40b6874760a38dff5e8444af61e53f6f25839475c8687e43b17c",
+      "sizeBytes": 158694901
     },
     "android": {
       "shellVersion": "0.5.2",
-      "feVersion": "4.4.1",
+      "feVersion": "4.4.1+web.1",
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
@@ -191,8 +198,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1795280384035,
-    "version": "4.4.1",
-    "value": "FQM4LjKChPDHnSDA6A3/XBSLOgTaKE48+wAQsCVtGAHc7wVAC4jdBx+iIScbkQi7885mmAfo/JWDllbEsOO0Aw=="
+    "sequence": 1795320983022,
+    "version": "4.4.1-1",
+    "value": "STh2QhffJrPOed+v4zRbRv38QhKR0QyXLjsi42QVn0cireOdVFgkM7WwkAoTCfbJPYsPriH0ud3ZhgSqziLqBw=="
   }
 }
