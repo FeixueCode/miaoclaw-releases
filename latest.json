@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "app": "miaoclaw",
-  "publishedAt": "2026-11-25T01:12:03.691Z",
+  "publishedAt": "2026-11-25T10:35:05.179Z",
   "resources": [
     {
       "id": "ocr",
@@ -165,29 +165,29 @@
       "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-11-18.1.json",
       "sha256": "370555ac6dee3ce8818eb25091b84e35d42f7cab80e7eb0f57dd7de959ac8d97",
       "minAppVersion": "4.3.1-4"
+    },
+    {
+      "version": "2026-11-25.1",
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/provider-catalog/provider-catalog-2026-11-25.1.json",
+      "mirror": "https://raw.githubusercontent.com/FeixueCode/miaoclaw-releases/main/provider-catalog/provider-catalog-2026-11-25.1.json",
+      "sha256": "7043dc608c72f11bbe2338147725cfd6dc9cbe13ae7d3fa548fcfbc7354b12a0",
+      "minAppVersion": "4.4.2-4"
     }
   ],
   "latest": {
-    "version": "4.4.2-3",
-    "displayVersion": "4.4.2v3",
-    "notes": "# Miaoclaw 4.4.2v3\n\n从微信粘贴或从电脑选取的视频，发送后和重新打开对话时都可以在消息里播放。需要转换格式时，播放器会使用兼容预览，下载仍可取得原文件。\n\nGIF 在输入预览、已发送消息和历史对话中直接播放。较大的动图生成适合屏幕的动画预览，取回文件时保留原图。\n\n在桌面移动或删除导出的生图文件后，对话会使用生成时保存在私人空间的副本。重开旧对话时，有完整副本的原图也能重新显示。\n\n较慢的生图请求可以等待供应商回执。连接中断时，对话会标明哪些提交还要核实。继续任务时可以分辨上次的操作记录。锁定私人空间会为正在执行的任务保存续点，解锁后可继续处理。\n\n设置入口可以立即切换分类。已加载的模型配置可以先看，自检记录单独读取。普通对话在后台查询电脑操作状态时，也能继续显示当前任务的真实进度。\n\n使用离线转写时，可在组件设置更新语音包。新版改善了跨段声音标记的去重，以及个别词的时间标记。\n\n电脑按应用内提示更新并重启。手机下次打开妙爪时会检查界面更新，原有配对可以继续使用。原账户的对话、手帐、记忆和设置数据都会保留。如果一次生图提交后失去连接，供应商是否完成仍需核实。",
+    "version": "4.4.2-4",
+    "displayVersion": "4.4.2v4",
+    "notes": "# Miaoclaw 4.4.2v4\n\n多人共用一台电脑时，每个人都可以登录自己的账户，在“更多 → 账户管理”中验证本人口令后删除自己的私人空间。在锁定页删除任何账户，需要本机管理员密码。\n\n首个账户可以设置管理员密码，也可以先跳过。升级前已有多个账户时，最早创建且仍存在的账户获得设置权。首次设置时可以指定管理账户，以后由它验证本人口令更改管理员密码。\n\n删除管理账户时可以指定继任者，跳过则交给剩余账户中最早创建的一位。删除一经确认，旧管理员密码立即失效，由继任者设置新密码。删除最后一个账户后，新建的首个账户重新配置。\n\n模型设置已更新智谱 Coding Plan 的 GLM-5.4、百炼 Qwen4-Max 和 Google Gemini 4 Neon、Hydrogen。已保存的千问预览 ID 可以继续使用，妙爪按百炼正式版的思考档位和输出上限发起请求。对话窗口按当前地址和协议显示可对话的型号。服务商仅提供型号、尚未声明对话能力时，可以在模型设置中点“验证后加入对话”。实时语音、向量和决策等专用接口不会混入对话选项。\n\n本次通过完整 Windows 安装包更新，同时更新桌面引擎与 PDF 文档组件。安装后重启妙爪，原账户及对话数据保存在原资料目录。手机下次打开时会检查界面更新，可以继续使用原有配对。",
     "minSupported": "2.0.0",
     "full": {
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.2-3/Miaoclaw-Setup-4.4.2-3.exe",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.2-3/Miaoclaw-Setup-4.4.2-3.exe",
-      "sha256": "0be35d8378b1ab012c473b8113934ccc0a8fb89f09edaf7b70ffe6b7e2201908",
-      "sizeBytes": 591259831
-    },
-    "hot": {
-      "baseline": "4.4.2-2",
-      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.2-3/miaoclaw-hot-4.4.2-3.zip",
-      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.2-3/miaoclaw-hot-4.4.2-3.zip",
-      "sha256": "5ba542264f74e7a2ed45cd04765aa00c69caa9adc26b63461a789e2428ef0839",
-      "sizeBytes": 158728645
+      "url": "https://miaoclaw-1449106480.cos.ap-shanghai.myqcloud.com/v4.4.2-4/Miaoclaw-Setup-4.4.2-4.exe",
+      "mirror": "https://github.com/FeixueCode/miaoclaw-releases/releases/download/v4.4.2-4/Miaoclaw-Setup-4.4.2-4.exe",
+      "sha256": "210685138978fa4eed1e41d9cff15f15c064cd768647b033f21b97548883fe24",
+      "sizeBytes": 591455461
     },
     "android": {
       "shellVersion": "0.5.2",
-      "feVersion": "4.4.2+web.3",
+      "feVersion": "4.4.2+web.4",
       "sha256": "425cecccb4f450b360e6d6ae3a8e40fd6a90f4f7f8d8ee7d26697b1899b3b198",
       "sizeBytes": 6260807,
       "url": "https://app.miao-claw.com/dl/Miaoclaw-android-0.5.2.apk",
@@ -198,8 +198,8 @@
     "schema": "miaoclaw.update-manifest/v1",
     "algorithm": "Ed25519",
     "keyId": "21f6555f00fe464ad19341807d341de9fece2505beff9e8503f350fc2cda1d61",
-    "sequence": 1795569123691,
-    "version": "4.4.2-3",
-    "value": "BvJS5OHyRz+DJuwyihjZwVuNCIXVqJnsLTXbfQ1cABdd03xKYCeEiC9EnCoLEd/SW8tCew9DoIiLzJkXAevxDw=="
+    "sequence": 1795602905179,
+    "version": "4.4.2-4",
+    "value": "AZUy6OmahuC139uklsicc1if4PhVLuBxGYg3U0CFR4fdye0bxN66eyn2WnuzyBIBDFQO1nkyi0yH/1Ra43l7DA=="
   }
 }
